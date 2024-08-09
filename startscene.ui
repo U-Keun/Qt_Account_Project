@@ -32,24 +32,6 @@
      <string>Project name</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>10</y>
-      <width>201</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
@@ -60,7 +42,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>quit</string>
     </property>
    </widget>
    <widget class="QWidget" name="">
