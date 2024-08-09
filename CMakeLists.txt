@@ -18,7 +18,8 @@ add_executable(Qt_account_project main.cpp
     loginscene.h loginscene.cpp loginscene.ui
     singinscene.h singinscene.cpp singinscene.ui
     mainmenuscene.h mainmenuscene.cpp mainmenuscene.ui
-    registetscene.h registetscene.cpp registetscene.ui)
+    registetscene.h registetscene.cpp registetscene.ui
+    inquiryscene.h inquiryscene.cpp inquiryscene.ui)
 target_link_libraries(Qt_account_project
         Qt::Core
         Qt::Gui

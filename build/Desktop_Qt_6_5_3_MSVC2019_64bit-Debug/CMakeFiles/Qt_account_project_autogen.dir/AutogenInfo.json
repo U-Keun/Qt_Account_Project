@@ -239,6 +239,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h",
+			"MU",
+			"EWIEGA46WW/moc_inquiryscene.cpp",
+			null
+		],
+		[
 			"C:/Users/change08/Desktop/Qt_Account_Project/loginscene.h",
 			"MU",
 			"EWIEGA46WW/moc_loginscene.cpp",
@@ -323,6 +329,11 @@
 	"SETTINGS_FILE" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/Qt_account_project_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/Users/change08/Desktop/Qt_Account_Project/loginscene.cpp",
 			"MU",
