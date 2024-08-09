@@ -1,0 +1,9 @@
+# ninja log v5
+33	224	7448721505967556	Qt_account_project_autogen/timestamp	1eab5168b6a6dbd4
+498	3798	7448719591369922	CMakeFiles/Qt_account_project.dir/Qt_account_project_autogen/mocs_compilation.cpp.obj	f0e91a16ae0162b6
+33	224	7448721505967556	Qt_account_project_autogen/mocs_compilation.cpp	1eab5168b6a6dbd4
+33	224	7448721505967556	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/timestamp	1eab5168b6a6dbd4
+33	224	7448721505967556	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/mocs_compilation.cpp	1eab5168b6a6dbd4
+503	3799	7448719591369922	CMakeFiles/Qt_account_project.dir/main.cpp.obj	ca77376983a9bdcb
+237	3457	7448721541520782	CMakeFiles/Qt_account_project.dir/startscene.cpp.obj	7e644e0ac5706e24
+3457	3688	7448721543359647	Qt_account_project.exe	15d0c00c29495b51
