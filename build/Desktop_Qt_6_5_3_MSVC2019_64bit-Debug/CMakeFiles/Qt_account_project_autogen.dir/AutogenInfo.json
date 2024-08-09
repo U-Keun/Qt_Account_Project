@@ -251,6 +251,12 @@
 			null
 		],
 		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/registetscene.h",
+			"MU",
+			"EWIEGA46WW/moc_registetscene.cpp",
+			null
+		],
+		[
 			"C:/Users/change08/Desktop/Qt_Account_Project/singinscene.h",
 			"MU",
 			"EWIEGA46WW/moc_singinscene.cpp",
@@ -325,6 +331,11 @@
 		[ "C:/Users/change08/Desktop/Qt_Account_Project/main.cpp", "MU", null ],
 		[
 			"C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/registetscene.cpp",
 			"MU",
 			null
 		],
