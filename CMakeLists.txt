@@ -19,7 +19,7 @@ add_executable(Qt_account_project main.cpp
     singinscene.h singinscene.cpp singinscene.ui
     mainmenuscene.h mainmenuscene.cpp mainmenuscene.ui
     registetscene.h registetscene.cpp registetscene.ui
-    inquiryscene.h inquiryscene.cpp inquiryscene.ui)
+    inquiryscene.h inquiryscene.cpp inquiryscene.ui
     deposit.h deposit.cpp deposit.ui
     withdraw.h withdraw.cpp withdraw.ui
     depositaccount.h depositaccount.cpp depositaccount.ui
