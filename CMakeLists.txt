@@ -14,10 +14,17 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(Qt_account_project main.cpp
+    startscene.h startscene.cpp startscene.ui
+    loginscene.h loginscene.cpp loginscene.ui
+    singinscene.h singinscene.cpp singinscene.ui
+    mainmenuscene.h mainmenuscene.cpp mainmenuscene.ui
+    registetscene.h registetscene.cpp registetscene.ui
+    inquiryscene.h inquiryscene.cpp inquiryscene.ui)
     deposit.h deposit.cpp deposit.ui
     withdraw.h withdraw.cpp withdraw.ui
     depositaccount.h depositaccount.cpp depositaccount.ui
     withdrawaccount.h withdrawaccount.cpp withdrawaccount.ui)
+
 target_link_libraries(Qt_account_project
         Qt::Core
         Qt::Gui
