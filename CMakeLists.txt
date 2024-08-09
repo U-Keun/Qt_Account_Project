@@ -13,7 +13,9 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Qt_account_project main.cpp)
+add_executable(Qt_account_project main.cpp
+    deposit.h deposit.cpp deposit.ui
+    withdraw.h withdraw.cpp withdraw.ui)
 target_link_libraries(Qt_account_project
         Qt::Core
         Qt::Gui
