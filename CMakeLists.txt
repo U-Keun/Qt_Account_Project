@@ -15,7 +15,9 @@ find_package(Qt6 COMPONENTS
 
 add_executable(Qt_account_project main.cpp
     deposit.h deposit.cpp deposit.ui
-    withdraw.h withdraw.cpp withdraw.ui)
+    withdraw.h withdraw.cpp withdraw.ui
+    depositaccount.h depositaccount.cpp depositaccount.ui
+    withdrawaccount.h withdrawaccount.cpp withdrawaccount.ui)
 target_link_libraries(Qt_account_project
         Qt::Core
         Qt::Gui
