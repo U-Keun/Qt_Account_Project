@@ -6,9 +6,14 @@ StartScene::StartScene(QWidget *parent)
     , ui(new Ui::StartScene)
 {
     ui->setupUi(this);
+
+    connect(ui->pushButton_2, &QPushButton::clicked, this, &StartScene::moveToLogInWindow);
+    connect(ui->pushButton_3, &QPushButton::clicked, this, &StartScene::moveToSignInWindow);
 }
 
 StartScene::~StartScene()
 {
     delete ui;
 }
+
+

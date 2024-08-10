@@ -15,6 +15,9 @@ public:
     explicit StartScene(QWidget *parent = nullptr);
     ~StartScene();
 
+signals:
+    void moveToLogInWindow();
+    void moveToSignInWindow();
 private:
     Ui::StartScene *ui;
 };
