@@ -1,17 +1,18 @@
 #include "signinscene.h"
 #include "ui_signinscene.h"
 
-singinScene::singinScene(QWidget *parent)
+signinScene::signinScene(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::singinScene)
+    , ui(new Ui::signinScene)
 {
     ui->setupUi(this);
 
     // buttons
-    connect(ui->goBackButton, &QPushButton::clicked, this, &singinScene::goBack);
+    connect(ui->signInButton, &QPushButton::clicked, this, &signinScene::validateMember);
+    connect(ui->goBackButton, &QPushButton::clicked, this, &signinScene::goBack);
 }
 
-singinScene::~singinScene()
+signinScene::~signinScene()
 {
     delete ui;
 }

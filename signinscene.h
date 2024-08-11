@@ -4,22 +4,23 @@
 #include <QMainWindow>
 
 namespace Ui {
-class singinScene;
+class signinScene;
 }
 
-class singinScene : public QMainWindow
+class signinScene : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit singinScene(QWidget *parent = nullptr);
-    ~singinScene();
+    explicit signinScene(QWidget *parent = nullptr);
+    ~signinScene();
 
 signals:
+    void validateMember();
     void goBack();
 
 private:
-    Ui::singinScene *ui;
+    Ui::signinScene *ui;
 };
 
 #endif // SINGINSCENE_H
