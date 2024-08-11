@@ -16,11 +16,3 @@ loginScene::~loginScene()
 {
     delete ui;
 }
-
-void moveToMainMenu() {
-
-}
-
-void goBack() {
-
-}
