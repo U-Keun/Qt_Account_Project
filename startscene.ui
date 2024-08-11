@@ -45,7 +45,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Log in</string>
+        <string>Log In</string>
        </property>
       </widget>
      </item>
@@ -64,7 +64,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sign in</string>
+        <string>Sign In</string>
        </property>
       </widget>
      </item>
@@ -127,7 +127,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>36</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>
