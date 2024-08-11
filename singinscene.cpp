@@ -6,6 +6,9 @@ singinScene::singinScene(QWidget *parent)
     , ui(new Ui::singinScene)
 {
     ui->setupUi(this);
+
+    // buttons
+    connect(ui->pushButton_7, &QPushButton::clicked, this, &singinScene::goBack);
 }
 
 singinScene::~singinScene()

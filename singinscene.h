@@ -15,6 +15,9 @@ public:
     explicit singinScene(QWidget *parent = nullptr);
     ~singinScene();
 
+signals:
+    void goBack();
+
 private:
     Ui::singinScene *ui;
 };

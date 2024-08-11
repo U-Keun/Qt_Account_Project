@@ -15,6 +15,10 @@ public:
     explicit loginScene(QWidget *parent = nullptr);
     ~loginScene();
 
+signals:
+    void moveToMainMenu();
+    void goBack();
+
 private:
     Ui::loginScene *ui;
 };

@@ -50,12 +50,12 @@ void WindowManager::setUpLogInScene() {
     loginScene *window = new loginScene(nullptr);
     pushWindow(window);
 
-
+    QObject::connect(window, &loginScene::goBack, this, &WindowManager::popWindow);
 }
 
 void WindowManager::setUpSignInScene() {
     singinScene *window = new singinScene(nullptr);
     pushWindow(window);
 
-
+    QObject::connect(window, &singinScene::goBack, this, &WindowManager::popWindow);
 }
