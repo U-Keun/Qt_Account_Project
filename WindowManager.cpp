@@ -3,6 +3,10 @@
 #include "loginscene.h"
 #include "signinscene.h"
 #include "mainmenuscene.h"
+#include "inquiryscene.h"
+#include "registetscene.h"
+#include "deposit.h"
+#include "withdraw.h"
 
 WindowManager::WindowManager() {
     setUpStartScene();
@@ -76,7 +80,12 @@ void WindowManager::setUpMainMenu() {
 }
 
 void WindowManager::setUpInquiryScene() {
-    qDebug() << "let's show inquiry scene.";
+    inquiryScene *window = new inquiryScene(nullptr);
+    pushWindow(window);
+
+
+
+    connect(window, &inquiryScene::goBack, this, &WindowManager::popWindow);
 }
 
 void WindowManager::setUpRegisterScene() {

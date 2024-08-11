@@ -15,6 +15,9 @@ public:
     explicit inquiryScene(QWidget *parent = nullptr);
     ~inquiryScene();
 
+signals:
+    void goBack();
+
 private:
     Ui::inquiryScene *ui;
 };

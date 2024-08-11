@@ -17,7 +17,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>50</x>
       <y>40</y>
       <width>150</width>
       <height>60</height>
@@ -33,7 +33,7 @@
      <string>Main menu</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -41,7 +41,7 @@
      <rect>
       <x>210</x>
       <y>170</y>
-      <width>351</width>
+      <width>352</width>
       <height>221</height>
      </rect>
     </property>
