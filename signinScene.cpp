@@ -1,5 +1,5 @@
-#include "singinscene.h"
-#include "ui_singinscene.h"
+#include "signinscene.h"
+#include "ui_signinscene.h"
 
 singinScene::singinScene(QWidget *parent)
     : QMainWindow(parent)

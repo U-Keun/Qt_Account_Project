@@ -1,7 +1,7 @@
 #include "WindowManager.h"
 #include "startscene.h"
 #include "loginscene.h"
-#include "singinscene.h"
+#include "signinscene.h"
 
 WindowManager::WindowManager() {
     setUpStartScene();
@@ -42,20 +42,20 @@ void WindowManager::setUpStartScene() {
     StartScene *window = new StartScene(nullptr);
     pushWindow(window);
 
-    QObject::connect(window, &StartScene::moveToLogInWindow, this, &WindowManager::setUpLogInScene);
-    QObject::connect(window, &StartScene::moveToSignInWindow, this, &WindowManager::setUpSignInScene);
+    connect(window, &StartScene::moveToLogInWindow, this, &WindowManager::setUpLogInScene);
+    connect(window, &StartScene::moveToSignInWindow, this, &WindowManager::setUpSignInScene);
 }
 
 void WindowManager::setUpLogInScene() {
     loginScene *window = new loginScene(nullptr);
     pushWindow(window);
 
-    QObject::connect(window, &loginScene::goBack, this, &WindowManager::popWindow);
+    connect(window, &loginScene::goBack, this, &WindowManager::popWindow);
 }
 
 void WindowManager::setUpSignInScene() {
     singinScene *window = new singinScene(nullptr);
     pushWindow(window);
 
-    QObject::connect(window, &singinScene::goBack, this, &WindowManager::popWindow);
+    connect(window, &singinScene::goBack, this, &WindowManager::popWindow);
 }
