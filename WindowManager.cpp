@@ -89,7 +89,11 @@ void WindowManager::setUpInquiryScene() {
 }
 
 void WindowManager::setUpRegisterScene() {
-    qDebug() << "let's show register scene.";
+    registerScene *window = new registerScene(nullptr);
+    pushWindow(window);
+
+    connect(window, &registerScene::registerAccount, this, &WindowManager::popWindow); // 계좌 등록 성공 후 메인 메뉴로 돌아가는 로직 필요
+    connect(window, &registerScene::goBack, this, &WindowManager::popWindow);
 }
 
 void WindowManager::setUpDepositScene() {
