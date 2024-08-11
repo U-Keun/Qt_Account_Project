@@ -1,14 +1,16 @@
 #include "withdrawaccount.h"
 #include "ui_withdrawaccount.h"
 
-withdrawaccount::withdrawaccount(QWidget *parent)
+WithdrawAccount::WithdrawAccount(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::withdrawaccount)
+    , ui(new Ui::WithdrawAccount)
 {
     ui->setupUi(this);
+
+    connect(ui->goBackButton, &QPushButton::clicked, this, &WithdrawAccount::goBack);
 }
 
-withdrawaccount::~withdrawaccount()
+WithdrawAccount::~WithdrawAccount()
 {
     delete ui;
 }

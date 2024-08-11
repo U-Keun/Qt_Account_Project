@@ -4,9 +4,9 @@
 #include "signinscene.h"
 #include "mainmenuscene.h"
 #include "inquiryscene.h"
-#include "registetscene.h"
-#include "deposit.h"
-#include "withdraw.h"
+#include "registerscene.h"
+#include "depositaccount.h"
+#include "withdrawaccount.h"
 
 WindowManager::WindowManager() {
     setUpStartScene();
@@ -103,6 +103,12 @@ void WindowManager::setUpDepositAccountScene() {
     connect(window, &DepositAccount::goBack, this, &WindowManager::popWindow);
 }
 
-void WindowManager::setUpWithdrawScene() {
+void WindowManager::setUpWithdrawAccountScene() {
     qDebug() << "let's show withdraw scene.";
+    WithdrawAccount *window = new WithdrawAccount(nullptr);
+    pushWindow(window);
+
+
+    connect(window, &WithdrawAccount::goBack, this, &WindowManager::popWindow);
+
 }
