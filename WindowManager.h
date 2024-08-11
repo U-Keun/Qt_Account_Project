@@ -13,7 +13,7 @@ class WindowManager : public QObject {
     // window transition helper
     void setUpStartScene();
     void setUpLogInScene();
-    void setUpSignInScene();
+    void setUpSignUpScene();
     void setUpMainMenu();
     void setUpInquiryScene();
     void setUpRegisterScene();

@@ -1,7 +1,7 @@
 #include "WindowManager.h"
 #include "startscene.h"
 #include "loginscene.h"
-#include "signinscene.h"
+#include "signupscene.h"
 #include "mainmenuscene.h"
 #include "inquiryscene.h"
 #include "registerscene.h"
@@ -48,7 +48,7 @@ void WindowManager::setUpStartScene() {
     pushWindow(window);
 
     connect(window, &StartScene::moveToLogInWindow, this, &WindowManager::setUpLogInScene);
-    connect(window, &StartScene::moveToSignInWindow, this, &WindowManager::setUpSignInScene);
+    connect(window, &StartScene::moveToSignUpWindow, this, &WindowManager::setUpSignUpScene);
     connect(window, &StartScene::goBack, this, &WindowManager::popWindow);
 }
 
@@ -60,12 +60,12 @@ void WindowManager::setUpLogInScene() {
     connect(window, &loginScene::goBack, this, &WindowManager::popWindow);
 }
 
-void WindowManager::setUpSignInScene() {
-    signinScene *window = new signinScene(nullptr);
+void WindowManager::setUpSignUpScene() {
+    SignUpScene *window = new SignUpScene(nullptr);
     pushWindow(window);
 
-    connect(window, &signinScene::validateMember, this, &WindowManager::popWindow); // 회원 검증 로직 추가 필요
-    connect(window, &signinScene::goBack, this, &WindowManager::popWindow);
+    connect(window, &SignUpScene::validateMember, this, &WindowManager::popWindow); // 회원 검증 로직 추가 필요
+    connect(window, &SignUpScene::goBack, this, &WindowManager::popWindow);
 }
 
 void WindowManager::setUpMainMenu() {

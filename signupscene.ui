@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>signinScene</class>
- <widget class="QMainWindow" name="signinScene">
+ <class>SignUpScene</class>
+ <widget class="QMainWindow" name="SignUpScene">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -98,7 +98,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Sign In !</string>
+        <string>Sign Up !</string>
        </property>
       </widget>
      </item>
@@ -135,7 +135,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Sign In</string>
+     <string>Sign Up</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
