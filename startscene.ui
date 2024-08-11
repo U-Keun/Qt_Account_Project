@@ -44,6 +44,12 @@
          <height>50</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Log In</string>
        </property>
@@ -63,6 +69,12 @@
          <height>50</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Sign In</string>
        </property>
@@ -75,6 +87,12 @@
          <width>200</width>
          <height>50</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>20</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Quit</string>
