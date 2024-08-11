@@ -9,7 +9,7 @@ loginScene::loginScene(QWidget *parent)
 
     // buttons
     // connect()
-    connect(ui->pushButton_7, &QPushButton::clicked, this, &loginScene::goBack);
+    connect(ui->goBackButton, &QPushButton::clicked, this, &loginScene::goBack);
 }
 
 loginScene::~loginScene()
