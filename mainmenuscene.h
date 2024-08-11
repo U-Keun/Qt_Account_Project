@@ -18,8 +18,8 @@ public:
 signals:
     void moveToInquiryWindow();
     void moveToRegisterWindow();
-    void moveToDepositWindow();
-    void moveToWithdrawWindow();
+    void moveToDepositAccountWindow();
+    void moveToWithdrawAccountWindow();
     void goBack();
 
 private:

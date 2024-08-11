@@ -74,8 +74,8 @@ void WindowManager::setUpMainMenu() {
 
     connect(window, &mainmenuScene::moveToInquiryWindow, this, &WindowManager::setUpInquiryScene);
     connect(window, &mainmenuScene::moveToRegisterWindow, this, &WindowManager::setUpRegisterScene);
-    connect(window, &mainmenuScene::moveToDepositWindow, this, &WindowManager::setUpDepositScene);
-    connect(window, &mainmenuScene::moveToWithdrawWindow, this, &WindowManager::setUpWithdrawScene);
+    connect(window, &mainmenuScene::moveToDepositAccountWindow, this, &WindowManager::setUpDepositAccountScene);
+    connect(window, &mainmenuScene::moveToWithdrawAccountWindow, this, &WindowManager::setUpWithdrawAccountScene);
     connect(window, &mainmenuScene::goBack, this, &WindowManager::popWindow);
 }
 
@@ -96,8 +96,11 @@ void WindowManager::setUpRegisterScene() {
     connect(window, &registerScene::goBack, this, &WindowManager::popWindow);
 }
 
-void WindowManager::setUpDepositScene() {
-    qDebug() << "let's show deposit scene.";
+void WindowManager::setUpDepositAccountScene() {
+    DepositAccount *window = new DepositAccount(nullptr);
+    pushWindow(window);
+
+    connect(window, &DepositAccount::goBack, this, &WindowManager::popWindow);
 }
 
 void WindowManager::setUpWithdrawScene() {

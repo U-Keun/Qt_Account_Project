@@ -10,8 +10,8 @@ mainmenuScene::mainmenuScene(QWidget *parent)
     // buttons
     connect(ui->accountInquiryButton, &QPushButton::clicked, this, &mainmenuScene::moveToInquiryWindow);
     connect(ui->accountRegisterButton, &QPushButton::clicked, this, &mainmenuScene::moveToRegisterWindow);
-    connect(ui->depositButton, &QPushButton::clicked, this, &mainmenuScene::moveToDepositWindow);
-    connect(ui->withdrawButton, &QPushButton::clicked, this, &mainmenuScene::moveToWithdrawWindow);
+    connect(ui->depositButton, &QPushButton::clicked, this, &mainmenuScene::moveToDepositAccountWindow);
+    connect(ui->withdrawButton, &QPushButton::clicked, this, &mainmenuScene::moveToWithdrawAccountWindow);
     connect(ui->goBackButton, &QPushButton::clicked, this, &mainmenuScene::goBack);
 }
 

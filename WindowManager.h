@@ -17,8 +17,8 @@ class WindowManager : public QObject {
     void setUpMainMenu();
     void setUpInquiryScene();
     void setUpRegisterScene();
-    void setUpDepositScene();
-    void setUpWithdrawScene();
+    void setUpDepositAccountScene();
+    void setUpWithdrawAccountScene();
 public:
     WindowManager();
     ~WindowManager();

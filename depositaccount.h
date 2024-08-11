@@ -15,6 +15,9 @@ public:
     explicit DepositAccount(QWidget *parent = nullptr);
     ~DepositAccount();
 
+signals:
+    void goBack();
+
 private:
     Ui::DepositAccount *ui;
 };
