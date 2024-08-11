@@ -14,6 +14,11 @@ class WindowManager : public QObject {
     void setUpStartScene();
     void setUpLogInScene();
     void setUpSignInScene();
+    void setUpMainMenu();
+    void setUpInquiryScene();
+    void setUpRegisterScene();
+    void setUpDepositScene();
+    void setUpWithdrawScene();
 public:
     WindowManager();
     ~WindowManager();
@@ -22,7 +27,6 @@ public:
     void pushWindow(QWidget*);
     void popWindow();
     QWidget* currentWindow() const;
-
 };
 
 #endif // WINDOWMANAGER_H

@@ -8,7 +8,7 @@ loginScene::loginScene(QWidget *parent)
     ui->setupUi(this);
 
     // buttons
-    // connect()
+    connect(ui->logInButton, &QPushButton::clicked, this, &loginScene::moveToMainMenu);
     connect(ui->goBackButton, &QPushButton::clicked, this, &loginScene::goBack);
 }
 

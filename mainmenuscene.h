@@ -15,6 +15,13 @@ public:
     explicit mainmenuScene(QWidget *parent = nullptr);
     ~mainmenuScene();
 
+signals:
+    void moveToInquiryWindow();
+    void moveToRegisterWindow();
+    void moveToDepositWindow();
+    void moveToWithdrawWindow();
+    void goBack();
+
 private:
     Ui::mainmenuScene *ui;
 };
