@@ -18,6 +18,7 @@ public:
 signals:
     void moveToLogInWindow();
     void moveToSignInWindow();
+    void goBack();
 private:
     Ui::StartScene *ui;
 };
