@@ -330,13 +330,21 @@ Qt_account_project_autogen/timestamp: \
 	C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/CMakeLists.txt \
+	C:/Users/change08/Desktop/Qt_Account_Project/Member.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/Member.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.cpp \
 	C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/account.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/account.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	C:/Users/change08/Desktop/Qt_Account_Project/date.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/date.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/deposit.cpp \
 	C:/Users/change08/Desktop/Qt_Account_Project/deposit.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.cpp \

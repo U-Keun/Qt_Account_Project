@@ -239,9 +239,33 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/Member.h",
+			"MU",
+			"EWIEGA46WW/moc_Member.cpp",
+			null
+		],
+		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h",
+			"MU",
+			"EWIEGA46WW/moc_MemberManager.cpp",
+			null
+		],
+		[
 			"C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.h",
 			"MU",
 			"EWIEGA46WW/moc_WindowManager.cpp",
+			null
+		],
+		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/account.h",
+			"MU",
+			"EWIEGA46WW/moc_account.cpp",
+			null
+		],
+		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/date.h",
+			"MU",
+			"EWIEGA46WW/moc_date.cpp",
 			null
 		],
 		[
@@ -359,11 +383,23 @@
 	"SETTINGS_FILE" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/Qt_account_project_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/Users/change08/Desktop/Qt_Account_Project/Member.cpp", "MU", null ],
+		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.cpp",
 			"MU",
 			null
 		],
+		[
+			"C:/Users/change08/Desktop/Qt_Account_Project/account.cpp",
+			"MU",
+			null
+		],
+		[ "C:/Users/change08/Desktop/Qt_Account_Project/date.cpp", "MU", null ],
 		[
 			"C:/Users/change08/Desktop/Qt_Account_Project/deposit.cpp",
 			"MU",
