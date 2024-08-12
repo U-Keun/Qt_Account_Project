@@ -2,6 +2,8 @@
 #define REGISTERSCENE_H
 
 #include <QMainWindow>
+#include "GlobalManager.h"
+
 
 namespace Ui {
 class registerScene;
@@ -21,6 +23,11 @@ signals:
 
 private:
     Ui::registerScene *ui;
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    MemberManager* manager = globalManager.getMemberManager();
+
+public slots :
+    void registerMember();
 };
 
 #endif // REGISTERSCENE_H

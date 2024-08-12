@@ -6,25 +6,25 @@ Member::Member() {
 	this->pwd = "1111";
 }
 
-Member::Member(string name, string id, string pwd) {
+Member::Member(QString name, QString id, QString pwd) {
 	this->name = name;
 	this->id = id;
 	this->pwd = pwd;
 }
 
-string Member::getName() const {
+QString Member::getName() const {
 	return name;
 }
 
-string Member::getId() const {
+QString Member::getId() const {
 	return id;
 }
 
-string Member::getPwd() const {
+QString Member::getPwd() const {
 	return pwd;
 }
 
-vector<Account>& Member::getAccount() {
+QVector<Account>& Member::getAccount() {
 	return accountList;
 }
 

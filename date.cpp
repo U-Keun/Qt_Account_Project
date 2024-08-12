@@ -1,8 +1,8 @@
-#include <sstream>
-#include <iomanip>
+#include <QString>
+#include <QTextStream>
+#include <QStringList>
+#include <QVector>
 #include <ctime>
-#include <vector>
-
 #include "date.h"
 
 #if defined(_WIN32) || defined(_WIN64)
@@ -25,30 +25,23 @@ Date::Date() {
     this->day = date.tm_mday;
 }
 
-vector<string> split(string str, char Delimiter) {
-    istringstream iss(str);
-    string buffer;
-
-    vector<string> result;
-
-    while (getline(iss, buffer, Delimiter)) {
-        result.push_back(buffer);
-    }
-
-    return result;
+QVector<QString> split(const QString& str, char delimiter) {
+    QStringList list = str.split(delimiter);
+    return QVector<QString>::fromList(list);
 }
 
-Date::Date(string date) {
-    vector<string> ymd = split(date, '-');
-    this->year = stoi(ymd[0]);
-    this->month = stoi(ymd[1]);
-    this->day = stoi(ymd[2]);
+Date::Date(QString date) {
+    QVector<QString> ymd = split(date, '-');
+    this->year = ymd[0].toInt();
+    this->month = ymd[1].toInt();
+    this->day = ymd[2].toInt();
 }
 
-string Date::toString() const {
-    ostringstream oss;
+QString Date::toString() const {
+    QString result;
+    QTextStream oss(&result);
     oss << year << '-'
-        << setw(2) << setfill('0') << month << '-'
-        << setw(2) << setfill('0') << day;
-    return oss.str();
+        << QString("%1").arg(month, 2, 10, QChar('0')) << '-'
+        << QString("%1").arg(day, 2, 10, QChar('0'));
+    return result;
 }

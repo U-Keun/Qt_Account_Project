@@ -1,8 +1,9 @@
-#include <string>
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
+
+#include <QString>
 #include "date.h"
 
-#ifndef DEPOSIT_H
-#define DEPOSIT_H
 
 class Account {
     int accountId;
@@ -17,7 +18,8 @@ public:
     Date getDate() const;
     bool deposit(long long money);
     bool withdraw(long long money);
-    string toString();
+    QString  toString() const;
 };
 
-#endif //DEPOSIT_H
+
+#endif // ACCOUNT_H

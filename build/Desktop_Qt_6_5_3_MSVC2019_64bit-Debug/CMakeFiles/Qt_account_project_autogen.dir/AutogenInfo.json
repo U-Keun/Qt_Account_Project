@@ -1,19 +1,19 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/change08/Desktop/Qt_Account_Project",
+	"BUILD_DIR" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Ho/Desktop/Qt_Account_Project",
 	"CMAKE_EXECUTABLE" : "C:/Qt/Tools/CMake_64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/change08/Desktop/Qt_Account_Project/CMakeLists.txt",
-		"C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake",
-		"C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake",
+		"C:/Users/Ho/Desktop/Qt_Account_Project/CMakeLists.txt",
+		"C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake",
-		"C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake",
-		"C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake",
+		"C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake",
+		"C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake",
@@ -26,7 +26,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-MSVC-C.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-MSVC.cmake",
-		"C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake",
+		"C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeRCInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake",
@@ -232,106 +232,112 @@
 		"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.5.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginAdditionalTargetInfo.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/change08/Desktop/Qt_Account_Project",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Ho/Desktop/Qt_Account_Project",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/deps",
+	"DEP_FILE" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Qt_account_project_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/Member.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/Member.h",
 			"MU",
 			"EWIEGA46WW/moc_Member.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/MemberManager.h",
 			"MU",
 			"EWIEGA46WW/moc_MemberManager.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/WindowManager.h",
 			"MU",
 			"EWIEGA46WW/moc_WindowManager.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/account.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/account.h",
 			"MU",
 			"EWIEGA46WW/moc_account.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/date.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/date.h",
 			"MU",
 			"EWIEGA46WW/moc_date.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/deposit.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/deposit.h",
 			"MU",
 			"EWIEGA46WW/moc_deposit.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/depositaccount.h",
 			"MU",
 			"EWIEGA46WW/moc_depositaccount.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/globalmanager.h",
+			"MU",
+			"EWIEGA46WW/moc_globalmanager.cpp",
+			null
+		],
+		[
+			"C:/Users/Ho/Desktop/Qt_Account_Project/inquiryscene.h",
 			"MU",
 			"EWIEGA46WW/moc_inquiryscene.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/loginscene.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/loginscene.h",
 			"MU",
 			"EWIEGA46WW/moc_loginscene.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/mainmenuscene.h",
 			"MU",
 			"EWIEGA46WW/moc_mainmenuscene.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/registerscene.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/registerscene.h",
 			"MU",
 			"EWIEGA46WW/moc_registerscene.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/signupscene.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/signupscene.h",
 			"MU",
 			"EWIEGA46WW/moc_signupscene.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/startscene.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/startscene.h",
 			"MU",
 			"EWIEGA46WW/moc_startscene.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/withdraw.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/withdraw.h",
 			"MU",
 			"EWIEGA46WW/moc_withdraw.cpp",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.h",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/withdrawaccount.h",
 			"MU",
 			"EWIEGA46WW/moc_withdrawaccount.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -374,80 +380,57 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/Qt_account_project_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/Qt_account_project_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.5.3/msvc2019_64/./bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.5.3/msvc2019_64/./bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 5,
-	"SETTINGS_FILE" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/Qt_account_project_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/Qt_account_project_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "C:/Users/change08/Desktop/Qt_Account_Project/Member.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/Member.cpp", "MU", null ],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.cpp",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/MemberManager.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.cpp",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/WindowManager.cpp",
+			"MU",
+			null
+		],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/account.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/date.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/deposit.cpp", "MU", null ],
+		[
+			"C:/Users/Ho/Desktop/Qt_Account_Project/depositaccount.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/account.cpp",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/globalmanager.cpp",
 			"MU",
 			null
 		],
-		[ "C:/Users/change08/Desktop/Qt_Account_Project/date.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/inquiryscene.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/loginscene.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/main.cpp", "MU", null ],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/deposit.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.cpp",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/mainmenuscene.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/loginscene.cpp",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/registerscene.cpp",
 			"MU",
 			null
 		],
-		[ "C:/Users/change08/Desktop/Qt_Account_Project/main.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/signupScene.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/startscene.cpp", "MU", null ],
+		[ "C:/Users/Ho/Desktop/Qt_Account_Project/withdraw.cpp", "MU", null ],
 		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/registerscene.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/signupScene.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/startscene.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/withdraw.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.cpp",
+			"C:/Users/Ho/Desktop/Qt_Account_Project/withdrawaccount.cpp",
 			"MU",
 			null
 		]

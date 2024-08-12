@@ -1,6 +1,9 @@
 #include "registerscene.h"
 #include "ui_registerscene.h"
 
+
+
+
 registerScene::registerScene(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::registerScene)
@@ -14,4 +17,13 @@ registerScene::registerScene(QWidget *parent) :
 registerScene::~registerScene()
 {
     delete ui;
+}
+
+//잘못봐서 register가 사람 등록인줄 알앗습니다...
+
+void registerScene::registerMember() {
+    QString name = ui->accountName->text();
+    QString id = ui->balance->text();
+    QString pwd = ui->date->text();
+    manager->registration(name, id, pwd);
 }

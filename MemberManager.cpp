@@ -1,288 +1,269 @@
-﻿#include <fstream>
+﻿#include <QFile>
+#include <QTextStream>
+#include <QDebug>
+#include <QString>
 #include "MemberManager.h"
 #include "account.h"
 #include <algorithm>
 #include <memory>
 #include "line.h"
-#include <QDebug>
-#include <QString>
 
 using namespace std;
 
 void MemberManager::readFile() {
-	ifstream fin;
-#if defined(_WIN32) || defined(_WIN64)
-	fin.open("C:\\Users\\change08\\Desktop\\Veda_fisrtProject\\info.txt");
-#else
-	fin.open("info.txt");
-#endif
-	if (!fin.is_open()) {
-		return;
-	}
-	int memberCount;
-	fin >> memberCount;
+// #if defined(_WIN32) || defined(_WIN64)
+//     QFile file("C:/Users/change08/Desktop/Veda_fisrtProject/info.txt");
+// #else
+//     QFile file("info.txt");
+// #endif
+    QFile file("info.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug("파일 오픈 안됨");
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            qDebug("파일 생성 실패");
+            return;
+        }
+        file.close();
 
-	string name, id, pwd;
-	int accountCount;
-	for (int i = 0; i < memberCount; i++) {
-		fin >> name >> id >> pwd;
-		this->memberList.emplace_back(Member(name, id, pwd));
-		fin >> accountCount;
+        //만들어 둔거 다시 열기
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            qDebug("파일을 다시 열 수 없습니다.");
+            return;
+        }
+    }
 
-		int accountId;
-		long long money;
-		string date;
-		for (int j = 0; j < accountCount; j++) {
-			fin >> accountId >> money >> date;
-			this->memberList[i].addAccount(Account(accountId, money, Date(date)));
-		}
-	}
+    QTextStream in(&file);
+    int memberCount;
+    in >> memberCount;
 
-	fin.close();
+    QString name, id, pwd;
+    int accountCount;
+    for (int i = 0; i < memberCount; i++) {
+        in >> name >> id >> pwd;
+        this->memberList.emplace_back(Member(name, id, pwd));
+        in >> accountCount;
+
+        int accountId;
+        long long money;
+        QString date;
+        for (int j = 0; j < accountCount; j++) {
+            in >> accountId >> money >> date;
+            this->memberList[i].addAccount(Account(accountId, money, Date(date)));
+        }
+    }
+
+    file.close();
 }
 
 void MemberManager::writeFile() {
-#if defined(_WIN32) || defined(_WIN64)
-	ofstream fout("C:\\Users\\change08\\Desktop\\Veda_fisrtProject\\info.txt");
-#else
-	ofstream fout("info.txt");
-#endif
-	if (!fout.is_open()) {
-		cerr << "Error opening file for writing\n";
-		return;
-	}
+// #if defined(_WIN32) || defined(_WIN64)
+//     QFile file("C:/Users/change08/Desktop/Veda_fisrtProject/info.txt");
+// #else
+//     QFile file("info.txt");
+// #endif
+    QFile file("info.txt");
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qWarning() << "Error opening file for writing";
+        return;
+    }
 
-	fout << memberList.size() << "\n";
-	for (auto& member : memberList) {
-		fout << member.getName() << " "
-			<< member.getId() << " "
-			<< member.getPwd() << "\n";
+    QTextStream out(&file);
+    out << memberList.size() << "\n";
+    for (auto& member : memberList) {
+        qDebug() << "저장 테스트용으로 찍은 디버그" << member.getName() << member.getId() << member.getPwd();
+        out << member.getName() << " "
+            << member.getId() << " "
+            << member.getPwd() << "\n";
 
-		fout << member.getAccount().size() << "\n";
+        out << member.getAccount().size() << "\n";
 
-		for (const auto& account : member.getAccount()) {
-			fout << account.getAccountId() << " "
-				<< account.getMoney() << " "
-				<< account.getDate().toString() << "\n";
-		}
-	}
+        for (const auto& account : member.getAccount()) {
+            out << account.getAccountId() << " "
+                << account.getMoney() << " "
+                << account.getDate().toString() << "\n";
+        }
+    }
 
-	fout.close();
+    file.close();
 }
 
 MemberManager::MemberManager() {
-	readFile();
+    qDebug() << "MemberManager 생성";
+    readFile();
 }
 
 MemberManager::~MemberManager() {
-	this->writeFile();
+    qDebug() << "MemberManager 소멸";
+    writeFile();
 }
 
-void MemberManager::registration() {
-	cout << "enter member name, Id, PW\n";
-	string name, id, pwd;
-	cin >> name >> id >> pwd;
-	for (auto i = memberList.begin(); i != memberList.end(); i++)
-	{
-		string tmp = (*i).getId();
-		if (tmp == id)
-		{
-			cout << "alreay registered member!\n";
-			return;
-		}
-	}
-	Member mem(name, id, pwd);
-	memberList.push_back(mem);
-	//line();
+void MemberManager::registration(QString name, QString id, QString pwd) {
+    // qDebug() << "Enter member name, ID, PW:";
+    // QTextStream qin(stdin);
+    // qin >> name >> id >> pwd;
 
+    qDebug("사용자 등록 요청 왓음");
+
+    for (auto& member : memberList) {
+        if (member.getId() == id) {
+            qDebug() << "Already registered member!";
+            return;
+        }
+    }
+    Member mem(name, id, pwd);
+    memberList.push_back(mem);
 }
-
 
 void MemberManager::searchAllMember() {
-	line();
-	cout << "search all registerd members" << '\n';
-	for (auto i = memberList.begin(); i != memberList.end(); i++)
-	{
-		cout << "name : " << (*i).getName() << " ID : " << (*i).getId() << '\n';
-		if (!(*i).getAccount().empty())
-		{
-			vector<Account> tmp = (*i).getAccount();
-			for (auto j = tmp.begin(); j != tmp.end(); j++)
-			{
-				cout << (*j).toString();
-			}
-		}
-		else cout << "Haven't opened an account yet\n";
-	}
+    line();
+    qDebug() << "Search all registered members:";
+    for (auto& member : memberList) {
+        qDebug() << "Name:" << member.getName() << "ID:" << member.getId();
+        if (!member.getAccount().empty()) {
+            for (const auto& account : member.getAccount()) {
+                qDebug() << account.toString();
+            }
+        } else {
+            qDebug() << "Haven't opened an account yet";
+        }
+    }
 }
 
-bool MemberManager::isRegister(string name) const {
-	//line();
-	for (auto i = memberList.begin(); i != memberList.end(); i++)
-	{
-		if (name == (*i).getName()) {
-			cout << "already registerd member" << '\n';
-			return true;
-		}
-	}
+bool MemberManager::isRegister(QString name) const {
+    for (const auto& member : memberList) {
+        if (name == member.getName()) {
+            qDebug() << "Already registered member";
+            return true;
+        }
+    }
 
-	cout << "not registerd member\n";
-	return false;
+    qDebug() << "Not registered member";
+    return false;
 }
 
-void MemberManager::setCurrentMember(Member *member) {
-	currentMember = member;
+void MemberManager::setCurrentMember(Member* member) {
+    currentMember = member;
 }
 
 Member* MemberManager::getCurrentMember() const {
-	return currentMember;
+    return currentMember;
 }
 
-
 void MemberManager::getCurrentMemberStatus() {
-	//line();
-	//cout << "getCurrentMemberStatus 메서드 호출\n";
-	if (currentMember == NULL)
-	{
-		cout << "please login\n";
-		return;
-	}
-	cout << "name : " << currentMember->getName() << " ID : " << currentMember->getId() <<'\n';
-	if (!currentMember->getAccount().empty())
-	{
-		cout << "account ID, account balance";
-		vector<Account> tmp = currentMember->getAccount();
-		for (auto j = tmp.begin(); j != tmp.end(); j++)
-		{
-			cout << (*j).toString();
-		}
-	}
+    if (currentMember == nullptr) {
+        qDebug() << "Please login";
+        return;
+    }
 
-	else cout << "Haven't opened an account yet\n";
+    qDebug() << "Name:" << currentMember->getName() << "ID:" << currentMember->getId();
+    if (!currentMember->getAccount().empty()) {
+        qDebug() << "Account ID, account balance:";
+        for (const auto& account : currentMember->getAccount()) {
+            qDebug() << account.toString();
+        }
+    } else {
+        qDebug() << "Haven't opened an account yet";
+    }
 }
 
 void MemberManager::addAccount() {
-	//line();
-	if (currentMember == NULL)
-	{
-		cout << "please login\n";
-		return;
-	}
+    if (currentMember == nullptr) {
+        qDebug() << "Please login";
+        return;
+    }
 
-	int tmpId =  currentMember->getAccount().size() + 1;
-	long long tmpMoney;
-	cout << "enter initial account balance\n";
-	cin >> tmpMoney;
+    int tmpId = currentMember->getAccount().size() + 1;
+    long long tmpMoney;
+    qDebug() << "Enter initial account balance:";
+    QTextStream qin(stdin);
+    qin >> tmpMoney;
 
-	try {
-		Account account(tmpId, tmpMoney);
-		currentMember->addAccount(account);
-	} catch (const char* err) {
-		cout << err << '\n';
-		return;
-	}
+    try {
+        Account account(tmpId, tmpMoney);
+        currentMember->addAccount(account);
+    } catch (const char* err) {
+        qDebug() << err;
+        return;
+    }
 }
 
 void MemberManager::login() {
-	//line();
-	
-	cout << "enter member ID, PW" << '\n';
-	string tmpId, tmpPw;
-	cin >> tmpId >> tmpPw;
+    qDebug() << "Enter member ID, PW:";
+    QString tmpId, tmpPw;
+    QTextStream qin(stdin);
+    qin >> tmpId >> tmpPw;
 
+    for (auto& member : memberList) {
+        if (member.getId() == tmpId) {
+            if (member.getPwd() == tmpPw) {
+                qDebug() << "Login success";
+                setCurrentMember(&member);
+                return;
+            } else {
+                qDebug() << "Password error! Login fail";
+                return;
+            }
+        }
+    }
 
-	for (auto i = memberList.begin(); i != memberList.end(); i++)
-	{
-		if ((*i).getId() == tmpId)
-		{
-			if ((*i).getPwd() == tmpPw) {
-				cout << "login success\n";
-				setCurrentMember(&(*i));
-				return;
-			}
-			else {
-				cout << "password error!\n";
-				cout << "login fail\n";
-
-				return;
-			}
-		}
-	}
-
-	cout << "Id not exist!\n";
-	cout << "login fail\n";
-	return;
+    qDebug() << "ID not exist! Login fail";
 }
 
 void MemberManager::logout() {
-	//line();
-	if (currentMember == NULL)
-	{
-		cout << "not logged in!\n";
-	}
-	currentMember = NULL;
-	cout << "logout!\n";
+    if (currentMember == nullptr) {
+        qDebug() << "Not logged in!";
+    } else {
+        currentMember = nullptr;
+        qDebug() << "Logout!";
+    }
 }
 
 void MemberManager::transaction() {
-	//line();
-	//cout << "transaction 메서드 호출\n";
-	if (currentMember == NULL)
-	{
-		cout << "please login\n";
-		return;
-	}
+    if (currentMember == nullptr) {
+        qDebug() << "Please login";
+        return;
+    }
 
-	vector<Account>& currentAccountList = currentMember->getAccount();
-	if (currentMember->getAccount().empty())
-	{
-		cout << "no account member\n";
-		return;
-	}
+    if (currentMember->getAccount().empty()) {
+        qDebug() << "No account found";
+        return;
+    }
 
-	cout << "deposit : 1,  withdraw 2\n";
-	int tmp;
-	cin >> tmp;
+    qDebug() << "Deposit: 1, Withdraw: 2";
+    int choice;
+    QTextStream qin(stdin);
+    qin >> choice;
 
+    qDebug() << "Account list:";
+    int maxAccountCount = currentMember->getAccount().size();
+    for (const auto& account : currentMember->getAccount()) {
+        qDebug() << account.toString();
+    }
 
-	cout << "account list\n";
+    int selectedAccount;
+    qin >> selectedAccount;
 
-	for (auto j = currentMember->getAccount().begin(); j != currentMember->getAccount().end(); j++)
-	{
-		cout << (*j).toString();
-	}
+    if (selectedAccount > maxAccountCount) {
+        qDebug() << "Invalid account number";
+        return;
+    }
 
-	int maxAccountCount = currentMember->getAccount().size();
+    qDebug() << "Enter amount:";
+    int amount;
+    qin >> amount;
 
-	int choosedAccountCount;
-	cin >> choosedAccountCount;
-	int choosedVectorIndex = choosedAccountCount - 1;
-	//cout << "current account max : " << maxAccountCount << "현재 고른 번호 " << choosedAccountCount <<'\n';
-	if (choosedAccountCount > maxAccountCount)
-	{
-		cout << "no that account\n";
-		return;
-	}
+    if (amount < 0) {
+        qDebug() << "Please enter a positive integer";
+        return;
+    }
 
-	cout << "how much deposit/withdra\n";
-	int inputMoney;
-	cin >> inputMoney;
-
-	if (inputMoney < 0)
-	{
-		cout << "positive integer\n";
-		return;
-	}
-
-	if (tmp == 1)
-	{
-		//cout << "입금 메서드 호출" << '\n';
-		if (currentMember->getAccount()[choosedVectorIndex].deposit(inputMoney)) {
-			cout << "deposit success!" << '\n';
-		}
-	}
-	else if (tmp == 2) {
-		currentMember->getAccount()[choosedVectorIndex].withdraw(inputMoney);
-		cout << "withdraw success!" << '\n';
-	}
+    auto& account = currentMember->getAccount()[selectedAccount - 1];
+    if (choice == 1) {
+        if (account.deposit(amount)) {
+            qDebug() << "Deposit success!";
+        }
+    } else if (choice == 2) {
+        account.withdraw(amount);
+        qDebug() << "Withdraw success!";
+    }
 }

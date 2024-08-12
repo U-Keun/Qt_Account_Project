@@ -1,13 +1,14 @@
 #include <QApplication>
 #include <QPushButton>
 #include "WindowManager.h"
-#include "MemberManager.h"
+#include "globalmanager.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
+    MemberManager* manager = new MemberManager();
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    globalManager.setMemberManager(manager);
     WindowManager s;
-    MemberManager m;
-    m.registration();
 
-    return QApplication::exec();
+    return a.exec();
 }

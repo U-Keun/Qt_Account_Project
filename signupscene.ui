@@ -20,10 +20,38 @@
       <x>300</x>
       <y>270</y>
       <width>202</width>
-      <height>165</height>
+      <height>214</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLineEdit" name="nameInput">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string> NAME :</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QLineEdit" name="IdInput">
        <property name="minimumSize">
@@ -166,7 +194,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>24</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

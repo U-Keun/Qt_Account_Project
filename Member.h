@@ -1,22 +1,24 @@
 #pragma once
-#include <iostream>
-#include <vector>
+// #include <iostream>
 #include "account.h"
-
+#include <QString>
+#include <QVector>
 
 using namespace std;
 
 class Member{
-    string name, id, pwd;
-    vector<Account> accountList;
+    QString name;
+    QString id;
+    QString pwd;
+    QVector<Account> accountList;
 
     public:
         Member();
-        Member(string name, string id, string pwd);
-        string getName() const;
-        string getId() const;
-        string getPwd() const;
-        vector<Account>& getAccount();
+        Member(QString name, QString id, QString pwd);
+        QString getName() const;
+        QString getId() const;
+        QString getPwd() const;
+        QVector<Account>& getAccount();
 
         void addAccount(Account newAccount);
 

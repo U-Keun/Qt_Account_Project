@@ -1,15 +1,15 @@
 #pragma once
 #include <iostream>
-#include <vector>
+#include <QVector>
 #include "Member.h"
 
 using namespace std;
 
 class MemberManager 
 {
-    vector<Member> memberList;
+    QVector<Member> memberList;
     Member* currentMember = NULL;
-    bool isRegister(string name) const;
+    bool isRegister(QString name) const;
     // File IO 함수
     void readFile();
     void writeFile();
@@ -18,7 +18,7 @@ public:
     ~MemberManager();
 
     // command function
-    void registration();
+    void registration(QString name, QString id, QString pwd);
     void searchAllMember();
     void addAccount();
     void transaction();
