@@ -7,6 +7,10 @@ StartScene::StartScene(QWidget *parent)
 {
     ui->setupUi(this);
 
+    connect(ui->logInButton, &QPushButton::clicked, [=](){
+        qDebug("start -> login 버튼");
+    });
+
     // buttons
     connect(ui->logInButton, &QPushButton::clicked, this, &StartScene::moveToLogInWindow);
     connect(ui->signInButton, &QPushButton::clicked, this, &StartScene::moveToSignUpWindow);
