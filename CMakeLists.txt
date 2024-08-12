@@ -6,6 +6,8 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+# ui 폴더에 있는 ui 파일을 읽을 수 있도록 설정
+set(CMAKE_AUTOUIC_SEARCH_PATHS "${CMAKE_CURRENT_SOURCE_DIR}/ui")
 
 find_package(Qt6 COMPONENTS
         Core
@@ -13,7 +15,11 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Qt_account_project main.cpp)
+add_executable(Qt_account_project main.cpp
+        header/WindowManager.h src/WindowManager.cpp
+        header/StartScene.h src/StartScene.cpp ui/StartScene.ui
+)
+
 target_link_libraries(Qt_account_project
         Qt::Core
         Qt::Gui
