@@ -1,4 +1,6 @@
 Qt_account_project_autogen/timestamp: \
+	C:/Qt/6.5.3/msvc2019_64/include/QtCore/QObject \
+	C:/Qt/6.5.3/msvc2019_64/include/QtCore/QStack \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h \
@@ -71,6 +73,7 @@ Qt_account_project_autogen/timestamp: \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qsharedpointer.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qsharedpointer_impl.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qsize.h \
+	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qstack.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qstring.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qstringalgorithms.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qstringbuilder.h \
@@ -133,6 +136,7 @@ Qt_account_project_autogen/timestamp: \
 	C:/Qt/6.5.3/msvc2019_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtGui/qwindowdefs_win.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/QMainWindow \
+	C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/QWidget \
 	C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qsizepolicy.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtabwidget.h \
@@ -326,13 +330,42 @@ Qt_account_project_autogen/timestamp: \
 	C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/CMakeLists.txt \
+	C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	C:/Users/change08/Desktop/Qt_Account_Project/deposit.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/deposit.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/loginscene.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/loginscene.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/main.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/registerscene.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/registerscene.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/signupScene.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/signupscene.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/startscene.cpp \
 	C:/Users/change08/Desktop/Qt_Account_Project/startscene.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/withdraw.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/withdraw.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/deposit.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/loginscene.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/registerscene.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/signupscene.ui \
 	C:/Users/change08/Desktop/Qt_Account_Project/startscene.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/withdraw.ui \
+	C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

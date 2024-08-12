@@ -40,13 +40,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 16,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 10,
+				"line" : 7,
 				"parent" : 0
 			},
 			{
@@ -166,7 +166,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 22,
+				"line" : 25,
 				"parent" : 0
 			}
 		]
@@ -282,18 +282,24 @@
 				6,
 				9,
 				12,
-				15
+				15,
+				18,
+				21,
+				24,
+				27,
+				30,
+				33
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "Qt_account_project_autogen::@6890427a1f51a3e7e1df"
+			"id" : "Qt_account_project_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "Qt_account_project_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "Qt_account_project_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Qt_account_project::@6890427a1f51a3e7e1df",
@@ -375,7 +381,13 @@
 				6,
 				9,
 				12,
-				15
+				15,
+				18,
+				21,
+				24,
+				27,
+				30,
+				33
 			]
 		},
 		{
@@ -388,10 +400,21 @@
 				11,
 				14,
 				17,
-				18,
-				19,
 				20,
-				21
+				23,
+				26,
+				29,
+				32,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43
 			]
 		},
 		{
@@ -403,14 +426,19 @@
 				10,
 				13,
 				16,
-				22
+				19,
+				22,
+				25,
+				28,
+				31,
+				44
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				23
+				45
 			]
 		}
 	],
@@ -463,18 +491,18 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "singinscene.h",
+			"path" : "signupscene.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "singinscene.cpp",
+			"path" : "signupScene.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "singinscene.ui",
+			"path" : "signupscene.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -495,19 +523,110 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "registetscene.h",
+			"path" : "registerscene.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "registetscene.cpp",
+			"path" : "registerscene.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "registetscene.ui",
+			"path" : "registerscene.ui",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "inquiryscene.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "inquiryscene.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "inquiryscene.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "deposit.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "deposit.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "deposit.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "withdraw.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "withdraw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "withdraw.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "depositaccount.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "depositaccount.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "depositaccount.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "withdrawaccount.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "withdrawaccount.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "withdrawaccount.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "WindowManager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "WindowManager.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
@@ -524,7 +643,7 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_singinscene.h",
+			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_signupscene.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -536,7 +655,37 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_registetscene.h",
+			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_registerscene.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_inquiryscene.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_deposit.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_withdraw.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_depositaccount.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/include/ui_withdrawaccount.h",
 			"sourceGroupIndex" : 1
 		},
 		{

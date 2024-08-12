@@ -1,33 +1,29 @@
 cmake_minimum_required(VERSION 3.28)
 project(Qt_account_project)
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
-
-
 find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
         REQUIRED)
-
 add_executable(Qt_account_project main.cpp
     startscene.h startscene.cpp startscene.ui
     loginscene.h loginscene.cpp loginscene.ui
-    singinscene.h singinscene.cpp singinscene.ui
+    signupscene.h signupScene.cpp signupscene.ui
     mainmenuscene.h mainmenuscene.cpp mainmenuscene.ui
-    registetscene.h registetscene.cpp registetscene.ui
+    registerscene.h registerscene.cpp registerscene.ui
     inquiryscene.h inquiryscene.cpp inquiryscene.ui
     deposit.h deposit.cpp deposit.ui
     withdraw.h withdraw.cpp withdraw.ui
     depositaccount.h depositaccount.cpp depositaccount.ui
-    withdrawaccount.h withdrawaccount.cpp withdrawaccount.ui)
-
+    withdrawaccount.h withdrawaccount.cpp withdrawaccount.ui
+    WindowManager.h WindowManager.cpp
+)
 target_link_libraries(Qt_account_project
         Qt::Core
         Qt::Gui
         Qt::Widgets
 )
-

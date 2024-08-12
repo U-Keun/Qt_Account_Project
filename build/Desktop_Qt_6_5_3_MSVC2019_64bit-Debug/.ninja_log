@@ -1,9 +1,19 @@
 # ninja log v5
-33	224	7448721505967556	Qt_account_project_autogen/timestamp	1eab5168b6a6dbd4
-498	3798	7448719591369922	CMakeFiles/Qt_account_project.dir/Qt_account_project_autogen/mocs_compilation.cpp.obj	f0e91a16ae0162b6
-33	224	7448721505967556	Qt_account_project_autogen/mocs_compilation.cpp	1eab5168b6a6dbd4
-33	224	7448721505967556	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/timestamp	1eab5168b6a6dbd4
-33	224	7448721505967556	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/mocs_compilation.cpp	1eab5168b6a6dbd4
-503	3799	7448719591369922	CMakeFiles/Qt_account_project.dir/main.cpp.obj	ca77376983a9bdcb
-237	3457	7448721541520782	CMakeFiles/Qt_account_project.dir/startscene.cpp.obj	7e644e0ac5706e24
-3457	3688	7448721543359647	Qt_account_project.exe	15d0c00c29495b51
+5469	9282	7451431082370722	CMakeFiles/Qt_account_project.dir/WindowManager.cpp.obj	ef85e819fd16181e
+4991	8922	7451432029879854	CMakeFiles/Qt_account_project.dir/inquiryscene.cpp.obj	d33d165577b7843a
+1301	6452	7451429764670010	CMakeFiles/Qt_account_project.dir/Qt_account_project_autogen/mocs_compilation.cpp.obj	30c61dcad0d931f1
+34	254	7451431927848011	Qt_account_project_autogen/timestamp	1eab5168b6a6dbd4
+34	254	7451431927848011	Qt_account_project_autogen/mocs_compilation.cpp	1eab5168b6a6dbd4
+34	254	7451431927848011	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/timestamp	1eab5168b6a6dbd4
+267	4991	7451431990299305	CMakeFiles/Qt_account_project.dir/main.cpp.obj	b846c12e2560220f
+34	254	7451431927848011	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/Qt_account_project_autogen/mocs_compilation.cpp	1eab5168b6a6dbd4
+272	5514	7451431995455545	CMakeFiles/Qt_account_project.dir/startscene.cpp.obj	a1e4ff7d2767cac7
+9267	9554	7451432035611803	Qt_account_project.exe	d4084e8b1bfd0ad2
+276	5124	7451431991705496	CMakeFiles/Qt_account_project.dir/loginscene.cpp.obj	fcde2e62e39ea96e
+286	5323	7451431993736798	CMakeFiles/Qt_account_project.dir/mainmenuscene.cpp.obj	1452a461ffc93fd3
+282	5149	7451431992174226	CMakeFiles/Qt_account_project.dir/signupScene.cpp.obj	a25df89402f65e5d
+5124	8834	7451432028942357	CMakeFiles/Qt_account_project.dir/withdraw.cpp.obj	7e6140db8ceb9ad1
+5040	8967	7451432030348562	CMakeFiles/Qt_account_project.dir/deposit.cpp.obj	b71c7ac6cbdd1a58
+307	5039	7451431990924296	CMakeFiles/Qt_account_project.dir/registerscene.cpp.obj	ab54c88da824ef9f
+5149	9267	7451432033317353	CMakeFiles/Qt_account_project.dir/depositaccount.cpp.obj	4035e329bc2cbcc0
+5324	8985	7451432030504799	CMakeFiles/Qt_account_project.dir/withdrawaccount.cpp.obj	a09011d237b7c4e9

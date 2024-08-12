@@ -85,7 +85,7 @@ build CMakeFiles\Qt_account_project.dir\loginscene.cpp.obj: CXX_COMPILER__Qt_acc
   TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
   TARGET_PDB = Qt_account_project.pdb
 
-build CMakeFiles\Qt_account_project.dir\singinscene.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\singinscene.cpp || cmake_object_order_depends_target_Qt_account_project
+build CMakeFiles\Qt_account_project.dir\signupScene.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\signupScene.cpp || cmake_object_order_depends_target_Qt_account_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -external:IC:\Users\change08\Desktop\Qt_Account_Project\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\Qt_account_project_autogen\include -external:IC:\Qt\6.5.3\msvc2019_64\include\QtCore -external:IC:\Qt\6.5.3\msvc2019_64\include -external:IC:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.5.3\msvc2019_64\include\QtGui -external:IC:\Qt\6.5.3\msvc2019_64\include\QtWidgets -external:W0
@@ -103,7 +103,7 @@ build CMakeFiles\Qt_account_project.dir\mainmenuscene.cpp.obj: CXX_COMPILER__Qt_
   TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
   TARGET_PDB = Qt_account_project.pdb
 
-build CMakeFiles\Qt_account_project.dir\registetscene.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\registetscene.cpp || cmake_object_order_depends_target_Qt_account_project
+build CMakeFiles\Qt_account_project.dir\registerscene.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\registerscene.cpp || cmake_object_order_depends_target_Qt_account_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -external:IC:\Users\change08\Desktop\Qt_Account_Project\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\Qt_account_project_autogen\include -external:IC:\Qt\6.5.3\msvc2019_64\include\QtCore -external:IC:\Qt\6.5.3\msvc2019_64\include -external:IC:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.5.3\msvc2019_64\include\QtGui -external:IC:\Qt\6.5.3\msvc2019_64\include\QtWidgets -external:W0
@@ -121,6 +121,51 @@ build CMakeFiles\Qt_account_project.dir\inquiryscene.cpp.obj: CXX_COMPILER__Qt_a
   TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
   TARGET_PDB = Qt_account_project.pdb
 
+build CMakeFiles\Qt_account_project.dir\deposit.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\deposit.cpp || cmake_object_order_depends_target_Qt_account_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -external:IC:\Users\change08\Desktop\Qt_Account_Project\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\Qt_account_project_autogen\include -external:IC:\Qt\6.5.3\msvc2019_64\include\QtCore -external:IC:\Qt\6.5.3\msvc2019_64\include -external:IC:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.5.3\msvc2019_64\include\QtGui -external:IC:\Qt\6.5.3\msvc2019_64\include\QtWidgets -external:W0
+  OBJECT_DIR = CMakeFiles\Qt_account_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\Qt_account_project.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
+  TARGET_PDB = Qt_account_project.pdb
+
+build CMakeFiles\Qt_account_project.dir\withdraw.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\withdraw.cpp || cmake_object_order_depends_target_Qt_account_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -external:IC:\Users\change08\Desktop\Qt_Account_Project\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\Qt_account_project_autogen\include -external:IC:\Qt\6.5.3\msvc2019_64\include\QtCore -external:IC:\Qt\6.5.3\msvc2019_64\include -external:IC:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.5.3\msvc2019_64\include\QtGui -external:IC:\Qt\6.5.3\msvc2019_64\include\QtWidgets -external:W0
+  OBJECT_DIR = CMakeFiles\Qt_account_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\Qt_account_project.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
+  TARGET_PDB = Qt_account_project.pdb
+
+build CMakeFiles\Qt_account_project.dir\depositaccount.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\depositaccount.cpp || cmake_object_order_depends_target_Qt_account_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -external:IC:\Users\change08\Desktop\Qt_Account_Project\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\Qt_account_project_autogen\include -external:IC:\Qt\6.5.3\msvc2019_64\include\QtCore -external:IC:\Qt\6.5.3\msvc2019_64\include -external:IC:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.5.3\msvc2019_64\include\QtGui -external:IC:\Qt\6.5.3\msvc2019_64\include\QtWidgets -external:W0
+  OBJECT_DIR = CMakeFiles\Qt_account_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\Qt_account_project.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
+  TARGET_PDB = Qt_account_project.pdb
+
+build CMakeFiles\Qt_account_project.dir\withdrawaccount.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\withdrawaccount.cpp || cmake_object_order_depends_target_Qt_account_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -external:IC:\Users\change08\Desktop\Qt_Account_Project\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\Qt_account_project_autogen\include -external:IC:\Qt\6.5.3\msvc2019_64\include\QtCore -external:IC:\Qt\6.5.3\msvc2019_64\include -external:IC:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.5.3\msvc2019_64\include\QtGui -external:IC:\Qt\6.5.3\msvc2019_64\include\QtWidgets -external:W0
+  OBJECT_DIR = CMakeFiles\Qt_account_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\Qt_account_project.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
+  TARGET_PDB = Qt_account_project.pdb
+
+build CMakeFiles\Qt_account_project.dir\WindowManager.cpp.obj: CXX_COMPILER__Qt_account_project_unscanned_Debug C$:\Users\change08\Desktop\Qt_Account_Project\WindowManager.cpp || cmake_object_order_depends_target_Qt_account_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -external:IC:\Users\change08\Desktop\Qt_Account_Project\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\Qt_account_project_autogen\include -external:IC:\Qt\6.5.3\msvc2019_64\include\QtCore -external:IC:\Qt\6.5.3\msvc2019_64\include -external:IC:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.5.3\msvc2019_64\include\QtGui -external:IC:\Qt\6.5.3\msvc2019_64\include\QtWidgets -external:W0
+  OBJECT_DIR = CMakeFiles\Qt_account_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\Qt_account_project.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Qt_account_project.dir\
+  TARGET_PDB = Qt_account_project.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Qt_account_project
@@ -129,7 +174,7 @@ build CMakeFiles\Qt_account_project.dir\inquiryscene.cpp.obj: CXX_COMPILER__Qt_a
 #############################################
 # Link the executable Qt_account_project.exe
 
-build Qt_account_project.exe: CXX_EXECUTABLE_LINKER__Qt_account_project_Debug CMakeFiles\Qt_account_project.dir\Qt_account_project_autogen\mocs_compilation.cpp.obj CMakeFiles\Qt_account_project.dir\main.cpp.obj CMakeFiles\Qt_account_project.dir\startscene.cpp.obj CMakeFiles\Qt_account_project.dir\loginscene.cpp.obj CMakeFiles\Qt_account_project.dir\singinscene.cpp.obj CMakeFiles\Qt_account_project.dir\mainmenuscene.cpp.obj CMakeFiles\Qt_account_project.dir\registetscene.cpp.obj CMakeFiles\Qt_account_project.dir\inquiryscene.cpp.obj | C$:\Qt\6.5.3\msvc2019_64\lib\Qt6Widgetsd.lib C$:\Qt\6.5.3\msvc2019_64\lib\Qt6Guid.lib C$:\Qt\6.5.3\msvc2019_64\lib\Qt6Cored.lib || Qt_account_project_autogen Qt_account_project_autogen_timestamp_deps
+build Qt_account_project.exe: CXX_EXECUTABLE_LINKER__Qt_account_project_Debug CMakeFiles\Qt_account_project.dir\Qt_account_project_autogen\mocs_compilation.cpp.obj CMakeFiles\Qt_account_project.dir\main.cpp.obj CMakeFiles\Qt_account_project.dir\startscene.cpp.obj CMakeFiles\Qt_account_project.dir\loginscene.cpp.obj CMakeFiles\Qt_account_project.dir\signupScene.cpp.obj CMakeFiles\Qt_account_project.dir\mainmenuscene.cpp.obj CMakeFiles\Qt_account_project.dir\registerscene.cpp.obj CMakeFiles\Qt_account_project.dir\inquiryscene.cpp.obj CMakeFiles\Qt_account_project.dir\deposit.cpp.obj CMakeFiles\Qt_account_project.dir\withdraw.cpp.obj CMakeFiles\Qt_account_project.dir\depositaccount.cpp.obj CMakeFiles\Qt_account_project.dir\withdrawaccount.cpp.obj CMakeFiles\Qt_account_project.dir\WindowManager.cpp.obj | C$:\Qt\6.5.3\msvc2019_64\lib\Qt6Widgetsd.lib C$:\Qt\6.5.3\msvc2019_64\lib\Qt6Guid.lib C$:\Qt\6.5.3\msvc2019_64\lib\Qt6Cored.lib || Qt_account_project_autogen Qt_account_project_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\Qt\6.5.3\msvc2019_64\lib\Qt6Widgetsd.lib  C:\Qt\6.5.3\msvc2019_64\lib\Qt6Guid.lib  C:\Qt\6.5.3\msvc2019_64\lib\Qt6Cored.lib  mpr.lib  userenv.lib  d3d11.lib  dxgi.lib  dxguid.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -175,7 +220,7 @@ build Qt_account_project_autogen_timestamp_deps: phony
 #############################################
 # Utility command for Qt_account_project_autogen
 
-build Qt_account_project_autogen: phony CMakeFiles\Qt_account_project_autogen Qt_account_project_autogen\include\ui_startscene.h Qt_account_project_autogen\include\ui_loginscene.h Qt_account_project_autogen\include\ui_singinscene.h Qt_account_project_autogen\include\ui_mainmenuscene.h Qt_account_project_autogen\include\ui_registetscene.h Qt_account_project_autogen\include\ui_inquiryscene.h Qt_account_project_autogen\timestamp Qt_account_project_autogen\mocs_compilation.cpp Qt_account_project_autogen_timestamp_deps
+build Qt_account_project_autogen: phony CMakeFiles\Qt_account_project_autogen Qt_account_project_autogen\include\ui_startscene.h Qt_account_project_autogen\include\ui_loginscene.h Qt_account_project_autogen\include\ui_signupscene.h Qt_account_project_autogen\include\ui_mainmenuscene.h Qt_account_project_autogen\include\ui_registerscene.h Qt_account_project_autogen\include\ui_inquiryscene.h Qt_account_project_autogen\include\ui_deposit.h Qt_account_project_autogen\include\ui_withdraw.h Qt_account_project_autogen\include\ui_depositaccount.h Qt_account_project_autogen\include\ui_withdrawaccount.h Qt_account_project_autogen\timestamp Qt_account_project_autogen\mocs_compilation.cpp Qt_account_project_autogen_timestamp_deps
 
 
 #############################################
@@ -192,7 +237,7 @@ build Qt_account_project_autogen\timestamp Qt_account_project_autogen\mocs_compi
 #############################################
 # Phony custom command for CMakeFiles\Qt_account_project_autogen
 
-build CMakeFiles\Qt_account_project_autogen Qt_account_project_autogen\include\ui_startscene.h Qt_account_project_autogen\include\ui_loginscene.h Qt_account_project_autogen\include\ui_singinscene.h Qt_account_project_autogen\include\ui_mainmenuscene.h Qt_account_project_autogen\include\ui_registetscene.h Qt_account_project_autogen\include\ui_inquiryscene.h | ${cmake_ninja_workdir}CMakeFiles\Qt_account_project_autogen ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_startscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_loginscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_singinscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_mainmenuscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_registetscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_inquiryscene.h: phony Qt_account_project_autogen\timestamp || Qt_account_project_autogen_timestamp_deps
+build CMakeFiles\Qt_account_project_autogen Qt_account_project_autogen\include\ui_startscene.h Qt_account_project_autogen\include\ui_loginscene.h Qt_account_project_autogen\include\ui_signupscene.h Qt_account_project_autogen\include\ui_mainmenuscene.h Qt_account_project_autogen\include\ui_registerscene.h Qt_account_project_autogen\include\ui_inquiryscene.h Qt_account_project_autogen\include\ui_deposit.h Qt_account_project_autogen\include\ui_withdraw.h Qt_account_project_autogen\include\ui_depositaccount.h Qt_account_project_autogen\include\ui_withdrawaccount.h | ${cmake_ninja_workdir}CMakeFiles\Qt_account_project_autogen ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_startscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_loginscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_signupscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_mainmenuscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_registerscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_inquiryscene.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_deposit.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_withdraw.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_depositaccount.h ${cmake_ninja_workdir}Qt_account_project_autogen\include\ui_withdrawaccount.h: phony Qt_account_project_autogen\timestamp || Qt_account_project_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

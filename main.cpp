@@ -1,10 +1,10 @@
 #include <QApplication>
 #include <QPushButton>
-#include "startscene.h"
+#include "WindowManager.h"
+
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    StartScene s;
-    s.show();
+    WindowManager s;
     return QApplication::exec();
 }

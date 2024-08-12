@@ -53,6 +53,7 @@ void WindowManager::setUpStartScene() {
 }
 
 void WindowManager::setUpLogInScene() {
+    qDebug("windownamager");
     loginScene *window = new loginScene(nullptr);
     pushWindow(window);
 
