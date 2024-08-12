@@ -4,19 +4,22 @@
 #include <QMainWindow>
 
 namespace Ui {
-class withdrawaccount;
+class WithdrawAccount;
 }
 
-class withdrawaccount : public QMainWindow
+class WithdrawAccount : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit withdrawaccount(QWidget *parent = nullptr);
-    ~withdrawaccount();
+    explicit WithdrawAccount(QWidget *parent = nullptr);
+    ~WithdrawAccount();
+
+signals:
+    void goBack();
 
 private:
-    Ui::withdrawaccount *ui;
+    Ui::WithdrawAccount *ui;
 };
 
 #endif // WITHDRAWACCOUNT_H

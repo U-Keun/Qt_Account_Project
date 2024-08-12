@@ -15,6 +15,10 @@ public:
     explicit StartScene(QWidget *parent = nullptr);
     ~StartScene();
 
+signals:
+    void moveToLogInWindow();
+    void moveToSignUpWindow();
+    void goBack();
 private:
     Ui::StartScene *ui;
 };

@@ -6,6 +6,8 @@ DepositAccount::DepositAccount(QWidget *parent)
     , ui(new Ui::DepositAccount)
 {
     ui->setupUi(this);
+
+    connect(ui->goBackButton, &QPushButton::clicked, this, &DepositAccount::goBack);
 }
 
 DepositAccount::~DepositAccount()

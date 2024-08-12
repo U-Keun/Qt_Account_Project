@@ -6,6 +6,8 @@ inquiryScene::inquiryScene(QWidget *parent)
     , ui(new Ui::inquiryScene)
 {
     ui->setupUi(this);
+
+    connect(ui->goBackButton, &QPushButton::clicked, this, &inquiryScene::goBack);
 }
 
 inquiryScene::~inquiryScene()

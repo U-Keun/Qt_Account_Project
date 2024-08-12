@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>mainmenuScene</class>
- <widget class="QMainWindow" name="mainmenuScene">
+ <class>registerScene</class>
+ <widget class="QMainWindow" name="registerScene">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,56 +10,36 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>40</y>
-      <width>150</width>
-      <height>60</height>
+      <x>230</x>
+      <y>140</y>
+      <width>302</width>
+      <height>291</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>25</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Main menu</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>170</y>
-      <width>352</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>2</number>
-     </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QPushButton" name="accountInquiryButton">
+      <widget class="QLineEdit" name="accountName">
        <property name="minimumSize">
         <size>
-         <width>350</width>
+         <width>300</width>
          <height>50</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>350</width>
+         <width>300</width>
          <height>50</height>
         </size>
        </property>
@@ -70,21 +50,24 @@
         </font>
        </property>
        <property name="text">
-        <string>Account inquiry</string>
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Account Name</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="accountRegisterButton">
+      <widget class="QLineEdit" name="date">
        <property name="minimumSize">
         <size>
-         <width>350</width>
+         <width>300</width>
          <height>50</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>350</width>
+         <width>300</width>
          <height>50</height>
         </size>
        </property>
@@ -95,21 +78,24 @@
         </font>
        </property>
        <property name="text">
-        <string>Account registration</string>
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Balance</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="depositButton">
+      <widget class="QLineEdit" name="balance">
        <property name="minimumSize">
         <size>
-         <width>350</width>
+         <width>300</width>
          <height>50</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>350</width>
+         <width>300</width>
          <height>50</height>
         </size>
        </property>
@@ -120,32 +106,10 @@
         </font>
        </property>
        <property name="text">
-        <string>Deposit</string>
+        <string/>
        </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="withdrawButton">
-       <property name="minimumSize">
-        <size>
-         <width>350</width>
-         <height>50</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>350</width>
-         <height>50</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Withdraw</string>
+       <property name="placeholderText">
+        <string>Registered Date</string>
        </property>
       </widget>
      </item>
@@ -168,6 +132,47 @@
     </property>
     <property name="text">
      <string>go back</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="menuName">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>241</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Account Registration</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="registerButton">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>410</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>register !</string>
     </property>
    </widget>
   </widget>
