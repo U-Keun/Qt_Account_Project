@@ -6,13 +6,14 @@
 
 
 class Account {
+    QString accountName;
     int accountId;
     long long money;
     Date regDate;
 public:
     Account(int accountId, long long money)/* throw(const char*)*/;
-    Account(int accountId, long long money, Date date)
-    : accountId(accountId), money(money), regDate(date) {}
+    Account(QString accountName, int accountId, long long money, Date date)
+        : accountName(accountName), accountId(accountId), money(money), regDate(date) {}
     int getAccountId() const;
     long long getMoney() const;
     Date getDate() const;

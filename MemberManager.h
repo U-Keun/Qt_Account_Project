@@ -20,7 +20,7 @@ public:
     // command function
     void registration(QString name, QString id, QString pwd);
     void searchAllMember();
-    void addAccount(long long tmpMoney);
+    bool addAccount(QString accountName, long long tmpMoney, QString date);
     void transaction();
     bool login(QString tmpId, QString tmpPw);
     void logout();

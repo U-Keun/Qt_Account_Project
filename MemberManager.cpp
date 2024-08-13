@@ -5,6 +5,7 @@
 #include "MemberManager.h"
 #include "account.h"
 #include "line.h"
+#include <QDate>
 
 using namespace std;
 
@@ -44,9 +45,10 @@ void MemberManager::readFile() {
         int accountId;
         long long money;
         QString date;
+        QString accountName;
         for (int j = 0; j < accountCount; j++) {
             in >> accountId >> money >> date;
-            this->memberList[i].addAccount(Account(accountId, money, Date(date)));
+            this->memberList[i].addAccount(Account(accountName, accountId, money, date));
         }
     }
 
@@ -66,6 +68,7 @@ void MemberManager::writeFile() {
         return;
     }
 
+
     QTextStream out(&file);
     out << memberList.size() << "\n";
     for (auto& member : memberList) {
@@ -73,9 +76,7 @@ void MemberManager::writeFile() {
         out << member.getName() << " "
             << member.getId() << " "
             << member.getPwd() << "\n";
-
         out << member.getAccount().size() << "\n";
-
         for (const auto& account : member.getAccount()) {
             out << account.getAccountId() << " "
                 << account.getMoney() << " "
@@ -95,6 +96,7 @@ MemberManager::~MemberManager() {
     writeFile();
 }
 
+//멤버 등록
 void MemberManager::registration(QString name, QString id, QString pwd) {
     // qDebug() << "Enter member name, ID, PW:";
     // QTextStream qin(stdin);
@@ -165,23 +167,22 @@ void MemberManager::getCurrentMemberStatus() {
     }
 }
 
-void MemberManager::addAccount(long long tmpMoney) {
+
+bool MemberManager::addAccount(QString accountName, long long tmpMoney, QString date) {
     if (currentMember == nullptr) {
         qDebug() << "Please login";
-        return;
+        return false;
     }
 
     int tmpId = currentMember->getAccount().size() + 1;
     qDebug() << "Enter initial account balance:";
-    QTextStream qin(stdin);
-    qin >> tmpMoney;
-
     try {
-        Account account(tmpId, tmpMoney);
+        Account account(accountName, tmpId, tmpMoney, date);
         currentMember->addAccount(account);
+        return true;
     } catch (const char* err) {
         qDebug() << err;
-        return;
+        return false;
     }
 }
 

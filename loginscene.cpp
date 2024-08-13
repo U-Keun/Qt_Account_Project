@@ -21,7 +21,9 @@ void loginScene::login() {
     QString id = ui->IdInput->text();
     QString pwd = ui->PwInput->text();
     qDebug() << id << pwd << "로그인 시도!" << __FUNCTION__;
-    manager->login(id,pwd);
-    emit moveToMainMenu();
+    if(manager->login(id,pwd)){
+        emit moveToMainMenu();
+    }
+    else qDebug("로그인 실패!");
     // connect(ui->logInButton, &QPushButton::clicked, this, &loginScene::login);
 }

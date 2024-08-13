@@ -17,11 +17,12 @@ registerScene::~registerScene()
     delete ui;
 }
 
-//잘못봐서 register가 사람 등록인줄 알앗습니다...
-
-void registerScene::registerMember() {
-    QString name = ui->accountName->text();
-    QString id = ui->balance->text();
-    QString pwd = ui->date->text();
-    manager->registration(name, id, pwd);
+void registerScene::registerAccount() {
+    QString accountName = ui->accountName->text();
+    long long accountBalance = ui->balance->text().toDouble();
+    QString accountDate = ui->date->text();
+    if(manager->addAccount(accountName, accountBalance, accountDate)){
+        qDebug() << "계좌 등록 성공" << __FUNCTION__;
+    }
+    else qDebug() << "계좌 등록 실패";
 }
