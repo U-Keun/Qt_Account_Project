@@ -11,6 +11,7 @@
 #include "../header/mainmenuscene.h"
 #include "../header/inquiryscene.h"
 #include "../header/registerscene.h"
+#include "../header/depositaccount.h"
 
 WindowManager::WindowManager() {
     mainWindow = new QMainWindow();
@@ -85,7 +86,10 @@ void WindowManager::setUpRegisterScene() {
 }
 
 void WindowManager::setUpDepositAccountScene() {
-    qDebug() << "set up deposit account scene.";
+    DepositAccount *scene = new DepositAccount(nullptr);
+    setCentralWidget(scene);
+
+    connect(scene, &DepositAccount::goBack, this, &WindowManager::setUpMainMenu);
 }
 
 void WindowManager::setUpWithdrawAccountScene() {
