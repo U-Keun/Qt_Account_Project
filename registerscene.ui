@@ -58,7 +58,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="date">
+      <widget class="QLineEdit" name="balance">
        <property name="minimumSize">
         <size>
          <width>300</width>
@@ -86,7 +86,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="balance">
+      <widget class="QLineEdit" name="date">
        <property name="minimumSize">
         <size>
          <width>300</width>
@@ -182,7 +182,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

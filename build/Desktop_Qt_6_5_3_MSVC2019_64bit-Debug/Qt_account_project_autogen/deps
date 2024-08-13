@@ -1,6 +1,8 @@
 Qt_account_project_autogen/timestamp: \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/QObject \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/QStack \
+	C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString \
+	C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h \
@@ -108,6 +110,7 @@ Qt_account_project_autogen/timestamp: \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h \
+	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h \
 	C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h \
@@ -330,17 +333,27 @@ Qt_account_project_autogen/timestamp: \
 	C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/CMakeLists.txt \
+	C:/Users/change08/Desktop/Qt_Account_Project/Member.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/Member.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.cpp \
 	C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/account.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/account.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	C:/Users/change08/Desktop/Qt_Account_Project/date.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/date.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/deposit.cpp \
 	C:/Users/change08/Desktop/Qt_Account_Project/deposit.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.cpp \
 	C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.h \
+	C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.cpp \
+	C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.cpp \
 	C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h \
 	C:/Users/change08/Desktop/Qt_Account_Project/loginscene.cpp \

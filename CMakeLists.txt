@@ -21,6 +21,8 @@ add_executable(Qt_account_project main.cpp
     depositaccount.h depositaccount.cpp depositaccount.ui
     withdrawaccount.h withdrawaccount.cpp withdrawaccount.ui
     WindowManager.h WindowManager.cpp
+    account.cpp date.cpp MemberManager.cpp account.h date.h Member.cpp Member.h MemberManager.h
+    globalmanager.h globalmanager.cpp
 )
 target_link_libraries(Qt_account_project
         Qt::Core

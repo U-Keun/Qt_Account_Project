@@ -1,10 +1,16 @@
 #include <QApplication>
 #include <QPushButton>
 #include "WindowManager.h"
-
+#include "globalmanager.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
+    MemberManager* manager = new MemberManager();
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    globalManager.setMemberManager(manager);
+    globalManager.getMemberManager()->searchAllMember();
     WindowManager s;
-    return QApplication::exec();
+    qDebug("merge test");
+
+    return a.exec();
 }
