@@ -24,6 +24,7 @@ add_executable(Qt_account_project main.cpp
         header/loginscene.h src/loginscene.cpp ui/loginscene.ui
         header/signupscene.h src/signupscene.cpp ui/signupscene.ui
         header/mainmenuscene.h src/mainmenuscene.cpp ui/mainmenuscene.ui
+        header/inquiryscene.h src/inquiryscene.cpp ui/inquiryscene.ui
 )
 
 target_link_libraries(Qt_account_project

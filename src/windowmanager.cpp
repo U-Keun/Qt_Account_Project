@@ -9,6 +9,7 @@
 #include "../header/loginscene.h"
 #include "../header/signupscene.h"
 #include "../header/mainmenuscene.h"
+#include "../header/inquiryscene.h"
 
 WindowManager::WindowManager() {
     mainWindow = new QMainWindow();
@@ -68,7 +69,10 @@ void WindowManager::setUpMainMenu() {
 }
 
 void WindowManager::setUpInquiryScene() {
-    qDebug() << "set up inquiry scene.";
+    InquiryScene *scene = new InquiryScene(nullptr);
+    setCentralWidget(scene);
+
+    connect(scene, &InquiryScene::goBack, this, &WindowManager::setUpMainMenu);
 }
 
 void WindowManager::setUpRegisterScene() {
