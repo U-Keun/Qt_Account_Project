@@ -23,6 +23,10 @@ Date Account::getDate() const {
     return this->regDate;
 }
 
+QString Account::getName() const{
+    return this->accountName;
+}
+
 bool Account::deposit(long long money) {
     // 예외가 발생할 가능성 고려
     this->money += money;

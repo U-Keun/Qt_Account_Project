@@ -10,7 +10,5 @@ int main(int argc, char *argv[]) {
     globalManager.setMemberManager(manager);
     globalManager.getMemberManager()->searchAllMember();
     WindowManager s;
-    qDebug("merge test");
-
     return a.exec();
 }

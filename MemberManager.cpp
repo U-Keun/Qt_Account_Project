@@ -47,7 +47,7 @@ void MemberManager::readFile() {
         QString date;
         QString accountName;
         for (int j = 0; j < accountCount; j++) {
-            in >> accountId >> money >> date;
+            in >> accountName >> accountId >> money >> date;
             this->memberList[i].addAccount(Account(accountName, accountId, money, date));
         }
     }
@@ -78,7 +78,8 @@ void MemberManager::writeFile() {
             << member.getPwd() << "\n";
         out << member.getAccount().size() << "\n";
         for (const auto& account : member.getAccount()) {
-            out << account.getAccountId() << " "
+            out << account.getName() << " "
+                << account.getAccountId() << " "
                 << account.getMoney() << " "
                 << account.getDate().toString() << "\n";
         }
@@ -202,6 +203,7 @@ bool MemberManager::login(QString tmpId, QString tmpPw) {
     }
 
     qDebug() << "ID not exist! Login fail";
+    return false;
 }
 
 void MemberManager::logout() {

@@ -25,5 +25,5 @@ void SignUpScene::signUpMember() {
     QString id = ui->IdInput->text();
     QString pwd = ui->PwInput->text();
     qDebug() << name << id << pwd << "멤버 생성!";
-    manager->registration(name, id, pwd);
+    // manager->registration(name, id, pwd);
 }

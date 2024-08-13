@@ -15,8 +15,8 @@ class registerScene : public QMainWindow
 
 public:
     explicit registerScene(QWidget *parent = nullptr);
-    void registerAccount();
     ~registerScene();
+    void registerAccount();
 
 signals:
     void goBack();
@@ -26,9 +26,8 @@ private:
     GlobalManager& globalManager = GlobalManager::getInstance();
     MemberManager* manager = globalManager.getMemberManager();
 
-
 public slots :
-    void registerMember();
+
 };
 
 #endif // REGISTERSCENE_H
