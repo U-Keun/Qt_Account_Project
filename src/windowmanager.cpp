@@ -10,6 +10,7 @@
 #include "../header/signupscene.h"
 #include "../header/mainmenuscene.h"
 #include "../header/inquiryscene.h"
+#include "../header/registerscene.h"
 
 WindowManager::WindowManager() {
     mainWindow = new QMainWindow();
@@ -76,7 +77,11 @@ void WindowManager::setUpInquiryScene() {
 }
 
 void WindowManager::setUpRegisterScene() {
-    qDebug() << "set up register scene.";
+    RegisterScene *scene = new RegisterScene(nullptr);
+    setCentralWidget(scene);
+
+    connect(scene, &RegisterScene::registerAccount, this, &WindowManager::setUpMainMenu);
+    connect(scene, &RegisterScene::goBack, this, &WindowManager::setUpMainMenu);
 }
 
 void WindowManager::setUpDepositAccountScene() {
