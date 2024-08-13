@@ -1,3 +1,5 @@
+#include <QApplication>
+
 #include "WindowManager.h"
 #include "startscene.h"
 #include "loginscene.h"
@@ -14,6 +16,7 @@ WindowManager::WindowManager() {
 }
 
 WindowManager::~WindowManager() {
+    qDebug("windowmanager 소멸");
     while (!windowStack.isEmpty()) {
         delete windowStack.pop();
     }
@@ -49,7 +52,7 @@ void WindowManager::setUpStartScene() {
 
     connect(window, &StartScene::moveToLogInWindow, this, &WindowManager::setUpLogInScene);
     connect(window, &StartScene::moveToSignUpWindow, this, &WindowManager::setUpSignUpScene);
-    connect(window, &StartScene::goBack, this, &WindowManager::popWindow);
+    connect(window, &StartScene::goBack, qApp, &QApplication::quit);
 }
 
 void WindowManager::setUpLogInScene() {

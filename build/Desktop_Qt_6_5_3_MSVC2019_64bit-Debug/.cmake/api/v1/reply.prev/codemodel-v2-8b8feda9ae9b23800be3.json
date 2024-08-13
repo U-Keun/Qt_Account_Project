@@ -43,7 +43,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Qt_account_project::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Qt_account_project-Debug-dbdd49fd20ffe03ab306.json",
+					"jsonFile" : "target-Qt_account_project-Debug-5ca9180a64a9181d5637.json",
 					"name" : "Qt_account_project",
 					"projectIndex" : 0
 				},
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Ho/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug",
-		"source" : "C:/Users/Ho/Desktop/Qt_Account_Project"
+		"build" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug",
+		"source" : "C:/Users/change08/Desktop/Qt_Account_Project"
 	},
 	"version" : 
 	{
