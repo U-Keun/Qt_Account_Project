@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/change08/Desktop/Qt_Account_Project
+# Install script for directory: C:/Users/rmswk/Desktop/Qt_Account_Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/rmswk/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
