@@ -28,6 +28,7 @@ add_executable(Qt_account_project main.cpp
         header/registerscene.h src/registerscene.cpp ui/registerscene.ui
         header/depositaccount.h src/depositaccount.cpp ui/depositaccount.ui
         header/withdrawaccount.h src/withdrawaccount.cpp ui/withdrawaccount.ui
+        header/deposit.h src/deposit.cpp ui/deposit.ui
 )
 
 target_link_libraries(Qt_account_project
