@@ -1,5 +1,6 @@
 #ifndef DEPOSITACCOUNT_H
 #define DEPOSITACCOUNT_H
+#include "globalmanager.h"
 
 #include <QMainWindow>
 
@@ -20,6 +21,8 @@ signals:
 
 private:
     Ui::DepositAccount *ui;
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    MemberManager* manager = globalManager.getMemberManager();
 };
 
 #endif // DEPOSITACCOUNT_H

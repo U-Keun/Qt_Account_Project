@@ -3,6 +3,8 @@ C:/Users/change08/Desktop/Qt_Account_Project/Member.h
 C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
 C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
@@ -109,6 +111,7 @@ C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
@@ -144,7 +147,12 @@ C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/Member.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/account.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/date.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/depositaccount.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
 C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QObject
@@ -439,6 +447,8 @@ C:/Users/change08/Desktop/Qt_Account_Project/date.h
 C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
 C:/Users/change08/Desktop/Qt_Account_Project/deposit.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
@@ -545,6 +555,7 @@ C:/Users/change08/Desktop/Qt_Account_Project/deposit.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
@@ -580,9 +591,16 @@ C:/Users/change08/Desktop/Qt_Account_Project/deposit.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/Member.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/account.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/date.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/deposit.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
 C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
@@ -689,6 +707,7 @@ C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
@@ -724,9 +743,16 @@ C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/Member.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/account.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/date.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/inquiryscene.h
 C:/Users/change08/Desktop/Qt_Account_Project/loginscene.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
@@ -833,6 +859,7 @@ C:/Users/change08/Desktop/Qt_Account_Project/loginscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
@@ -868,9 +895,16 @@ C:/Users/change08/Desktop/Qt_Account_Project/loginscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/Member.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/account.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/date.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/loginscene.h
 C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
@@ -977,6 +1011,7 @@ C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
@@ -1012,6 +1047,11 @@ C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/Member.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/account.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/date.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/mainmenuscene.h
 C:/Users/change08/Desktop/Qt_Account_Project/registerscene.h
  mmc:Q_OBJECT
@@ -1320,6 +1360,8 @@ C:/Users/change08/Desktop/Qt_Account_Project/signupscene.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/signupscene.h
 C:/Users/change08/Desktop/Qt_Account_Project/withdraw.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
@@ -1426,6 +1468,7 @@ C:/Users/change08/Desktop/Qt_Account_Project/withdraw.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
@@ -1461,10 +1504,17 @@ C:/Users/change08/Desktop/Qt_Account_Project/withdraw.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/Member.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/account.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/date.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/withdraw.h
 C:/Users/change08/Desktop/Qt_Account_Project/WindowManager.cpp
 C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
@@ -1571,6 +1621,7 @@ C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvarlengtharray.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
@@ -1606,6 +1657,11 @@ C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/Member.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/account.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/date.h
+ mdp:C:/Users/change08/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/change08/Desktop/Qt_Account_Project/withdrawaccount.h
 C:/Users/change08/Desktop/Qt_Account_Project/Member.cpp
 C:/Users/change08/Desktop/Qt_Account_Project/MemberManager.cpp

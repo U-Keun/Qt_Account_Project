@@ -1,5 +1,6 @@
 #ifndef MAINMENUSCENE_H
 #define MAINMENUSCENE_H
+#include "globalmanager.h"
 
 #include <QMainWindow>
 
@@ -24,6 +25,8 @@ signals:
 
 private:
     Ui::mainmenuScene *ui;
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    MemberManager* manager = globalManager.getMemberManager();
 };
 
 #endif // MAINMENUSCENE_H

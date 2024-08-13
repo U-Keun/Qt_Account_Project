@@ -22,7 +22,7 @@ public:
     void searchAllMember();
     void addAccount(long long tmpMoney);
     void transaction();
-    void login(QString tmpId, QString tmpPw);
+    bool login(QString tmpId, QString tmpPw);
     void logout();
     void getCurrentMemberStatus();
     void setCurrentMember(Member *member);

@@ -2,8 +2,6 @@
 #include "ui_registerscene.h"
 
 
-
-
 registerScene::registerScene(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::registerScene)

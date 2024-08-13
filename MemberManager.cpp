@@ -59,7 +59,7 @@ void MemberManager::writeFile() {
 // #else
 //     QFile file("info.txt");
 // #endif
-    qDebug("asd");
+    qDebug("writefile 메서드 호출");
     QFile file("info.txt");
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         qWarning() << "Error opening file for writing";
@@ -69,7 +69,7 @@ void MemberManager::writeFile() {
     QTextStream out(&file);
     out << memberList.size() << "\n";
     for (auto& member : memberList) {
-        qDebug() << "저장 테스트용으로 찍은 디버그" << member.getName() << member.getId() << member.getPwd() << __FILE__;
+        // qDebug() << "저장 테스트용으로 찍은 디버그" << member.getName() << member.getId() << member.getPwd() << __FILE__;
         out << member.getName() << " "
             << member.getId() << " "
             << member.getPwd() << "\n";
@@ -82,7 +82,6 @@ void MemberManager::writeFile() {
                 << account.getDate().toString() << "\n";
         }
     }
-
     file.close();
 }
 
@@ -186,17 +185,17 @@ void MemberManager::addAccount(long long tmpMoney) {
     }
 }
 
-void MemberManager::login(QString tmpId, QString tmpPw) {
+bool MemberManager::login(QString tmpId, QString tmpPw) {
     qDebug() << "로그인 요청" << __FUNCTION__ ;
     for (auto& member : memberList) {
         if (member.getId() == tmpId) {
             if (member.getPwd() == tmpPw) {
                 qDebug() << "Login success";
                 setCurrentMember(&member);
-                return;
+                return true;
             } else {
                 qDebug() << "Password error! Login fail";
-                return;
+                return false;
             }
         }
     }

@@ -1,5 +1,6 @@
 #ifndef INQUIRYSCENE_H
 #define INQUIRYSCENE_H
+#include "globalmanager.h"
 
 #include <QMainWindow>
 
@@ -20,6 +21,8 @@ signals:
 
 private:
     Ui::inquiryScene *ui;
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    MemberManager* manager = globalManager.getMemberManager();
 };
 
 #endif // INQUIRYSCENE_H

@@ -1,5 +1,6 @@
 #ifndef WITHDRAWACCOUNT_H
 #define WITHDRAWACCOUNT_H
+#include "globalmanager.h"
 
 #include <QMainWindow>
 
@@ -20,6 +21,8 @@ signals:
 
 private:
     Ui::WithdrawAccount *ui;
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    MemberManager* manager = globalManager.getMemberManager();
 };
 
 #endif // WITHDRAWACCOUNT_H

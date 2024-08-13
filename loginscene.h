@@ -1,6 +1,6 @@
 #ifndef LOGINSCENE_H
 #define LOGINSCENE_H
-
+#include "globalmanager.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -14,6 +14,7 @@ class loginScene : public QMainWindow
 public:
     explicit loginScene(QWidget *parent = nullptr);
     ~loginScene();
+    void login();
 
 signals:
     void moveToMainMenu();
@@ -21,6 +22,8 @@ signals:
 
 private:
     Ui::loginScene *ui;
+    GlobalManager& globalManager = GlobalManager::getInstance();
+    MemberManager* manager = globalManager.getMemberManager();
 };
 
 #endif // LOGINSCENE_H
