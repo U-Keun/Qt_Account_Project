@@ -16,6 +16,7 @@ class WindowManager : public QObject {
     void setUpStartScene();
     void setUpLogInScene();
     void setUpSignUpScene();
+    void setUpMainMenu();
 
 public:
     WindowManager();

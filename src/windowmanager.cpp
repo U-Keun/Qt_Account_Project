@@ -4,8 +4,10 @@
 #include <QApplication>
 #include <QMainWindow>
 
-#include "../header/WindowManager.h"
-#include "../header/StartScene.h"
+#include "../header/windowmanager.h"
+#include "../header/startscene.h"
+#include "../header/loginscene.h"
+#include "../header/signupscene.h"
 
 WindowManager::WindowManager() {
     mainWindow = new QMainWindow();
@@ -34,13 +36,25 @@ void WindowManager::setUpStartScene() {
     setCentralWidget(scene);
 
     connect(scene, &StartScene::moveToLogInWindow, this, &WindowManager::setUpLogInScene);
-    connect(scene, &StartScene::moveToLogInWindow, this, &WindowManager::setUpSignUpScene);
+    connect(scene, &StartScene::moveToSignUpWindow, this, &WindowManager::setUpSignUpScene);
 }
 
 void WindowManager::setUpLogInScene() {
-    qDebug() << "set up log in scene.";
+    LogInScene *scene = new LogInScene(nullptr);
+    setCentralWidget(scene);
+
+    connect(scene, &LogInScene::moveToMainMenu, this, &WindowManager::setUpMainMenu);
+    connect(scene, &LogInScene::goBack, this, &WindowManager::setUpStartScene);
 }
 
 void WindowManager::setUpSignUpScene() {
-    qDebug() << "set up sign up scene.";
+    SignUpScene *scene = new SignUpScene(nullptr);
+    setCentralWidget(scene);
+
+    connect(scene, &SignUpScene::validateSignUp, this, &WindowManager::setUpStartScene);
+    connect(scene, &SignUpScene::goBack, this, &WindowManager::setUpStartScene);
+}
+
+void WindowManager::setUpMainMenu() {
+    qDebug() << "set up main menu";
 }

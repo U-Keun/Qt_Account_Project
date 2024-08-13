@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>StartScene</class>
- <widget class="QWidget" name="StartScene">
+ <class>SignUpScene</class>
+ <widget class="QWidget" name="SignUpScene">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,38 +10,20 @@
     <height>600</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <family>Arial</family>
-    <pointsize>13</pointsize>
-    <underline>false</underline>
-   </font>
-  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="programName">
+  <widget class="QPushButton" name="goBackButton">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>100</y>
-     <width>500</width>
-     <height>100</height>
+     <x>660</x>
+     <y>500</y>
+     <width>100</width>
+     <height>50</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>32</pointsize>
-     <bold>true</bold>
-     <underline>true</underline>
-    </font>
-   </property>
    <property name="text">
-    <string>Account Manager</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
+    <string>Go Back</string>
    </property>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
@@ -49,13 +31,13 @@
     <rect>
      <x>280</x>
      <y>290</y>
-     <width>201</width>
+     <width>202</width>
      <height>201</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="buttons">
     <item>
-     <widget class="QPushButton" name="logInButton">
+     <widget class="QLineEdit" name="idInput">
       <property name="minimumSize">
        <size>
         <width>200</width>
@@ -72,11 +54,35 @@
        <font>
         <family>Arial</family>
         <pointsize>20</pointsize>
-        <underline>false</underline>
        </font>
       </property>
-      <property name="text">
-       <string>Log In</string>
+      <property name="placeholderText">
+       <string> ID :</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="pwInput">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string> PW :</string>
       </property>
      </widget>
     </item>
@@ -106,33 +112,31 @@
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="quitButton">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>200</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>20</pointsize>
-        <underline>false</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Quit</string>
-      </property>
-     </widget>
-    </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="programName">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>100</y>
+     <width>500</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>32</pointsize>
+     <bold>true</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sign Up</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources/>

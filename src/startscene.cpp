@@ -1,5 +1,5 @@
-#include "../header/StartScene.h"
-#include "../ui_StartScene.h"
+#include "../header/startscene.h"
+#include "ui_StartScene.h"
 
 StartScene::StartScene(QWidget *parent)
     : QWidget(parent)

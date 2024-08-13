@@ -16,8 +16,10 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(Qt_account_project main.cpp
-        header/WindowManager.h src/WindowManager.cpp
-        header/StartScene.h src/StartScene.cpp ui/StartScene.ui
+        header/windowmanager.h src/windowmanager.cpp
+        header/startscene.h src/startscene.cpp ui/startscene.ui
+        header/loginscene.h src/loginscene.cpp ui/loginscene.ui
+        header/signupscene.h src/signupscene.cpp ui/signupscene.ui
 )
 
 target_link_libraries(Qt_account_project
