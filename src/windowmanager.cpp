@@ -99,3 +99,11 @@ void WindowManager::setUpWithdrawAccountScene() {
 
     connect(scene, &WithdrawAccount::goBack, this, &WindowManager::setUpMainMenu);
 }
+
+void WindowManager::setUpDepositScene() {
+    qDebug() << "set up deposit scene";
+}
+
+void WindowManager::setUpWithdrawScene() {
+    qDebug() << "set up withdraw scene";
+}

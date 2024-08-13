@@ -29,6 +29,7 @@ add_executable(Qt_account_project main.cpp
         header/depositaccount.h src/depositaccount.cpp ui/depositaccount.ui
         header/withdrawaccount.h src/withdrawaccount.cpp ui/withdrawaccount.ui
         header/deposit.h src/deposit.cpp ui/deposit.ui
+        header/withdraw.h src/withdraw.cpp ui/withdraw.ui
 )
 
 target_link_libraries(Qt_account_project

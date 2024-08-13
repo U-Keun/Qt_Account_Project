@@ -21,6 +21,8 @@ class WindowManager : public QObject {
     void setUpRegisterScene();
     void setUpDepositAccountScene();
     void setUpWithdrawAccountScene();
+    void setUpDepositScene();
+    void setUpWithdrawScene();
 
 public:
     WindowManager();
