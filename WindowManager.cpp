@@ -86,9 +86,6 @@ void WindowManager::setUpMainMenu() {
 void WindowManager::setUpInquiryScene() {
     inquiryScene *window = new inquiryScene(nullptr);
     pushWindow(window);
-
-
-
     connect(window, &inquiryScene::goBack, this, &WindowManager::popWindow);
 }
 

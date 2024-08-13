@@ -46,6 +46,7 @@ QString Account::toString() const {
     QString result;
     QTextStream oss(&result);
     oss << "Account ID: "
+        << this->accountName << " | Account name: "
         << this->accountId << " | Account registered date: "
         << this->regDate.toString() << " | Balance: "
         << this->money << '\n';

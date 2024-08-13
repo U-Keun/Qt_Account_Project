@@ -152,7 +152,6 @@ C:/Users/rmswk/Desktop/Qt_Account_Project/mainmenuscene.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/mainmenuscene.h
 C:/Users/rmswk/Desktop/Qt_Account_Project/Member.h
-C:/Users/rmswk/Desktop/Qt_Account_Project/MemberManager.h
 C:/Users/rmswk/Desktop/Qt_Account_Project/date.cpp
 C:/Users/rmswk/Desktop/Qt_Account_Project/depositaccount.h
  mmc:Q_OBJECT
@@ -306,6 +305,7 @@ C:/Users/rmswk/Desktop/Qt_Account_Project/depositaccount.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/date.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/depositaccount.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/globalmanager.h
+C:/Users/rmswk/Desktop/Qt_Account_Project/MemberManager.h
 C:/Users/rmswk/Desktop/Qt_Account_Project/WindowManager.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QObject
@@ -606,12 +606,15 @@ C:/Users/rmswk/Desktop/Qt_Account_Project/deposit.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/date.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/deposit.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/globalmanager.h
+C:/Users/rmswk/Desktop/Qt_Account_Project/deposit.cpp
+ uic:ui_deposit.h
 C:/Users/rmswk/Desktop/Qt_Account_Project/inquiryscene.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QVector
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qabstractitemmodel.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qanystringview.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qarraydata.h
@@ -719,6 +722,7 @@ C:/Users/rmswk/Desktop/Qt_Account_Project/inquiryscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/qxptype_traits.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/QStandardItemModel
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qaction.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qbitmap.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qbrush.h
@@ -738,6 +742,7 @@ C:/Users/rmswk/Desktop/Qt_Account_Project/inquiryscene.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qregion.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qrgba64.h
+ mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qstandarditemmodel.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtGui/qtguiglobal.h
@@ -758,8 +763,9 @@ C:/Users/rmswk/Desktop/Qt_Account_Project/inquiryscene.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/date.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/inquiryscene.h
-C:/Users/rmswk/Desktop/Qt_Account_Project/deposit.cpp
- uic:ui_deposit.h
+C:/Users/rmswk/Desktop/Qt_Account_Project/mainmenuscene.cpp
+ uic:ui_mainmenuscene.h
+C:/Users/rmswk/Desktop/Qt_Account_Project/Member.cpp
 C:/Users/rmswk/Desktop/Qt_Account_Project/loginscene.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
@@ -912,9 +918,6 @@ C:/Users/rmswk/Desktop/Qt_Account_Project/loginscene.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/date.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/globalmanager.h
  mdp:C:/Users/rmswk/Desktop/Qt_Account_Project/loginscene.h
-C:/Users/rmswk/Desktop/Qt_Account_Project/Member.cpp
-C:/Users/rmswk/Desktop/Qt_Account_Project/mainmenuscene.cpp
- uic:ui_mainmenuscene.h
 C:/Users/rmswk/Desktop/Qt_Account_Project/registerscene.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.5.3/msvc2019_64/include/QtCore/QString
