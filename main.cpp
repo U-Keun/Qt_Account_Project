@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
     MemberManager* manager = new MemberManager();
     GlobalManager& globalManager = GlobalManager::getInstance();
     globalManager.setMemberManager(manager);
+    globalManager.getMemberManager()->searchAllMember();
     WindowManager s;
 
     return a.exec();

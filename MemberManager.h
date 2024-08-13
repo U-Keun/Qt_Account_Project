@@ -20,9 +20,9 @@ public:
     // command function
     void registration(QString name, QString id, QString pwd);
     void searchAllMember();
-    void addAccount();
+    void addAccount(long long tmpMoney);
     void transaction();
-    void login();
+    void login(QString tmpId, QString tmpPw);
     void logout();
     void getCurrentMemberStatus();
     void setCurrentMember(Member *member);

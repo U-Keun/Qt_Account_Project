@@ -4,8 +4,6 @@
 #include <QString>
 #include "MemberManager.h"
 #include "account.h"
-#include <algorithm>
-#include <memory>
 #include "line.h"
 
 using namespace std;
@@ -61,6 +59,7 @@ void MemberManager::writeFile() {
 // #else
 //     QFile file("info.txt");
 // #endif
+    qDebug("asd");
     QFile file("info.txt");
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         qWarning() << "Error opening file for writing";
@@ -70,7 +69,7 @@ void MemberManager::writeFile() {
     QTextStream out(&file);
     out << memberList.size() << "\n";
     for (auto& member : memberList) {
-        qDebug() << "저장 테스트용으로 찍은 디버그" << member.getName() << member.getId() << member.getPwd();
+        qDebug() << "저장 테스트용으로 찍은 디버그" << member.getName() << member.getId() << member.getPwd() << __FILE__;
         out << member.getName() << " "
             << member.getId() << " "
             << member.getPwd() << "\n";
@@ -102,7 +101,7 @@ void MemberManager::registration(QString name, QString id, QString pwd) {
     // QTextStream qin(stdin);
     // qin >> name >> id >> pwd;
 
-    qDebug("사용자 등록 요청 왓음");
+    qDebug()<< "사용자 등록 요청 왓음 " << __FILE__;
 
     for (auto& member : memberList) {
         if (member.getId() == id) {
@@ -112,6 +111,7 @@ void MemberManager::registration(QString name, QString id, QString pwd) {
     }
     Member mem(name, id, pwd);
     memberList.push_back(mem);
+    // writeFile();
 }
 
 void MemberManager::searchAllMember() {
@@ -166,14 +166,13 @@ void MemberManager::getCurrentMemberStatus() {
     }
 }
 
-void MemberManager::addAccount() {
+void MemberManager::addAccount(long long tmpMoney) {
     if (currentMember == nullptr) {
         qDebug() << "Please login";
         return;
     }
 
     int tmpId = currentMember->getAccount().size() + 1;
-    long long tmpMoney;
     qDebug() << "Enter initial account balance:";
     QTextStream qin(stdin);
     qin >> tmpMoney;
@@ -187,12 +186,8 @@ void MemberManager::addAccount() {
     }
 }
 
-void MemberManager::login() {
-    qDebug() << "Enter member ID, PW:";
-    QString tmpId, tmpPw;
-    QTextStream qin(stdin);
-    qin >> tmpId >> tmpPw;
-
+void MemberManager::login(QString tmpId, QString tmpPw) {
+    qDebug() << "로그인 요청" << __FUNCTION__ ;
     for (auto& member : memberList) {
         if (member.getId() == tmpId) {
             if (member.getPwd() == tmpPw) {
