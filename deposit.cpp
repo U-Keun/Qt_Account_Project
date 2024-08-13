@@ -6,7 +6,9 @@ deposit::deposit(QWidget *parent)
     , ui(new Ui::deposit)
 {
     ui->setupUi(this);
+
 }
+
 
 deposit::~deposit()
 {

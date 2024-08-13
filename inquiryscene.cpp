@@ -15,6 +15,7 @@ inquiryScene::inquiryScene(QWidget *parent)
     model->setHeaderData(3, Qt::Horizontal, "Creation Date");
     ui->tableView->setModel(model);
     showAccountData();
+    // ui 텍스트 길이대로 이쁘게 정렬 해주는 코드
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     connect(ui->goBackButton, &QPushButton::clicked, this, &inquiryScene::goBack);
 }

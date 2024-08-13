@@ -9,6 +9,7 @@ class MemberManager
 {
     QVector<Member> memberList;
     Member* currentMember = NULL;
+    Account* currentAccount = NULL;
     bool isRegister(QString name) const;
     // File IO 함수
     void readFile();
