@@ -135,10 +135,11 @@ void WindowManager::handleDepositSelection(const int accountId) {
 }
 
 void WindowManager::setUpWithdrawAccountScene() {
-    WithdrawAccount *scene = new WithdrawAccount(nullptr);
+    WithdrawAccount *scene = new WithdrawAccount(memberManager->getCurrentMember(), nullptr);
     setCentralWidget(scene);
 
     connect(scene, &WithdrawAccount::goBack, this, &WindowManager::setUpMainMenu);
+    connect(scene, &WithdrawAccount::accountSelected, this, &WindowManager::handleWithdrawSelection);
 }
 
 void WindowManager::handleWithdrawSelection(const int accountId) {
@@ -151,12 +152,7 @@ void WindowManager::handleWithdrawSelection(const int accountId) {
 void WindowManager::setUpDepositScene() {
     qDebug() << "set up deposit scene";
     // Deposit *scene = new Deposit(nullptr);
-    auto scene = std::make_shared<Deposit>(nullptr);
-
-    setCentralWidget(scene.get());
-
-
-
+    // setCentralWidget(scene.get());
 }
 
 void WindowManager::setUpWithdrawScene() {
