@@ -2,7 +2,7 @@
 #include "ui_depositaccount.h"
 
 
-DepositAccount::DepositAccount(std::shared_ptr<Member> member, QWidget *parent)
+DepositAccount::DepositAccount(Member* member, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::DepositAccount)
     , currentMember(member)

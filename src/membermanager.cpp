@@ -101,11 +101,11 @@ bool MemberManager::isRegistered(const QString& id) const {
     return memberList.contains(id);
 }
 
-void MemberManager::setCurrentMember(std::shared_ptr<Member> member) {
+void MemberManager::setCurrentMember(Member* member) {
     currentMember = member;
 }
 
-std::shared_ptr<Member> MemberManager::getCurrentMember() const {
+Member* MemberManager::getCurrentMember() const {
     return currentMember;
 }
 
@@ -131,7 +131,7 @@ bool MemberManager::addAccount(
 
 bool MemberManager::login(QString tmpId, QString tmpPw) {
     if (isRegistered(tmpId)) {
-        std::shared_ptr<Member> tmpMember = make_shared<Member>(&memberList[tmpId]);
+        Member* tmpMember = &memberList[tmpId];
         if (tmpMember->getPwd() == tmpPw) {
             qDebug() << "Login success";
             setCurrentMember(tmpMember);

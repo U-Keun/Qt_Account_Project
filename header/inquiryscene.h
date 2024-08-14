@@ -16,7 +16,7 @@ class InquiryScene : public QWidget
     Q_OBJECT
 
 public:
-    explicit InquiryScene(std::shared_ptr<Member> member, QWidget *parent = nullptr);
+    explicit InquiryScene(Member* member, QWidget *parent = nullptr);
     ~InquiryScene();
 
 signals:
@@ -24,7 +24,7 @@ signals:
 
 private:
     Ui::InquiryScene *ui;
-    std::shared_ptr<Member> member;
+    Member* member;
     QStandardItemModel *model;
 };
 

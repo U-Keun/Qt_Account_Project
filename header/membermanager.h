@@ -11,8 +11,8 @@ class Date;
 class MemberManager
 {
     QMap<QString, Member> memberList;
-    // Member* currentMember = nullptr;
-    std::shared_ptr<Member> currentMember = nullptr;
+    Member* currentMember = nullptr;
+
     bool isRegistered(const QString&) const;
 
     // File IO 함수
@@ -31,8 +31,8 @@ public:
     bool login(QString, QString);
     void logout();
     void getCurrentMemberStatus() const;
-    void setCurrentMember(std::shared_ptr<Member>);
-    std::shared_ptr<Member> getCurrentMember() const;
+    void setCurrentMember(Member*);
+    Member* getCurrentMember() const;
 };
 
 #endif //MEMBERMANAGER_H
