@@ -20,7 +20,6 @@ public:
 signals:
     void goBack();
     void accountSelected(const int);
-    void test(const int);
 
 private:
     Ui::DepositAccount *ui;
