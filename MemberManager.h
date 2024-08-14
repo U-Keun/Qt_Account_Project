@@ -18,7 +18,7 @@ public:
     ~MemberManager();
 
     // command function
-    void registration(QString name, QString id, QString pwd);
+    bool registration(QString name, QString id, QString pwd);
     void searchAllMember();
     bool addAccount(QString accountName, long long tmpMoney, QString date);
     void deposit(long long amount);

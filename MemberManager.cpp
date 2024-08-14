@@ -99,7 +99,7 @@ MemberManager::~MemberManager() {
 }
 
 //멤버 등록
-void MemberManager::registration(QString name, QString id, QString pwd) {
+bool MemberManager::registration(QString name, QString id, QString pwd) {
     // qDebug() << "Enter member name, ID, PW:";
     // QTextStream qin(stdin);
     // qin >> name >> id >> pwd;
@@ -109,11 +109,12 @@ void MemberManager::registration(QString name, QString id, QString pwd) {
     for (auto& member : memberList) {
         if (member.getId() == id) {
             qDebug() << "Already registered member!";
-            return;
+            return false;
         }
     }
     Member mem(name, id, pwd);
     memberList.push_back(mem);
+    return true;
     // writeFile();
 }
 

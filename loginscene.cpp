@@ -1,5 +1,6 @@
 #include "loginscene.h"
 #include "ui_loginscene.h"
+#include <QMessageBox>
 
 loginScene::loginScene(QWidget *parent)
     : QMainWindow(parent)
@@ -22,8 +23,9 @@ void loginScene::login() {
     QString pwd = ui->PwInput->text();
     qDebug() << id << pwd << "로그인 시도!" << __FUNCTION__;
     if(manager->login(id,pwd)){
+        QMessageBox::information(nullptr, "로그인 성공", "로그인 성공");
         emit moveToMainMenu();
     }
-    else qDebug("로그인 실패!");
+    else QMessageBox::warning(nullptr, "로그인 실패", "로그인 실패");
     // connect(ui->logInButton, &QPushButton::clicked, this, &loginScene::login);
 }

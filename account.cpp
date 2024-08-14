@@ -1,5 +1,6 @@
 #include <QString>
 #include <QTextStream>
+#include <QDebug>
 #include "account.h"
 #include "date.h"
 
@@ -34,6 +35,7 @@ bool Account::deposit(long long money) {
 }
 
 bool Account::withdraw(long long money) {
+    qDebug() << "출금 메서드 - account";
     if (this->money < money) {
         return false;
     }
