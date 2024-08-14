@@ -33,9 +33,25 @@ QVector<QString> split(const QString& str, char delimiter) {
 
 Date::Date(const QString& date) {
     QVector<QString> ymd = split(date, '-');
-    this->year = ymd[0].toInt();
-    this->month = ymd[1].toInt();
-    this->day = ymd[2].toInt();
+
+    if (ymd.size() != 3) {
+        throw std::invalid_argument("Date format must be YYYY-MM-DD");
+    }
+
+    bool yearOk, monthOk, dayOk;
+    this->year = ymd[0].toInt(&yearOk);
+    this->month = ymd[1].toInt(&monthOk);
+    this->day = ymd[2].toInt(&dayOk);
+
+    if (ymd[0].size() != 4) {
+        throw std::invalid_argument("Year must be a 4-digit number");
+    }
+
+    if (!yearOk || !monthOk || !dayOk ||
+        this->month < 1 || this->month > 12 ||
+        this->day < 1 || this->day > 31) {
+        throw std::invalid_argument("Invalid date format or values out of range");
+    }
 }
 
 QString Date::toString() const {

@@ -1,15 +1,14 @@
 #ifndef MEMBERMANAGER_H
 #define MEMBERMANAGER_H
 
-// #include <QVector>
 #include <QMap>
 
 class QString;
 class Member;
+class Date;
 
 class MemberManager
 {
-    // QVector<Member> memberList;
     QMap<QString, Member> memberList;
     Member* currentMember = nullptr;
     bool isRegistered(const QString&) const;
@@ -25,7 +24,7 @@ public:
     // command function
     bool registerMember(const QString&, const QString&, const QString&);
     void searchAllMember();
-    bool addAccount(const QString&, const long long, const QString&) const;
+    bool addAccount(const QString&, const long long, const Date) const;
     void transaction();
     bool login(QString, QString);
     void logout();

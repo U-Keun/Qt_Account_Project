@@ -2,20 +2,24 @@
 
 #include <QTextStream>
 
-Account::Account(const int accountId, const long long money) {
+Account::Account(const int accountId, const long long balance) {
     if (accountId < 0) throw "Account ID should be a positive integer.\n";
-    if (money < 0) throw "Balance cannot be a negative number.\n";
+    if (balance < 0) throw "Balance cannot be a negative number.\n";
     this->regDate = Date();
     this->accountId = accountId;
-    this->money = money;
+    this->balance = balance;
+}
+
+QString Account::getAccountName() const {
+    return this->accountName;
 }
 
 int Account::getAccountId() const {
     return this->accountId;
 }
 
-long long Account::getMoney() const {
-    return this->money;
+long long Account::getBalance() const {
+    return this->balance;
 }
 
 Date Account::getDate() const {
@@ -24,16 +28,16 @@ Date Account::getDate() const {
 
 bool Account::deposit(const long long money) {
     // 예외가 발생할 가능성 고려
-    this->money += money;
+    this->balance += money;
     return true;
 }
 
 bool Account::withdraw(const long long money) {
-    if (this->money < money) {
+    if (this->balance < money) {
         return false;
     }
 
-    this->money -= money;
+    this->balance -= money;
     return true;
 }
 
@@ -43,7 +47,7 @@ QString Account::toString() const {
     oss << "Account ID: "
         << this->accountId << " | Account registered date: "
         << this->regDate.toString() << " | Balance: "
-        << this->money << '\n';
+        << this->balance << '\n';
 
     return result;
 }

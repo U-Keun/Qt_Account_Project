@@ -45,7 +45,7 @@ void MemberManager::readFile() {
         QString accountName;
         for (int j = 0; j < accountCount; j++) {
             in >> accountName >> accountId >> money >> date;
-            this->memberList.value(id).addAccount(Account(accountName, accountId, money, date));
+            memberList[id].addAccount(Account(accountName, accountId, money, date));
         }
     }
 
@@ -68,8 +68,9 @@ void MemberManager::writeFile() {
             << it->getPwd() << " " << "\n";
         out << it->getAccount().size() << '\n';
         for (const auto& account : it->getAccount()) {
-            out << account.getAccountId() << " "
-                << account.getMoney() << " "
+            out << account.getAccountName() << " "
+                << account.getAccountId() << " "
+                << account.getBalance() << " "
                 << account.getDate().toString() << "\n";
         }
     }
@@ -97,21 +98,6 @@ bool MemberManager::registerMember(const QString& name, const QString& id, const
     return true;
 }
 
-void MemberManager::searchAllMember() {
-    // line();
-    // qDebug() << "Search all registered members:";
-    for (auto& member : memberList) {
-        qDebug() << "Name:" << member.getName() << "ID:" << member.getId();
-        if (!member.getAccount().empty()) {
-            for (const auto& account : member.getAccount()) {
-                qDebug() << account.toString();
-            }
-        } else {
-            qDebug() << "Haven't opened an account yet";
-        }
-    }
-}
-
 bool MemberManager::isRegistered(const QString& id) const {
     return memberList.contains(id);
 }
@@ -124,35 +110,16 @@ Member* MemberManager::getCurrentMember() const {
     return currentMember;
 }
 
-void MemberManager::getCurrentMemberStatus() const {
-    if (currentMember == nullptr) {
-        qDebug() << "Please login";
-        return;
-    }
-
-    qDebug() << "Name:" << currentMember->getName() << "ID:" << currentMember->getId();
-    if (!currentMember->getAccount().empty()) {
-        qDebug() << "Account ID, account balance:";
-        for (const auto& account : currentMember->getAccount()) {
-            qDebug() << account.toString();
-        }
-    } else {
-        qDebug() << "Haven't opened an account yet";
-    }
-}
-
-
 bool MemberManager::addAccount(
     const QString& accountName,
     const long long tmpMoney,
-    const QString& date) const {
+    const Date date) const {
     if (currentMember == nullptr) {
         qDebug() << "Please login";
         return false;
     }
 
     const int tmpId = currentMember->getAccount().size() + 1;
-    qDebug() << "Enter initial account balance:";
     try {
         const Account account(accountName, tmpId, tmpMoney, date);
         currentMember->addAccount(account);
@@ -164,13 +131,11 @@ bool MemberManager::addAccount(
 }
 
 bool MemberManager::login(QString tmpId, QString tmpPw) {
-    // qDebug() << "로그인 요청" << __FUNCTION__ ;
-
     if (isRegistered(tmpId)) {
-        Member tmpMember = memberList.value(tmpId);
-        if (tmpMember.getPwd() == tmpPw) {
+        Member *tmpMember = &memberList[tmpId];
+        if (tmpMember->getPwd() == tmpPw) {
             qDebug() << "Login success";
-            setCurrentMember(&tmpMember);
+            setCurrentMember(tmpMember);
             return true;
         }
     }

@@ -8,18 +8,24 @@
 class Account {
     QString accountName;
     int accountId;
-    long long money;
+    long long balance;
     Date regDate;
 
 public:
     Account(const int,const long long)/* throw(const char*)*/;
     Account(const QString& accountName,
             const int accountId,
-            const long long money,
+            const long long balance,
             const Date date)
-        : accountName(accountName), accountId(accountId), money(money), regDate(date) {}
+        : accountName(accountName), accountId(accountId), balance(balance), regDate(date) {}
+    Account(const Account& other)
+        : accountName(other.accountName),
+        accountId(other.accountId),
+        balance(other.balance),
+        regDate(other.regDate) {}
+    QString getAccountName() const;
     int getAccountId() const;
-    long long getMoney() const;
+    long long getBalance() const;
     Date getDate() const;
     bool deposit(const long long);
     bool withdraw(const long long);

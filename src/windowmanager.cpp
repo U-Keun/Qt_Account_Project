@@ -16,10 +16,9 @@
 #include "../header/withdrawaccount.h"
 #include "../header/membermanager.h"
 
-WindowManager::WindowManager(MemberManager* memberManager) {
+WindowManager::WindowManager(unique_ptr<MemberManager> memberManager) {
     mainWindow = new QMainWindow();
-    this->memberManager = memberManager;
-
+    this->memberManager = std::move(memberManager);
     mainWindow->resize(800, 600);
 
     setUpStartScene();
@@ -94,7 +93,7 @@ void WindowManager::setUpMainMenu() {
 }
 
 void WindowManager::setUpInquiryScene() {
-    InquiryScene *scene = new InquiryScene(nullptr);
+    InquiryScene *scene = new InquiryScene(memberManager->getCurrentMember(), nullptr);
     setCentralWidget(scene);
 
     connect(scene, &InquiryScene::goBack, this, &WindowManager::setUpMainMenu);
@@ -104,9 +103,20 @@ void WindowManager::setUpRegisterScene() {
     RegisterScene *scene = new RegisterScene(nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &RegisterScene::registerAccount, this, &WindowManager::setUpMainMenu);
+    connect(scene, &RegisterScene::registerAttempted, this, &WindowManager::handleRegisterAttempt);
     connect(scene, &RegisterScene::goBack, this, &WindowManager::setUpMainMenu);
 }
+
+void WindowManager::handleRegisterAttempt(const QString& accountName, const long long balance, const Date date) {
+    if (memberManager->addAccount(accountName, balance, date)) {
+        QMessageBox::information(nullptr, "Information", "Register success!");
+        setUpMainMenu();
+        return;
+    }
+
+    QMessageBox::warning(nullptr, "Warning", "Register failed.");
+}
+
 
 void WindowManager::setUpDepositAccountScene() {
     DepositAccount *scene = new DepositAccount(nullptr);

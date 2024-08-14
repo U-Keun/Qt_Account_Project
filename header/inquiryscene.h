@@ -3,6 +3,9 @@
 
 #include <QWidget>
 
+class Member;
+class QStandardItemModel;
+
 namespace Ui {
 class InquiryScene;
 }
@@ -12,7 +15,7 @@ class InquiryScene : public QWidget
     Q_OBJECT
 
 public:
-    explicit InquiryScene(QWidget *parent = nullptr);
+    explicit InquiryScene(Member* member, QWidget *parent = nullptr);
     ~InquiryScene();
 
 signals:
@@ -20,6 +23,8 @@ signals:
 
 private:
     Ui::InquiryScene *ui;
+    Member *member;
+    QStandardItemModel *model;
 };
 
 #endif // INQUIRYSCENE_H

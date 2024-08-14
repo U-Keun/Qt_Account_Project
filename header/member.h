@@ -1,10 +1,13 @@
 #ifndef MEMBER_H
 #define MEMBER_H
 
+#include "account.h"
+
 #include <QString>
 #include <QVector>
 
-class Account;
+
+// class Account;
 
 class Member {
     QString name, id, pwd;

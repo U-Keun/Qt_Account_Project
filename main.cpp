@@ -3,13 +3,11 @@
 #include "header/windowmanager.h"
 #include "header/membermanager.h"
 
-using namespace std;
-
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
-    const unique_ptr<MemberManager> ptr(new MemberManager());
-    WindowManager window(ptr.get());
+    unique_ptr<MemberManager> ptr = make_unique<MemberManager>();
+    WindowManager window(std::move(ptr));
 
     return QApplication::exec();
 }
