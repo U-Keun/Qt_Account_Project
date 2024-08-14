@@ -2,12 +2,14 @@
 #include <memory>
 #include "header/windowmanager.h"
 #include "header/membermanager.h"
+#include "header/deposit.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
-    unique_ptr<MemberManager> ptr = make_unique<MemberManager>();
-    WindowManager window(std::move(ptr));
+    // MemberManager *ptr = new MemberManager;
+    std::shared_ptr<MemberManager> ptr = std::make_shared<MemberManager>();
+    WindowManager window(ptr);
 
-    return QApplication::exec();
+    return a.exec();
 }

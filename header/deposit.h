@@ -16,7 +16,7 @@ public:
     ~Deposit();
 
 signals:
-    void depositRequested();
+    // void depositRequested();
     void goBack();
 
 private:

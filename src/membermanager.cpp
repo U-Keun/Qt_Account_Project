@@ -86,7 +86,6 @@ MemberManager::~MemberManager() {
     writeFile();
 }
 
-//멤버 등록
 bool MemberManager::registerMember(const QString& name, const QString& id, const QString& pwd) {
     if (isRegistered(id)) {
         qDebug() << "Already registered member!";
@@ -102,11 +101,11 @@ bool MemberManager::isRegistered(const QString& id) const {
     return memberList.contains(id);
 }
 
-void MemberManager::setCurrentMember(Member* member) {
+void MemberManager::setCurrentMember(std::shared_ptr<Member> member) {
     currentMember = member;
 }
 
-Member* MemberManager::getCurrentMember() const {
+std::shared_ptr<Member> MemberManager::getCurrentMember() const {
     return currentMember;
 }
 
@@ -132,7 +131,7 @@ bool MemberManager::addAccount(
 
 bool MemberManager::login(QString tmpId, QString tmpPw) {
     if (isRegistered(tmpId)) {
-        Member *tmpMember = &memberList[tmpId];
+        std::shared_ptr<Member> tmpMember = make_shared<Member>(&memberList[tmpId]);
         if (tmpMember->getPwd() == tmpPw) {
             qDebug() << "Login success";
             setCurrentMember(tmpMember);

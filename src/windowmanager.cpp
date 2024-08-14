@@ -14,11 +14,13 @@
 #include "../header/registerscene.h"
 #include "../header/depositaccount.h"
 #include "../header/withdrawaccount.h"
+#include "../header/deposit.h"
+#include "../header/withdraw.h"
 #include "../header/membermanager.h"
 
-WindowManager::WindowManager(unique_ptr<MemberManager> memberManager) {
+WindowManager::WindowManager(std::shared_ptr<MemberManager> memberManager) {
     mainWindow = new QMainWindow();
-    this->memberManager = std::move(memberManager);
+    this->memberManager = memberManager;
     mainWindow->resize(800, 600);
 
     setUpStartScene();
@@ -26,7 +28,7 @@ WindowManager::WindowManager(unique_ptr<MemberManager> memberManager) {
 }
 
 WindowManager::~WindowManager() {
-
+    // delete memberManager;
 }
 
 void WindowManager::setCentralWidget(QWidget *widget) {
@@ -119,10 +121,17 @@ void WindowManager::handleRegisterAttempt(const QString& accountName, const long
 
 
 void WindowManager::setUpDepositAccountScene() {
-    DepositAccount *scene = new DepositAccount(nullptr);
+    DepositAccount *scene = new DepositAccount(memberManager->getCurrentMember(), nullptr);
     setCentralWidget(scene);
 
     connect(scene, &DepositAccount::goBack, this, &WindowManager::setUpMainMenu);
+    connect(scene, &DepositAccount::accountSelected, this, &WindowManager::handleDepositSelection);
+}
+
+void WindowManager::handleDepositSelection(const int accountId) {
+    qDebug() << accountId;
+
+    setUpDepositScene();
 }
 
 void WindowManager::setUpWithdrawAccountScene() {
@@ -132,10 +141,26 @@ void WindowManager::setUpWithdrawAccountScene() {
     connect(scene, &WithdrawAccount::goBack, this, &WindowManager::setUpMainMenu);
 }
 
+void WindowManager::handleWithdrawSelection(const int accountId) {
+    qDebug() << accountId;
+
+    setUpWithdrawScene();
+}
+
+
 void WindowManager::setUpDepositScene() {
     qDebug() << "set up deposit scene";
+    // Deposit *scene = new Deposit(nullptr);
+    auto scene = std::make_shared<Deposit>(nullptr);
+
+    setCentralWidget(scene.get());
+
+
+
 }
 
 void WindowManager::setUpWithdrawScene() {
     qDebug() << "set up withdraw scene";
+    // Withdraw *scene = new Withdraw(nullptr);
+    // setCentralWidget(scene);
 }

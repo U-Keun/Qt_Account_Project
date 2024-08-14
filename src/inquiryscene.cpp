@@ -5,7 +5,7 @@
 
 #include <QStandardItem>
 
-InquiryScene::InquiryScene(Member *member, QWidget *parent)
+InquiryScene::InquiryScene(std::shared_ptr<Member> member, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::InquiryScene)
     , member(member)

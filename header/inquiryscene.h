@@ -2,6 +2,7 @@
 #define INQUIRYSCENE_H
 
 #include <QWidget>
+#include <memory>
 
 class Member;
 class QStandardItemModel;
@@ -15,7 +16,7 @@ class InquiryScene : public QWidget
     Q_OBJECT
 
 public:
-    explicit InquiryScene(Member* member, QWidget *parent = nullptr);
+    explicit InquiryScene(std::shared_ptr<Member> member, QWidget *parent = nullptr);
     ~InquiryScene();
 
 signals:
@@ -23,7 +24,7 @@ signals:
 
 private:
     Ui::InquiryScene *ui;
-    Member *member;
+    std::shared_ptr<Member> member;
     QStandardItemModel *model;
 };
 
