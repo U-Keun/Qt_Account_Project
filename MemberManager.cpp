@@ -6,6 +6,7 @@
 #include "account.h"
 #include "line.h"
 #include <QDate>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -151,6 +152,13 @@ Member* MemberManager::getCurrentMember() const {
     return currentMember;
 }
 
+Account* MemberManager::getCurrentAccount() const{
+    return currentAccount;
+}
+void MemberManager::setCurrentAccount(Account* account){
+    currentAccount = account;
+}
+
 void MemberManager::getCurrentMemberStatus() {
     if (currentMember == nullptr) {
         qDebug() << "Please login";
@@ -215,52 +223,17 @@ void MemberManager::logout() {
     }
 }
 
-void MemberManager::transaction() {
-    if (currentMember == nullptr) {
-        qDebug() << "Please login";
-        return;
-    }
+void MemberManager::deposit(long long amount) {
+    currentAccount->deposit(amount);
+}
 
-    if (currentMember->getAccount().empty()) {
-        qDebug() << "No account found";
-        return;
-    }
+void MemberManager::withdraw(long long amount) {
+    currentAccount->withdraw(amount);
+}
 
-    qDebug() << "Deposit: 1, Withdraw: 2";
-    int choice;
-    QTextStream qin(stdin);
-    qin >> choice;
-
-    qDebug() << "Account list:";
-    int maxAccountCount = currentMember->getAccount().size();
-    for (const auto& account : currentMember->getAccount()) {
-        qDebug() << account.toString();
-    }
-
-    int selectedAccount;
-    qin >> selectedAccount;
-
-    if (selectedAccount > maxAccountCount) {
-        qDebug() << "Invalid account number";
-        return;
-    }
-
-    qDebug() << "Enter amount:";
-    int amount;
-    qin >> amount;
-
-    if (amount < 0) {
-        qDebug() << "Please enter a positive integer";
-        return;
-    }
-
-    auto& account = currentMember->getAccount()[selectedAccount - 1];
-    if (choice == 1) {
-        if (account.deposit(amount)) {
-            qDebug() << "Deposit success!";
-        }
-    } else if (choice == 2) {
+/*
+ *     } else if (choice == 2) {
         account.withdraw(amount);
         qDebug() << "Withdraw success!";
     }
-}
+*/
