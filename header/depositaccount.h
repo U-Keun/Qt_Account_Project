@@ -14,7 +14,7 @@ class DepositAccount : public QWidget
     Q_OBJECT
 
 public:
-    explicit DepositAccount(std::shared_ptr<Member> member, QWidget *parent = nullptr);
+    explicit DepositAccount(Member* member, QWidget *parent = nullptr);
     ~DepositAccount();
 
 signals:
@@ -24,7 +24,7 @@ signals:
 
 private:
     Ui::DepositAccount *ui;
-    std::shared_ptr<Member> currentMember;
+    Member* currentMember;
     void showAccountList();
 
 private slots:
