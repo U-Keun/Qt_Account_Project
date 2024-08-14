@@ -19,7 +19,7 @@ public:
     QString getName() const;
     QString getId() const;
     QString getPwd() const;
-    QVector<Account>& getAccount();
+    QVector<Account> getAccount();
 
     void addAccount(const Account&);
 };

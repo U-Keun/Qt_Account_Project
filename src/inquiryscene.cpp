@@ -18,7 +18,7 @@ InquiryScene::InquiryScene(Member* member, QWidget *parent)
 
     model->setHorizontalHeaderLabels({"Account Name", "Account ID", "Balance", "Date"});
 
-    QVector<Account>& accounts = member->getAccount();
+    QVector<Account> accounts = member->getAccount();
 
     for (int i = 0; i < accounts.size(); ++i) {
         const Account& account = accounts[i];

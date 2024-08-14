@@ -133,7 +133,6 @@ bool MemberManager::login(QString tmpId, QString tmpPw) {
     if (isRegistered(tmpId)) {
         Member* tmpMember = &memberList[tmpId];
         if (tmpMember->getPwd() == tmpPw) {
-            qDebug() << "Login success";
             setCurrentMember(tmpMember);
             return true;
         }

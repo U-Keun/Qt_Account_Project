@@ -4,6 +4,7 @@
 #include "../header/member.h"
 
 #include <QWidget>
+#include <QListWidgetItem>
 
 namespace Ui {
 class WithdrawAccount;
@@ -24,9 +25,12 @@ signals:
 private:
     Ui::WithdrawAccount *ui;
     Member* currentMember;
+    QListWidgetItem* selectedItem;
+
     void showAccountList();
 
 private slots:
+    void itemClicked(QListWidgetItem *);
     void handleAccountSelection();
 
 };

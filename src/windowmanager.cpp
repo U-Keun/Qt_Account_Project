@@ -150,13 +150,15 @@ void WindowManager::handleWithdrawSelection(const int accountId) {
 
 
 void WindowManager::setUpDepositScene() {
-    qDebug() << "set up deposit scene";
-    // Deposit *scene = new Deposit(nullptr);
-    // setCentralWidget(scene.get());
+    Deposit *scene = new Deposit(nullptr);
+    setCentralWidget(scene);
+
+    connect(scene, &Deposit::goBack, this, &WindowManager::setUpDepositAccountScene);
 }
 
 void WindowManager::setUpWithdrawScene() {
-    qDebug() << "set up withdraw scene";
-    // Withdraw *scene = new Withdraw(nullptr);
-    // setCentralWidget(scene);
+    Withdraw *scene = new Withdraw(nullptr);
+    setCentralWidget(scene);
+
+    connect(scene, &Withdraw::goBack, this, &WindowManager::setUpWithdrawAccountScene);
 }

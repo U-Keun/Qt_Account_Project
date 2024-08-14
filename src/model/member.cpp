@@ -19,7 +19,7 @@ QString Member::getPwd() const {
     return pwd;
 }
 
-QVector<Account>& Member::getAccount() {
+QVector<Account> Member::getAccount() {
     return accountList;
 }
 

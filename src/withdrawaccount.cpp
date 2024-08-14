@@ -12,7 +12,8 @@ WithdrawAccount::WithdrawAccount(Member* member, QWidget *parent)
 
     showAccountList();
 
-    connect(ui->accountList, &QListWidget::itemDoubleClicked, this, &WithdrawAccount::handleAccountSelection);
+    connect(ui->accountList, &QListWidget::itemClicked, this, &WithdrawAccount::itemClicked);
+    connect(ui->selectButton, &QPushButton::clicked, this, &WithdrawAccount::handleAccountSelection);
 }
 
 WithdrawAccount::~WithdrawAccount()
@@ -30,8 +31,11 @@ void WithdrawAccount::showAccountList() {
     }
 }
 
+void WithdrawAccount::itemClicked(QListWidgetItem *item) {
+    selectedItem = item;
+}
+
 void WithdrawAccount::handleAccountSelection() {
-    QListWidgetItem *selectedItem = ui->accountList->currentItem();
     if (selectedItem) {
         int accountId = selectedItem->data(Qt::UserRole).toInt();
         emit accountSelected(accountId);
