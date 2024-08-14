@@ -1,5 +1,6 @@
 #include <QString>
 #include <QTextStream>
+#include <QDebug>
 #include "account.h"
 #include "date.h"
 
@@ -23,6 +24,10 @@ Date Account::getDate() const {
     return this->regDate;
 }
 
+QString Account::getName() const{
+    return this->accountName;
+}
+
 bool Account::deposit(long long money) {
     // 예외가 발생할 가능성 고려
     this->money += money;
@@ -30,6 +35,7 @@ bool Account::deposit(long long money) {
 }
 
 bool Account::withdraw(long long money) {
+    qDebug() << "출금 메서드 - account";
     if (this->money < money) {
         return false;
     }
@@ -42,6 +48,7 @@ QString Account::toString() const {
     QString result;
     QTextStream oss(&result);
     oss << "Account ID: "
+        << this->accountName << " | Account name: "
         << this->accountId << " | Account registered date: "
         << this->regDate.toString() << " | Balance: "
         << this->money << '\n';

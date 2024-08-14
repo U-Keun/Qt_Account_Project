@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/lib.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lib.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -39,7 +39,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug"
+			"value" : "c:/Users/rmswk/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -275,7 +275,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/rmswk/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -611,7 +611,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/change08/Desktop/Qt_Account_Project"
+			"value" : "C:/Users/rmswk/Desktop/Qt_Account_Project"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -891,11 +891,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to a program."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/link.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -911,7 +911,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe"
+			"value" : "C:/PROGRA~2/MICROS~2/2019/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1007,7 +1007,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.22000.0/x64/mt.exe"
+			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64/mt.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -1079,7 +1079,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake"
+			"value" : "C:/Users/rmswk/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake"
 		},
 		{
 			"name" : "CMAKE_PROJECT_NAME",
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.22000.0/x64/rc.exe"
+			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64/rc.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -6003,7 +6003,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/change08/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug"
+			"value" : "C:/Users/rmswk/Desktop/Qt_Account_Project/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug"
 		},
 		{
 			"name" : "Qt_account_project_IS_TOP_LEVEL",
@@ -6027,7 +6027,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/change08/Desktop/Qt_Account_Project"
+			"value" : "C:/Users/rmswk/Desktop/Qt_Account_Project"
 		},
 		{
 			"name" : "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE",

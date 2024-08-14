@@ -1,13 +1,13 @@
 #include "registerscene.h"
 #include "ui_registerscene.h"
+#include <QDate>
 
 
-registerScene::registerScene(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::registerScene)
+registerScene::registerScene(QWidget *parent) :QMainWindow(parent), ui(new Ui::registerScene)
 {
     ui->setupUi(this);
-
+    QString currentDate = QDate::currentDate().toString("yyyy-MM-dd");
+    ui->date->setText(currentDate);
     connect(ui->registerButton, &QPushButton::clicked, this, &registerScene::registerAccount);
     connect(ui->goBackButton, &QPushButton::clicked, this, &registerScene::goBack);
 }

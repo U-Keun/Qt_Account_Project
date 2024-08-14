@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>100</y>
+      <y>80</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -31,21 +31,6 @@
     <property name="text">
      <string>user name</string>
     </property>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>120</y>
-      <width>411</width>
-      <height>291</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QTableView" name="tableView"/>
-     </item>
-    </layout>
    </widget>
    <widget class="QPushButton" name="goBackButton">
     <property name="geometry">
@@ -88,6 +73,16 @@
      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
     </property>
    </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>160</y>
+      <width>771</width>
+      <height>271</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -95,7 +90,7 @@
      <x>0</x>
      <y>0</y>
      <width>872</width>
-     <height>22</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

@@ -6,6 +6,7 @@
 #include "account.h"
 #include "line.h"
 #include <QDate>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -47,7 +48,7 @@ void MemberManager::readFile() {
         QString date;
         QString accountName;
         for (int j = 0; j < accountCount; j++) {
-            in >> accountId >> money >> date;
+            in >> accountName >> accountId >> money >> date;
             this->memberList[i].addAccount(Account(accountName, accountId, money, date));
         }
     }
@@ -78,7 +79,8 @@ void MemberManager::writeFile() {
             << member.getPwd() << "\n";
         out << member.getAccount().size() << "\n";
         for (const auto& account : member.getAccount()) {
-            out << account.getAccountId() << " "
+            out << account.getName() << " "
+                << account.getAccountId() << " "
                 << account.getMoney() << " "
                 << account.getDate().toString() << "\n";
         }
@@ -97,7 +99,7 @@ MemberManager::~MemberManager() {
 }
 
 //멤버 등록
-void MemberManager::registration(QString name, QString id, QString pwd) {
+bool MemberManager::registration(QString name, QString id, QString pwd) {
     // qDebug() << "Enter member name, ID, PW:";
     // QTextStream qin(stdin);
     // qin >> name >> id >> pwd;
@@ -107,11 +109,12 @@ void MemberManager::registration(QString name, QString id, QString pwd) {
     for (auto& member : memberList) {
         if (member.getId() == id) {
             qDebug() << "Already registered member!";
-            return;
+            return false;
         }
     }
     Member mem(name, id, pwd);
     memberList.push_back(mem);
+    return true;
     // writeFile();
 }
 
@@ -148,6 +151,13 @@ void MemberManager::setCurrentMember(Member* member) {
 
 Member* MemberManager::getCurrentMember() const {
     return currentMember;
+}
+
+Account* MemberManager::getCurrentAccount() const{
+    return currentAccount;
+}
+void MemberManager::setCurrentAccount(Account* account){
+    currentAccount = account;
 }
 
 void MemberManager::getCurrentMemberStatus() {
@@ -202,6 +212,7 @@ bool MemberManager::login(QString tmpId, QString tmpPw) {
     }
 
     qDebug() << "ID not exist! Login fail";
+    return false;
 }
 
 void MemberManager::logout() {
@@ -213,52 +224,17 @@ void MemberManager::logout() {
     }
 }
 
-void MemberManager::transaction() {
-    if (currentMember == nullptr) {
-        qDebug() << "Please login";
-        return;
-    }
+void MemberManager::deposit(long long amount) {
+    currentAccount->deposit(amount);
+}
 
-    if (currentMember->getAccount().empty()) {
-        qDebug() << "No account found";
-        return;
-    }
+void MemberManager::withdraw(long long amount) {
+    currentAccount->withdraw(amount);
+}
 
-    qDebug() << "Deposit: 1, Withdraw: 2";
-    int choice;
-    QTextStream qin(stdin);
-    qin >> choice;
-
-    qDebug() << "Account list:";
-    int maxAccountCount = currentMember->getAccount().size();
-    for (const auto& account : currentMember->getAccount()) {
-        qDebug() << account.toString();
-    }
-
-    int selectedAccount;
-    qin >> selectedAccount;
-
-    if (selectedAccount > maxAccountCount) {
-        qDebug() << "Invalid account number";
-        return;
-    }
-
-    qDebug() << "Enter amount:";
-    int amount;
-    qin >> amount;
-
-    if (amount < 0) {
-        qDebug() << "Please enter a positive integer";
-        return;
-    }
-
-    auto& account = currentMember->getAccount()[selectedAccount - 1];
-    if (choice == 1) {
-        if (account.deposit(amount)) {
-            qDebug() << "Deposit success!";
-        }
-    } else if (choice == 2) {
+/*
+ *     } else if (choice == 2) {
         account.withdraw(amount);
         qDebug() << "Withdraw success!";
     }
-}
+*/

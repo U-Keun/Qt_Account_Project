@@ -9,6 +9,8 @@
 #include "registerscene.h"
 #include "depositaccount.h"
 #include "withdrawaccount.h"
+#include "deposit.h"
+#include "withdraw.h"
 
 WindowManager::WindowManager() {
     setUpStartScene();
@@ -86,9 +88,6 @@ void WindowManager::setUpMainMenu() {
 void WindowManager::setUpInquiryScene() {
     inquiryScene *window = new inquiryScene(nullptr);
     pushWindow(window);
-
-
-
     connect(window, &inquiryScene::goBack, this, &WindowManager::popWindow);
 }
 
@@ -104,15 +103,30 @@ void WindowManager::setUpDepositAccountScene() {
     DepositAccount *window = new DepositAccount(nullptr);
     pushWindow(window);
 
+
+    connect(window, &DepositAccount::goDeposit, this, &WindowManager::setUpDepositScene);
     connect(window, &DepositAccount::goBack, this, &WindowManager::popWindow);
 }
 
 void WindowManager::setUpWithdrawAccountScene() {
-    qDebug() << "let's show withdraw scene.";
     WithdrawAccount *window = new WithdrawAccount(nullptr);
     pushWindow(window);
 
-
+    connect(window, &WithdrawAccount::goWithdraw, this, &WindowManager::setUpwithdrawScene);
     connect(window, &WithdrawAccount::goBack, this, &WindowManager::popWindow);
 
+}
+
+void WindowManager::setUpDepositScene() {
+    deposit *window = new deposit(nullptr);
+    pushWindow(window);
+
+    connect(window, &deposit::goBack, this, &WindowManager::popWindow);
+}
+
+void WindowManager::setUpwithdrawScene() {
+    withdraw *window = new withdraw(nullptr);
+    pushWindow(window);
+
+    connect(window, &withdraw::goBack, this, &WindowManager::popWindow);
 }

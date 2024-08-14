@@ -17,6 +17,7 @@ public:
     int getAccountId() const;
     long long getMoney() const;
     Date getDate() const;
+    QString getName() const;
     bool deposit(long long money);
     bool withdraw(long long money);
     QString  toString() const;
