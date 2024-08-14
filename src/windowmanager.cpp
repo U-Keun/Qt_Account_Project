@@ -74,12 +74,12 @@ void WindowManager::setUpSignUpScene() {
 
 void WindowManager::handleSignUpAttempt(const QString& name, const QString& id, const QString& pwd) {
     if (memberManager->registerMember(name, id, pwd)) {
+        QMessageBox::information(nullptr, "Information", "Sign Up Success!");
         setUpStartScene();
         return;
     }
 
-    // QMessageBox::warning(nullptr, "Warning", "This ID is already registered.");
-    qDebug() << "sign up test";
+    QMessageBox::warning(nullptr, "Warning", "This ID is already registered.");
 }
 
 void WindowManager::setUpMainMenu() {

@@ -87,8 +87,6 @@ MemberManager::~MemberManager() {
 
 //멤버 등록
 bool MemberManager::registerMember(const QString& name, const QString& id, const QString& pwd) {
-    // QTextStream qin(stdin);
-    // qin >> name >> id >> pwd;
     if (isRegistered(id)) {
         qDebug() << "Already registered member!";
         return false;
