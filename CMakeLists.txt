@@ -36,6 +36,8 @@ add_executable(Qt_account_project main.cpp
         src/model/account.cpp
         header/date.h
         src/model/date.cpp
+        header/membermanager.h
+        src/membermanager.cpp
 )
 
 target_link_libraries(Qt_account_project

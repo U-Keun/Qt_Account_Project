@@ -1,10 +1,10 @@
 #include "../../header/member.h"
 #include "../../header/account.h"
 
-Member::Member(const QString& name, const QString& id, const QString& pw) {
+Member::Member(const QString& name, const QString& id, const QString& pwd) {
     this->name = name;
     this->id = id;
-    this->pw = pw;
+    this->pwd = pwd;
 }
 
 QString Member::getName() const {
@@ -15,8 +15,8 @@ QString Member::getId() const {
     return id;
 }
 
-QString Member::getPw() const {
-    return pw;
+QString Member::getPwd() const {
+    return pwd;
 }
 
 QVector<Account>& Member::getAccount() {

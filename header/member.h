@@ -7,7 +7,7 @@
 class Account;
 
 class Member {
-    QString name, id, pw;
+    QString name, id, pwd;
     QVector<Account> accountList;
 
 public:
@@ -15,7 +15,7 @@ public:
     Member(const QString&, const QString&, const QString&);
     QString getName() const;
     QString getId() const;
-    QString getPw() const;
+    QString getPwd() const;
     QVector<Account>& getAccount();
 
     void addAccount(const Account&);
