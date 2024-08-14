@@ -3,6 +3,7 @@
 //
 #include <QApplication>
 #include <QMainWindow>
+#include <QMessageBox>
 
 #include "../header/windowmanager.h"
 #include "../header/startscene.h"
@@ -13,9 +14,11 @@
 #include "../header/registerscene.h"
 #include "../header/depositaccount.h"
 #include "../header/withdrawaccount.h"
+#include "../header/membermanager.h"
 
-WindowManager::WindowManager() {
+WindowManager::WindowManager(MemberManager* memberManager) {
     mainWindow = new QMainWindow();
+    this->memberManager = memberManager;
 
     mainWindow->resize(800, 600);
 
@@ -48,8 +51,17 @@ void WindowManager::setUpLogInScene() {
     LogInScene *scene = new LogInScene(nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &LogInScene::moveToMainMenu, this, &WindowManager::setUpMainMenu);
+    connect(scene, &LogInScene::logInAttempted, this, &WindowManager::handleLogInAttempt);
     connect(scene, &LogInScene::goBack, this, &WindowManager::setUpStartScene);
+}
+
+void WindowManager::handleLogInAttempt(const QString& id, const QString& pwd) {
+    if (memberManager->login(id, pwd)) {
+        setUpMainMenu();
+        return;
+    }
+
+    QMessageBox::warning(nullptr, "Warning", "Invalid ID/PW");
 }
 
 void WindowManager::setUpSignUpScene() {

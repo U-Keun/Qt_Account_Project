@@ -18,9 +18,14 @@ public:
 signals:
     void moveToMainMenu();
     void goBack();
+    void logInAttempted(const QString&, const QString&);
 
 private:
     Ui::LogInScene *ui;
+
+private slots:
+    void handleLogIn();
+
 };
 
 #endif // LOGINSCENE_H

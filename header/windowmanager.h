@@ -6,11 +6,14 @@
 #define WINDOWMANAGER_H
 
 class QMainWindow;
+class QString;
+class MemberManager;
 
 class WindowManager : public QObject {
     Q_OBJECT;
 
     QMainWindow *mainWindow;
+    MemberManager *memberManager;
 
     void setCentralWidget(QWidget *widget);
     void setUpStartScene();
@@ -24,8 +27,14 @@ class WindowManager : public QObject {
     void setUpDepositScene();
     void setUpWithdrawScene();
 
+
+private slots:
+    // business logic
+    void handleLogInAttempt(const QString&, const QString&);
+
 public:
-    WindowManager();
+    // WindowManager();
+    WindowManager(MemberManager* memberManager);
     ~WindowManager();
 
 };

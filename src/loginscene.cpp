@@ -7,11 +7,17 @@ LogInScene::LogInScene(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->logInButton, &QPushButton::clicked, this, &LogInScene::moveToMainMenu);
+    connect(ui->logInButton, &QPushButton::clicked, this, &LogInScene::handleLogIn);
     connect(ui->goBackButton, &QPushButton::clicked, this, &LogInScene::goBack);
 }
 
 LogInScene::~LogInScene()
 {
     delete ui;
+}
+
+void LogInScene::handleLogIn() {
+    QString id = ui->idInput->text(), pwd = ui->pwInput->text();
+
+    emit logInAttempted(id, pwd);
 }

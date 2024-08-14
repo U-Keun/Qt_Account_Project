@@ -68,7 +68,7 @@ void MemberManager::writeFile() {
     for (auto it = memberList.begin(); it != memberList.end(); ++it) {
         out << it->getName() << " "
             << it->getId() << " "
-            << it->getPwd() << " ";
+            << it->getPwd() << " " << "\n";
         out << it->getAccount().size() << '\n';
         for (const auto& account : it->getAccount()) {
             out << account.getAccountId() << " "
@@ -174,21 +174,18 @@ bool MemberManager::addAccount(
 }
 
 bool MemberManager::login(QString tmpId, QString tmpPw) {
-    qDebug() << "로그인 요청" << __FUNCTION__ ;
-    for (auto& member : memberList) {
-        if (member.getId() == tmpId) {
-            if (member.getPwd() == tmpPw) {
-                qDebug() << "Login success";
-                setCurrentMember(&member);
-                return true;
-            } else {
-                qDebug() << "Password error! Login fail";
-                return false;
-            }
+    // qDebug() << "로그인 요청" << __FUNCTION__ ;
+
+    if (isRegistered(tmpId)) {
+        Member tmpMember = memberList.value(tmpId);
+        if (tmpMember.getPwd() == tmpPw) {
+            qDebug() << "Login success";
+            setCurrentMember(&tmpMember);
+            return true;
         }
     }
 
-    qDebug() << "ID not exist! Login fail";
+    qDebug() << "ID does not exist or PW is wrong";
     return false;
 }
 
