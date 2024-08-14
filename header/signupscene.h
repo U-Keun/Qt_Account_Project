@@ -18,9 +18,14 @@ public:
 signals:
     void validateSignUp();
     void goBack();
+    void signUpAttempted(const QString&, const QString&, const QString&);
 
 private:
     Ui::SignUpScene *ui;
+
+private slots:
+    void handleSignUp();
+
 };
 
 #endif // SIGNUPSCENE_H

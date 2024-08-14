@@ -31,6 +31,7 @@ class WindowManager : public QObject {
 private slots:
     // business logic
     void handleLogInAttempt(const QString&, const QString&);
+    void handleSignUpAttempt(const QString&, const QString&, const QString&);
 
 public:
     // WindowManager();

@@ -68,8 +68,18 @@ void WindowManager::setUpSignUpScene() {
     SignUpScene *scene = new SignUpScene(nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &SignUpScene::validateSignUp, this, &WindowManager::setUpStartScene);
+    connect(scene, &SignUpScene::signUpAttempted, this, &WindowManager::handleSignUpAttempt);
     connect(scene, &SignUpScene::goBack, this, &WindowManager::setUpStartScene);
+}
+
+void WindowManager::handleSignUpAttempt(const QString& name, const QString& id, const QString& pwd) {
+    if (memberManager->registerMember(name, id, pwd)) {
+        setUpStartScene();
+        return;
+    }
+
+    // QMessageBox::warning(nullptr, "Warning", "This ID is already registered.");
+    qDebug() << "sign up test";
 }
 
 void WindowManager::setUpMainMenu() {

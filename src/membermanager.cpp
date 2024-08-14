@@ -22,7 +22,6 @@ void MemberManager::readFile() {
         }
         file.close();
 
-        //만들어 둔거 다시 열기
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             qDebug("파일을 다시 열 수 없습니다.");
             return;
@@ -37,18 +36,16 @@ void MemberManager::readFile() {
     int accountCount;
     for (int i = 0; i < memberCount; i++) {
         in >> name >> id >> pwd;
-        // this->memberList.emplace_back(Member(name, id, pwd));
         this->memberList.insert(id, Member(name, id, pwd));
 
         in >> accountCount;
-
         int accountId;
         long long money;
         QString date;
         QString accountName;
         for (int j = 0; j < accountCount; j++) {
-            in >> accountId >> money >> date;
-            this->memberList[id].addAccount(Account(accountName, accountId, money, date));
+            in >> accountName >> accountId >> money >> date;
+            this->memberList.value(id).addAccount(Account(accountName, accountId, money, date));
         }
     }
 
@@ -81,30 +78,25 @@ void MemberManager::writeFile() {
 }
 
 MemberManager::MemberManager() {
-    // qDebug() << "MemberManager 생성";
     readFile();
 }
 
 MemberManager::~MemberManager() {
-    // qDebug() << "MemberManager 소멸";
     writeFile();
 }
 
 //멤버 등록
-void MemberManager::registerMember(QString& name, QString& id, QString& pwd) {
-    // qDebug() << "Enter member name, ID, PW:";
-    QTextStream qin(stdin);
-    qin >> name >> id >> pwd;
-
-    // qDebug()<< "사용자 등록 요청 왓음 " << __FILE__;
+bool MemberManager::registerMember(const QString& name, const QString& id, const QString& pwd) {
+    // QTextStream qin(stdin);
+    // qin >> name >> id >> pwd;
     if (isRegistered(id)) {
         qDebug() << "Already registered member!";
-        return;
+        return false;
     }
 
     const Member member(name, id, pwd);
     memberList.insert(id, member);
-    // writeFile();
+    return true;
 }
 
 void MemberManager::searchAllMember() {

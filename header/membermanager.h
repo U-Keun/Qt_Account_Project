@@ -23,7 +23,7 @@ public:
     ~MemberManager();
 
     // command function
-    void registerMember(QString&, QString&, QString&);
+    bool registerMember(const QString&, const QString&, const QString&);
     void searchAllMember();
     bool addAccount(const QString&, const long long, const QString&) const;
     void transaction();
