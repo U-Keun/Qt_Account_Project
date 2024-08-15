@@ -84,7 +84,6 @@ MemberManager::~MemberManager() {
 
 bool MemberManager::registerMember(const QString& name, const QString& id, const QString& pwd) {
     if (isRegistered(id)) {
-        qDebug() << "Already registered member!";
         return false;
     }
 
@@ -110,7 +109,6 @@ bool MemberManager::addAccount(
     const long long tmpMoney,
     const Date date) const {
     if (currentMember == nullptr) {
-        qDebug() << "Please login";
         return false;
     }
 
@@ -134,65 +132,5 @@ bool MemberManager::login(QString tmpId, QString tmpPw) {
         }
     }
 
-    qDebug() << "ID does not exist or PW is wrong";
     return false;
-}
-
-void MemberManager::logout() {
-    if (currentMember == nullptr) {
-        qDebug() << "Not logged in!";
-    } else {
-        currentMember = nullptr;
-        qDebug() << "Logout!";
-    }
-}
-
-void MemberManager::transaction() {
-    if (currentMember == nullptr) {
-        qDebug() << "Please login";
-        return;
-    }
-
-    if (currentMember->getAccount().empty()) {
-        qDebug() << "No account found";
-        return;
-    }
-
-    qDebug() << "Deposit: 1, Withdraw: 2";
-    int choice;
-    QTextStream qin(stdin);
-    qin >> choice;
-
-    qDebug() << "Account list:";
-    int maxAccountCount = currentMember->getAccount().size();
-    for (const auto& account : currentMember->getAccount()) {
-        qDebug() << account.toString();
-    }
-
-    int selectedAccount;
-    qin >> selectedAccount;
-
-    if (selectedAccount > maxAccountCount) {
-        qDebug() << "Invalid account number";
-        return;
-    }
-
-    qDebug() << "Enter amount:";
-    int amount;
-    qin >> amount;
-
-    if (amount < 0) {
-        qDebug() << "Please enter a positive integer";
-        return;
-    }
-
-    auto& account = currentMember->getAccount()[selectedAccount - 1];
-    if (choice == 1) {
-        if (account.deposit(amount)) {
-            qDebug() << "Deposit success!";
-        }
-    } else if (choice == 2) {
-        account.withdraw(amount);
-        qDebug() << "Withdraw success!";
-    }
 }

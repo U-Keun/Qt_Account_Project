@@ -12,7 +12,7 @@ class Account {
     Date regDate;
 
 public:
-    Account(const int,const long long)/* throw(const char*)*/;
+    Account(const int,const long long);
     Account(const QString& accountName,
             const int accountId,
             const long long balance,

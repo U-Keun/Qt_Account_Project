@@ -6,9 +6,6 @@
 #include <QString>
 #include <QVector>
 
-
-// class Account;
-
 class Member {
     QString name, id, pwd;
     QVector<Account> accountList;

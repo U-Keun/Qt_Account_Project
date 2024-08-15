@@ -20,7 +20,6 @@ public:
 signals:
     void goBack();
     void depositSuccessed();
-    // void depositFailed();
 
 private:
     Ui::Deposit *ui;

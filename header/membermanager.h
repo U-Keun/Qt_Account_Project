@@ -27,9 +27,7 @@ public:
     bool registerMember(const QString&, const QString&, const QString&);
     void searchAllMember();
     bool addAccount(const QString&, const long long, const Date) const;
-    void transaction();
     bool login(QString, QString);
-    void logout();
     void getCurrentMemberStatus() const;
     void setCurrentMember(Member*);
     Member* getCurrentMember() const;

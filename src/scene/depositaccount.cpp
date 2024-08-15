@@ -16,7 +16,6 @@ DepositAccount::DepositAccount(Member* member, QWidget *parent)
 
     connect(ui->accountList, &QListWidget::itemClicked, this, &DepositAccount::itemClicked);
     connect(ui->selectButton, &QPushButton::clicked, this, &DepositAccount::handleAccountSelection);
-    // connect(ui->accountList, &QListWidget::itemDoubleClicked, this, &DepositAccount::handleAccountSelection);
 }
 
 DepositAccount::~DepositAccount()

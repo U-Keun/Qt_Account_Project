@@ -27,7 +27,6 @@ Date Account::getDate() const {
 }
 
 bool Account::deposit(const long long money) {
-    // 예외가 발생할 가능성 고려
     this->balance += money;
     return true;
 }

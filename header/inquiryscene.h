@@ -6,7 +6,6 @@
 #include <QWidget>
 #include <memory>
 
-// class Member;
 class QStandardItemModel;
 
 namespace Ui {
