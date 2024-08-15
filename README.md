@@ -25,3 +25,4 @@ Qt 프로젝트(계좌 조회/관리 프로그램)
   - Withdraw
     - 사용자가 선택한 계좌에 출금 기능을 수행합니다     
 
+시나리오 링크 : https://excalidraw.com/#json=Ax2zqb9NSSpS30fk2x3sg,kYVwl4AR85WPQMQVGRoEkQ
