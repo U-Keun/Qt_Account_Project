@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+class Account;
+
 namespace Ui {
 class Deposit;
 }
@@ -12,15 +14,20 @@ class Deposit : public QWidget
     Q_OBJECT
 
 public:
-    explicit Deposit(QWidget *parent = nullptr);
+    explicit Deposit(Account*, QWidget *parent = nullptr);
     ~Deposit();
 
 signals:
-    // void depositRequested();
     void goBack();
+    void depositSuccessed();
+    // void depositFailed();
 
 private:
     Ui::Deposit *ui;
+    Account* currentAccount;
+
+private slots:
+    void depositRequested();
 };
 
 #endif // DEPOSIT_H

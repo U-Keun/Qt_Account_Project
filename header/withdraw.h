@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+class Account;
+
 namespace Ui {
 class Withdraw;
 }
@@ -12,15 +14,19 @@ class Withdraw : public QWidget
     Q_OBJECT
 
 public:
-    explicit Withdraw(QWidget *parent = nullptr);
+    explicit Withdraw(Account*, QWidget *parent = nullptr);
     ~Withdraw();
 
 signals:
-    void withdrawRequested();
     void goBack();
+    void withdrawSuccessed();
 
 private:
     Ui::Withdraw *ui;
+    Account* currentAccount;
+
+private slots:
+    void withdrawRequested();
 };
 
 #endif // WITHDRAW_H

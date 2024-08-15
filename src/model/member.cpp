@@ -23,6 +23,13 @@ QVector<Account> Member::getAccount() {
     return accountList;
 }
 
+Account* Member::getAccount(const int accountId) {
+    if (accountId >= 1 && accountId <= accountList.size()) {
+        return &accountList[accountId - 1];
+    }
+    return nullptr;
+}
+
 void Member::addAccount(const Account& newAccount) {
     accountList.push_back(newAccount);
 }

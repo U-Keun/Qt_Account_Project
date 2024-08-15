@@ -30,8 +30,8 @@ class WindowManager : public QObject {
     void setUpRegisterScene();
     void setUpDepositAccountScene();
     void setUpWithdrawAccountScene();
-    void setUpDepositScene();
-    void setUpWithdrawScene();
+    void setUpDepositScene(const int);
+    void setUpWithdrawScene(const int);
 
 private slots:
     // business logic

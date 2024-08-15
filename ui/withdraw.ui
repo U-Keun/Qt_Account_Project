@@ -34,10 +34,10 @@
     </font>
    </property>
    <property name="text">
-    <string>Chosen account : </string>
+    <string>Selected account : </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="moneyText">
    <property name="geometry">
     <rect>
      <x>60</x>
