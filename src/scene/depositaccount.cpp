@@ -1,4 +1,4 @@
-#include "../../header/depositaccount.h"
+#include "depositaccount.h"
 #include "ui_depositaccount.h"
 
 

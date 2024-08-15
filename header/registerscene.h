@@ -1,7 +1,7 @@
 #ifndef REGISTERSCENE_H
 #define REGISTERSCENE_H
 
-#include "../header/date.h"
+#include "date.h"
 
 #include <QWidget>
 

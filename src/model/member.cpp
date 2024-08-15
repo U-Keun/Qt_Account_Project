@@ -1,5 +1,5 @@
-#include "../../header/member.h"
-#include "../../header/account.h"
+#include "member.h"
+#include "account.h"
 
 Member::Member(const QString& name, const QString& id, const QString& pwd) {
     this->name = name;

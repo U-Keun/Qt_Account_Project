@@ -1,5 +1,5 @@
-#include "../../header/withdraw.h"
-#include "../../header/account.h"
+#include "withdraw.h"
+#include "account.h"
 #include "ui_withdraw.h"
 
 #include <QmessageBox>

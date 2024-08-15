@@ -1,7 +1,3 @@
-//
-// Created by u-keun song on 2024. 8. 12..
-//
-
 #ifndef WINDOWMANAGER_H
 #define WINDOWMANAGER_H
 

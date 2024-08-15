@@ -1,4 +1,4 @@
-#include "../../header/withdrawaccount.h"
+#include "withdrawaccount.h"
 #include "ui_withdrawaccount.h"
 
 WithdrawAccount::WithdrawAccount(Member* member, QWidget *parent)

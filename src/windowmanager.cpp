@@ -5,18 +5,18 @@
 #include <QMainWindow>
 #include <QMessageBox>
 
-#include "../header/windowmanager.h"
-#include "../header/startscene.h"
-#include "../header/loginscene.h"
-#include "../header/signupscene.h"
-#include "../header/mainmenuscene.h"
-#include "../header/inquiryscene.h"
-#include "../header/registerscene.h"
-#include "../header/depositaccount.h"
-#include "../header/withdrawaccount.h"
-#include "../header/deposit.h"
-#include "../header/withdraw.h"
-#include "../header/membermanager.h"
+#include "windowmanager.h"
+#include "startscene.h"
+#include "loginscene.h"
+#include "signupscene.h"
+#include "mainmenuscene.h"
+#include "inquiryscene.h"
+#include "registerscene.h"
+#include "depositaccount.h"
+#include "withdrawaccount.h"
+#include "deposit.h"
+#include "withdraw.h"
+#include "membermanager.h"
 
 WindowManager::WindowManager(std::shared_ptr<MemberManager> memberManager) {
     mainWindow = new QMainWindow();

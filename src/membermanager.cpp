@@ -1,6 +1,6 @@
-#include "../header/member.h"
-#include "../header/membermanager.h"
-#include "../header/account.h"
+#include "member.h"
+#include "membermanager.h"
+#include "account.h"
 
 #include <iostream>
 #include <QVector>

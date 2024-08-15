@@ -1,5 +1,5 @@
-#include "../header/deposit.h"
-#include "../header/account.h"
+#include "deposit.h"
+#include "account.h"
 #include "ui_deposit.h"
 
 #include <QMessageBox>

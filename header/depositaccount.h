@@ -1,7 +1,7 @@
 #ifndef DEPOSITACCOUNT_H
 #define DEPOSITACCOUNT_H
 
-#include "../header/member.h"
+#include "member.h"
 
 #include <QWidget>
 #include <QListWidgetItem>

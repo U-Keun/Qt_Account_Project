@@ -1,4 +1,4 @@
-#include "../../header/date.h"
+#include "date.h"
 
 #include <QString>
 #include <QTextStream>
