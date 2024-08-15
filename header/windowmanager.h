@@ -14,7 +14,7 @@ class WindowManager : public QObject {
     Q_OBJECT;
 
     QMainWindow *mainWindow;
-    std::shared_ptr<MemberManager> memberManager;
+    std::unique_ptr<MemberManager> memberManager;
 
     // window transition
     void setCentralWidget(QWidget *widget);
@@ -38,7 +38,7 @@ private slots:
     void handleWithdrawSelection(const int);
 
 public:
-    WindowManager(std::shared_ptr<MemberManager>);
+    WindowManager(std::unique_ptr<MemberManager>);
     ~WindowManager();
 
 };

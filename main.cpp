@@ -5,8 +5,8 @@
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
-    std::shared_ptr<MemberManager> ptr = std::make_shared<MemberManager>();
-    WindowManager window(ptr);
+    std::unique_ptr<MemberManager> ptr = std::make_unique<MemberManager>();
+    WindowManager window(std::move(ptr));
 
     return a.exec();
 }

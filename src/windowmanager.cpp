@@ -18,9 +18,9 @@
 #include "withdraw.h"
 #include "membermanager.h"
 
-WindowManager::WindowManager(std::shared_ptr<MemberManager> memberManager) {
+WindowManager::WindowManager(std::unique_ptr<MemberManager> memberManager) {
     mainWindow = new QMainWindow();
-    this->memberManager = memberManager;
+    this->memberManager = std::move(memberManager);
     mainWindow->resize(800, 600);
 
     setUpStartScene();
@@ -28,7 +28,7 @@ WindowManager::WindowManager(std::shared_ptr<MemberManager> memberManager) {
 }
 
 WindowManager::~WindowManager() {
-    // delete memberManager;
+
 }
 
 void WindowManager::setCentralWidget(QWidget *widget) {
