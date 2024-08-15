@@ -1,4 +1,4 @@
-#include "../header/registerscene.h"
+#include "../../header/registerscene.h"
 #include "ui_registerscene.h"
 
 #include <QMessageBox>

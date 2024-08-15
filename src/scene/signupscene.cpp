@@ -1,4 +1,4 @@
-#include "../header/signupscene.h"
+#include "../../header/signupscene.h"
 #include "ui_signupscene.h"
 
 SignUpScene::SignUpScene(QWidget *parent)

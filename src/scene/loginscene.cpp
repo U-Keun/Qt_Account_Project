@@ -1,4 +1,4 @@
-#include "../header/loginscene.h"
+#include "../../header/loginscene.h"
 #include "ui_LogInScene.h"
 
 LogInScene::LogInScene(QWidget *parent)
