@@ -1,6 +1,6 @@
-#include "../header/inquiryscene.h"
-#include "../header/member.h"
-#include "../header/account.h"
+#include "../../header/inquiryscene.h"
+#include "../../header/member.h"
+#include "../../header/account.h"
 #include "ui_inquiryscene.h"
 
 #include <QStandardItem>

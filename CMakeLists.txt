@@ -18,26 +18,63 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Qt_account_project main.cpp
-        header/windowmanager.h src/windowmanager.cpp
-        header/startscene.h src/startscene.cpp ui/startscene.ui
-        header/loginscene.h src/loginscene.cpp ui/loginscene.ui
-        header/signupscene.h src/signupscene.cpp ui/signupscene.ui
-        header/mainmenuscene.h src/mainmenuscene.cpp ui/mainmenuscene.ui
-        header/inquiryscene.h src/inquiryscene.cpp ui/inquiryscene.ui
-        header/registerscene.h src/registerscene.cpp ui/registerscene.ui
-        header/depositaccount.h src/depositaccount.cpp ui/depositaccount.ui
-        header/withdrawaccount.h src/withdrawaccount.cpp ui/withdrawaccount.ui
-        header/deposit.h src/deposit.cpp ui/deposit.ui
-        header/withdraw.h src/withdraw.cpp ui/withdraw.ui
+# 헤더 파일 리스트
+set(HEADER_FILES
+        header/windowmanager.h
+        header/startscene.h
+        header/loginscene.h
+        header/signupscene.h
+        header/mainmenuscene.h
+        header/inquiryscene.h
+        header/registerscene.h
+        header/depositaccount.h
+        header/withdrawaccount.h
+        header/deposit.h
+        header/withdraw.h
         header/member.h
-        src/model/member.cpp
         header/account.h
-        src/model/account.cpp
         header/date.h
-        src/model/date.cpp
         header/membermanager.h
+)
+
+# 소스 파일 리스트
+set(SRC_FILES
+        main.cpp
+        src/windowmanager.cpp
+        src/scene/startscene.cpp
+        src/scene/loginscene.cpp
+        src/scene/signupscene.cpp
+        src/scene/mainmenuscene.cpp
+        src/scene/inquiryscene.cpp
+        src/scene/registerscene.cpp
+        src/scene/depositaccount.cpp
+        src/scene/withdrawaccount.cpp
+        src/scene/deposit.cpp
+        src/scene/withdraw.cpp
+        src/model/member.cpp
+        src/model/account.cpp
+        src/model/date.cpp
         src/membermanager.cpp
+)
+
+# UI 파일 리스트
+set(UI_FILES
+        ui/startscene.ui
+        ui/loginscene.ui
+        ui/signupscene.ui
+        ui/mainmenuscene.ui
+        ui/inquiryscene.ui
+        ui/registerscene.ui
+        ui/depositaccount.ui
+        ui/withdrawaccount.ui
+        ui/deposit.ui
+        ui/withdraw.ui
+)
+
+add_executable(Qt_account_project main.cpp
+        ${HEADER_FILES}
+        ${SRC_FILES}
+        ${UI_FILES}
 )
 
 target_link_libraries(Qt_account_project
