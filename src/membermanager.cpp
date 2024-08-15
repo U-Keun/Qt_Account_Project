@@ -15,17 +15,13 @@ using namespace std;
 void MemberManager::readFile() {
     QFile file("info.txt");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug("파일 오픈 안됨");
         if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
             qDebug("파일 생성 실패");
             return;
         }
+        QTextStream out(&file);
+        out << "0\n";
         file.close();
-
-        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            qDebug("파일을 다시 열 수 없습니다.");
-            return;
-        }
     }
 
     QTextStream in(&file);
