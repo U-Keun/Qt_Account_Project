@@ -134,3 +134,9 @@ bool MemberManager::login(QString tmpId, QString tmpPw) {
 
     return false;
 }
+
+void MemberManager::logOut() {
+    if (currentMember != nullptr) {
+        currentMember = nullptr;
+    }
+}

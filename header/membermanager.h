@@ -28,6 +28,7 @@ public:
     void searchAllMember();
     bool addAccount(const QString&, const long long, const Date) const;
     bool login(QString, QString);
+    void logOut();
     void getCurrentMemberStatus() const;
     void setCurrentMember(Member*);
     Member* getCurrentMember() const;

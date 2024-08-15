@@ -91,7 +91,10 @@ void WindowManager::setUpMainMenu() {
     connect(scene, &MainMenuScene::moveToRegisterWindow, this, &WindowManager::setUpRegisterScene);
     connect(scene, &MainMenuScene::moveToDepositAccountWindow, this, &WindowManager::setUpDepositAccountScene);
     connect(scene, &MainMenuScene::moveToWithdrawAccountWindow, this, &WindowManager::setUpWithdrawAccountScene);
-    connect(scene, &MainMenuScene::goBack, this, &WindowManager::setUpStartScene);
+    connect(scene, &MainMenuScene::goBack, this, [&]() {
+        memberManager->logOut();
+        setUpStartScene();
+    });
 }
 
 void WindowManager::setUpInquiryScene() {
