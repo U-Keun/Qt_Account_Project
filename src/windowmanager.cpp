@@ -151,7 +151,7 @@ void WindowManager::setUpDepositScene(const int accountId) {
     setCentralWidget(scene);
 
     connect(scene, &Deposit::goBack, this, &WindowManager::setUpDepositAccountScene);
-    connect(scene, &Deposit::depositSuccessed, this, &WindowManager::setUpMainMenu);
+    connect(scene, &Deposit::depositSucceeded, this, &WindowManager::setUpMainMenu);
 }
 
 void WindowManager::setUpWithdrawScene(const int accountId) {
@@ -160,5 +160,5 @@ void WindowManager::setUpWithdrawScene(const int accountId) {
     setCentralWidget(scene);
 
     connect(scene, &Withdraw::goBack, this, &WindowManager::setUpWithdrawAccountScene);
-    connect(scene, &Withdraw::withdrawSuccessed, this, &WindowManager::setUpMainMenu);
+    connect(scene, &Withdraw::withdrawSucceeded, this, &WindowManager::setUpMainMenu);
 }

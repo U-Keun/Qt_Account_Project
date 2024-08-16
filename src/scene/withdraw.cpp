@@ -10,7 +10,6 @@ Withdraw::Withdraw(Account* account, QWidget *parent)
     , currentAccount(account)
 {
     ui->setupUi(this);
-    qDebug() << account->getAccountName();
 
     connect(ui->checkButton, &QPushButton::clicked, this, &Withdraw::withdrawRequested);
     connect(ui->goBackButton, &QPushButton::clicked, this, &Withdraw::goBack);
@@ -29,7 +28,7 @@ void Withdraw::withdrawRequested() {
     if (valid && amount > 0) {
         if (currentAccount->withdraw(amount)) {
             QMessageBox::information(this, "Success", "Withdraw success!");
-            emit withdrawSuccessed();
+            emit withdrawSucceeded();
             return;
         }
 

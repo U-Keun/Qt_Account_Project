@@ -19,7 +19,7 @@ public:
 
 signals:
     void goBack();
-    void withdrawSuccessed();
+    void withdrawSucceeded();
 
 private:
     Ui::Withdraw *ui;
