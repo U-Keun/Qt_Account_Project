@@ -18,9 +18,9 @@
 #include "withdraw.h"
 #include "membermanager.h"
 
-WindowManager::WindowManager(std::unique_ptr<MemberManager> memberManager) {
+WindowManager::WindowManager(std::shared_ptr<MemberManager> memberManager) {
     mainWindow = new QMainWindow();
-    this->memberManager = std::move(memberManager);
+    this->memberManager = memberManager;
     mainWindow->resize(800, 600);
 
     setUpStartScene();
@@ -49,21 +49,11 @@ void WindowManager::setUpStartScene() {
 }
 
 void WindowManager::setUpLogInScene() {
-    LogInScene *scene = new LogInScene(nullptr);
+    LogInScene *scene = new LogInScene(memberManager, nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &LogInScene::logInAttempted, this, &WindowManager::handleLogInAttempt);
+    connect(scene, &LogInScene::logInSucceeded, this, &WindowManager::setUpMainMenu);
     connect(scene, &LogInScene::goBack, this, &WindowManager::setUpStartScene);
-}
-
-void WindowManager::handleLogInAttempt(const QString& id, const QString& pwd) {
-    if (memberManager->login(id, pwd)) {
-        QMessageBox::information(nullptr, "Information", "Log In Success!");
-        setUpMainMenu();
-        return;
-    }
-
-    QMessageBox::warning(nullptr, "Warning", "Invalid ID/PW");
 }
 
 void WindowManager::setUpSignUpScene() {
