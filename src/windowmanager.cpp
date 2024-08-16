@@ -58,6 +58,7 @@ void WindowManager::setUpLogInScene() {
 
 void WindowManager::handleLogInAttempt(const QString& id, const QString& pwd) {
     if (memberManager->login(id, pwd)) {
+        QMessageBox::information(nullptr, "Information", "Log In Success!");
         setUpMainMenu();
         return;
     }
