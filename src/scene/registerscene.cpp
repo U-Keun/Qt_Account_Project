@@ -1,12 +1,14 @@
 #include "registerscene.h"
+#include "membermanager.h"
 #include "ui_registerscene.h"
 
 #include <QMessageBox>
 #include <QDate>
 
-RegisterScene::RegisterScene(QWidget *parent)
+RegisterScene::RegisterScene(std::shared_ptr<MemberManager> memberManager, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::RegisterScene)
+    , memberManager(memberManager)
 {
     ui->setupUi(this);
     QString currentDate = QDate::currentDate().toString("yyyy-MM-dd");
@@ -47,5 +49,11 @@ void RegisterScene::handleRegister() {
         return;
     }
 
-    emit registerAttempted(accountName, balanceValue, parsedDate);
+    if (memberManager->addAccount(accountName, balanceValue, parsedDate)) {
+        QMessageBox::information(nullptr, "Information", "Register success!");
+        emit registerSucceeded();
+        return;
+    }
+
+    QMessageBox::warning(nullptr, "Warning", "Register failed.");
 }

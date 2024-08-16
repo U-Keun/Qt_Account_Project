@@ -86,23 +86,12 @@ void WindowManager::setUpInquiryScene() {
 }
 
 void WindowManager::setUpRegisterScene() {
-    RegisterScene *scene = new RegisterScene(nullptr);
+    RegisterScene *scene = new RegisterScene(memberManager, nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &RegisterScene::registerAttempted, this, &WindowManager::handleRegisterAttempt);
+    connect(scene, &RegisterScene::registerSucceeded, this, &WindowManager::setUpMainMenu);
     connect(scene, &RegisterScene::goBack, this, &WindowManager::setUpMainMenu);
 }
-
-void WindowManager::handleRegisterAttempt(const QString& accountName, const long long balance, const Date date) {
-    if (memberManager->addAccount(accountName, balance, date)) {
-        QMessageBox::information(nullptr, "Information", "Register success!");
-        setUpMainMenu();
-        return;
-    }
-
-    QMessageBox::warning(nullptr, "Warning", "Register failed.");
-}
-
 
 void WindowManager::setUpDepositAccountScene() {
     DepositAccount *scene = new DepositAccount(memberManager->getCurrentMember(), nullptr);

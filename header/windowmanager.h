@@ -29,10 +29,6 @@ class WindowManager : public QObject {
     void setUpDepositScene(const int);
     void setUpWithdrawScene(const int);
 
-private slots:
-    // business logic
-    void handleRegisterAttempt(const QString&, const long long, const Date);
-
 public:
     WindowManager(std::shared_ptr<MemberManager>);
     ~WindowManager();

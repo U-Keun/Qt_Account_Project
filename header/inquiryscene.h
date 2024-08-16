@@ -1,12 +1,11 @@
 #ifndef INQUIRYSCENE_H
 #define INQUIRYSCENE_H
 
-#include "member.h"
-
 #include <QWidget>
 #include <memory>
 
 class QStandardItemModel;
+class Member;
 
 namespace Ui {
 class InquiryScene;
