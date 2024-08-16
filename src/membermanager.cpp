@@ -75,10 +75,12 @@ void MemberManager::writeFile() {
 }
 
 MemberManager::MemberManager() {
+    qDebug() << "MemberManager constructor called.";
     readFile();
 }
 
 MemberManager::~MemberManager() {
+    qDebug() << "MemberManager constructor called.";
     writeFile();
 }
 

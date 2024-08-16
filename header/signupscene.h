@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+class MemberManager;
+
 namespace Ui {
 class SignUpScene;
 }
@@ -12,16 +14,16 @@ class SignUpScene : public QWidget
     Q_OBJECT
 
 public:
-    explicit SignUpScene(QWidget *parent = nullptr);
+    explicit SignUpScene(std::shared_ptr<MemberManager>, QWidget *parent = nullptr);
     ~SignUpScene();
 
 signals:
-    void validateSignUp();
     void goBack();
-    void signUpAttempted(const QString&, const QString&, const QString&);
+    void signUpSucceeded();
 
 private:
     Ui::SignUpScene *ui;
+    std::shared_ptr<MemberManager> memberManager;
 
 private slots:
     void handleSignUp();

@@ -1,9 +1,13 @@
 #include "signupscene.h"
+#include "membermanager.h"
 #include "ui_signupscene.h"
 
-SignUpScene::SignUpScene(QWidget *parent)
+#include <QMessageBox>
+
+SignUpScene::SignUpScene(std::shared_ptr<MemberManager> memberManager, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::SignUpScene)
+    , memberManager(memberManager)
 {
     ui->setupUi(this);
 
@@ -21,5 +25,11 @@ void SignUpScene::handleSignUp() {
             id = ui->idInput->text(),
             pwd = ui->pwInput->text();
 
-    emit signUpAttempted(name, id, pwd);
+    if (memberManager->registerMember(name, id, pwd)) {
+        QMessageBox::information(nullptr, "Information", "Sign Up Success!");
+        emit signUpSucceeded();
+        return;
+    }
+
+    QMessageBox::warning(nullptr, "Warning", "This ID is already registered.");
 }
