@@ -3,7 +3,6 @@
 //
 #include <QApplication>
 #include <QMainWindow>
-#include <QMessageBox>
 
 #include "windowmanager.h"
 #include "startscene.h"

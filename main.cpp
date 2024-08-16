@@ -1,6 +1,6 @@
 #include <QApplication>
-#include "header/windowmanager.h"
-#include "header/membermanager.h"
+#include "windowmanager.h"
+#include "membermanager.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);

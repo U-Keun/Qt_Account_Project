@@ -1,7 +1,7 @@
 #ifndef WITHDRAWACCOUNT_H
 #define WITHDRAWACCOUNT_H
 
-#include "../header/member.h"
+#include "member.h"
 
 #include <QWidget>
 #include <QListWidgetItem>

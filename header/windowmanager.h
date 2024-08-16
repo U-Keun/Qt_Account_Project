@@ -30,7 +30,7 @@ class WindowManager : public QObject {
     void setUpWithdrawScene(const int);
 
 public:
-    WindowManager(std::shared_ptr<MemberManager>);
+    WindowManager(shared_ptr<MemberManager>);
     ~WindowManager();
 
 };

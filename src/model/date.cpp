@@ -2,7 +2,6 @@
 
 #include <QString>
 #include <QTextStream>
-#include <QStringList>
 #include <QVector>
 #include <ctime>
 

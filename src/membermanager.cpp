@@ -3,7 +3,6 @@
 #include "account.h"
 
 #include <iostream>
-#include <QVector>
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>

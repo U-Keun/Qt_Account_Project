@@ -2,7 +2,6 @@
 #define MEMBERMANAGER_H
 
 #include <QMap>
-#include <memory>
 
 class QString;
 class Member;
