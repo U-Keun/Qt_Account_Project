@@ -22,7 +22,6 @@ signals:
     void moveToMainMenu();
     void goBack();
     void logInSucceeded();
-    void logInAttempted(const QString&, const QString&);
 
 private:
     Ui::LogInScene *ui;
