@@ -1,9 +1,13 @@
 #include "loginscene.h"
+#include "membermanager.h"
 #include "ui_LogInScene.h"
 
-LogInScene::LogInScene(QWidget *parent)
+#include <QMessageBox>
+
+LogInScene::LogInScene(std::shared_ptr<MemberManager> memberManager, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::LogInScene)
+    , memberManager(memberManager)
 {
     ui->setupUi(this);
 
@@ -18,6 +22,11 @@ LogInScene::~LogInScene()
 
 void LogInScene::handleLogIn() {
     QString id = ui->idInput->text(), pwd = ui->pwInput->text();
+    if (memberManager->login(id, pwd)) {
+        QMessageBox::information(nullptr, "Information", "Log In success!");
+        emit logInSucceeded();
+        return;
+    }
 
-    emit logInAttempted(id, pwd);
+    QMessageBox::warning(nullptr, "Warning", "Invalid ID/PW");
 }

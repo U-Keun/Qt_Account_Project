@@ -28,7 +28,7 @@ void Deposit::depositRequested() {
     if (valid && amount > 0) {
         if (currentAccount->deposit(amount)) {
             QMessageBox::information(this, "Success", "Deposit success!");
-            emit depositSuccessed();
+            emit depositSucceeded();
             return;
         }
 

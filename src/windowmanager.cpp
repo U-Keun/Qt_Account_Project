@@ -18,9 +18,9 @@
 #include "withdraw.h"
 #include "membermanager.h"
 
-WindowManager::WindowManager(std::unique_ptr<MemberManager> memberManager) {
+WindowManager::WindowManager(std::shared_ptr<MemberManager> memberManager) {
     mainWindow = new QMainWindow();
-    this->memberManager = std::move(memberManager);
+    this->memberManager = memberManager;
     mainWindow->resize(800, 600);
 
     setUpStartScene();
@@ -49,39 +49,19 @@ void WindowManager::setUpStartScene() {
 }
 
 void WindowManager::setUpLogInScene() {
-    LogInScene *scene = new LogInScene(nullptr);
+    LogInScene *scene = new LogInScene(memberManager, nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &LogInScene::logInAttempted, this, &WindowManager::handleLogInAttempt);
+    connect(scene, &LogInScene::logInSucceeded, this, &WindowManager::setUpMainMenu);
     connect(scene, &LogInScene::goBack, this, &WindowManager::setUpStartScene);
 }
 
-void WindowManager::handleLogInAttempt(const QString& id, const QString& pwd) {
-    if (memberManager->login(id, pwd)) {
-        QMessageBox::information(nullptr, "Information", "Log In Success!");
-        setUpMainMenu();
-        return;
-    }
-
-    QMessageBox::warning(nullptr, "Warning", "Invalid ID/PW");
-}
-
 void WindowManager::setUpSignUpScene() {
-    SignUpScene *scene = new SignUpScene(nullptr);
+    SignUpScene *scene = new SignUpScene(memberManager, nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &SignUpScene::signUpAttempted, this, &WindowManager::handleSignUpAttempt);
+    connect(scene, &SignUpScene::signUpSucceeded, this, &WindowManager::setUpStartScene);
     connect(scene, &SignUpScene::goBack, this, &WindowManager::setUpStartScene);
-}
-
-void WindowManager::handleSignUpAttempt(const QString& name, const QString& id, const QString& pwd) {
-    if (memberManager->registerMember(name, id, pwd)) {
-        QMessageBox::information(nullptr, "Information", "Sign Up Success!");
-        setUpStartScene();
-        return;
-    }
-
-    QMessageBox::warning(nullptr, "Warning", "This ID is already registered.");
 }
 
 void WindowManager::setUpMainMenu() {
@@ -106,37 +86,19 @@ void WindowManager::setUpInquiryScene() {
 }
 
 void WindowManager::setUpRegisterScene() {
-    RegisterScene *scene = new RegisterScene(nullptr);
+    RegisterScene *scene = new RegisterScene(memberManager, nullptr);
     setCentralWidget(scene);
 
-    connect(scene, &RegisterScene::registerAttempted, this, &WindowManager::handleRegisterAttempt);
+    connect(scene, &RegisterScene::registerSucceeded, this, &WindowManager::setUpMainMenu);
     connect(scene, &RegisterScene::goBack, this, &WindowManager::setUpMainMenu);
 }
-
-void WindowManager::handleRegisterAttempt(const QString& accountName, const long long balance, const Date date) {
-    if (memberManager->addAccount(accountName, balance, date)) {
-        QMessageBox::information(nullptr, "Information", "Register success!");
-        setUpMainMenu();
-        return;
-    }
-
-    QMessageBox::warning(nullptr, "Warning", "Register failed.");
-}
-
 
 void WindowManager::setUpDepositAccountScene() {
     DepositAccount *scene = new DepositAccount(memberManager->getCurrentMember(), nullptr);
     setCentralWidget(scene);
 
     connect(scene, &DepositAccount::goBack, this, &WindowManager::setUpMainMenu);
-    connect(scene, &DepositAccount::accountSelected, this, &WindowManager::handleDepositSelection);
-}
-
-void WindowManager::handleDepositSelection(const int accountId) {
-    // 유효하지 않은 accountId가 들어오면 예외 처리
-    qDebug() << accountId;
-
-    setUpDepositScene(accountId);
+    connect(scene, &DepositAccount::accountSelected, this, &WindowManager::setUpDepositScene);
 }
 
 void WindowManager::setUpWithdrawAccountScene() {
@@ -144,16 +106,8 @@ void WindowManager::setUpWithdrawAccountScene() {
     setCentralWidget(scene);
 
     connect(scene, &WithdrawAccount::goBack, this, &WindowManager::setUpMainMenu);
-    connect(scene, &WithdrawAccount::accountSelected, this, &WindowManager::handleWithdrawSelection);
+    connect(scene, &WithdrawAccount::accountSelected, this, &WindowManager::setUpWithdrawScene);
 }
-
-void WindowManager::handleWithdrawSelection(const int accountId) {
-    // 유효하지 않은 accountId가 들어오면 예외 처리
-    qDebug() << accountId;
-
-    setUpWithdrawScene(accountId);
-}
-
 
 void WindowManager::setUpDepositScene(const int accountId) {
     Account* selectedAccount = memberManager->getCurrentMember()->getAccount(accountId);
@@ -161,7 +115,7 @@ void WindowManager::setUpDepositScene(const int accountId) {
     setCentralWidget(scene);
 
     connect(scene, &Deposit::goBack, this, &WindowManager::setUpDepositAccountScene);
-    connect(scene, &Deposit::depositSuccessed, this, &WindowManager::setUpMainMenu);
+    connect(scene, &Deposit::depositSucceeded, this, &WindowManager::setUpMainMenu);
 }
 
 void WindowManager::setUpWithdrawScene(const int accountId) {
@@ -170,5 +124,5 @@ void WindowManager::setUpWithdrawScene(const int accountId) {
     setCentralWidget(scene);
 
     connect(scene, &Withdraw::goBack, this, &WindowManager::setUpWithdrawAccountScene);
-    connect(scene, &Withdraw::withdrawSuccessed, this, &WindowManager::setUpMainMenu);
+    connect(scene, &Withdraw::withdrawSucceeded, this, &WindowManager::setUpMainMenu);
 }

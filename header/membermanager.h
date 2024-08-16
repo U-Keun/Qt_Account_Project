@@ -25,7 +25,6 @@ public:
 
     // command function
     bool registerMember(const QString&, const QString&, const QString&);
-    void searchAllMember();
     bool addAccount(const QString&, const long long, const Date) const;
     bool login(QString, QString);
     void logOut();

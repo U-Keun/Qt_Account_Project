@@ -14,7 +14,7 @@ class WindowManager : public QObject {
     Q_OBJECT;
 
     QMainWindow *mainWindow;
-    std::unique_ptr<MemberManager> memberManager;
+    std::shared_ptr<MemberManager> memberManager;
 
     // window transition
     void setCentralWidget(QWidget *widget);
@@ -29,16 +29,8 @@ class WindowManager : public QObject {
     void setUpDepositScene(const int);
     void setUpWithdrawScene(const int);
 
-private slots:
-    // business logic
-    void handleLogInAttempt(const QString&, const QString&);
-    void handleSignUpAttempt(const QString&, const QString&, const QString&);
-    void handleRegisterAttempt(const QString&, const long long, const Date);
-    void handleDepositSelection(const int);
-    void handleWithdrawSelection(const int);
-
 public:
-    WindowManager(std::unique_ptr<MemberManager>);
+    WindowManager(std::shared_ptr<MemberManager>);
     ~WindowManager();
 
 };
