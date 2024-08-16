@@ -19,7 +19,6 @@ public:
     ~LogInScene();
 
 signals:
-    void moveToMainMenu();
     void goBack();
     void logInSucceeded();
 
