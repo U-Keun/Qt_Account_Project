@@ -119,14 +119,7 @@ void WindowManager::setUpDepositAccountScene() {
     setCentralWidget(scene);
 
     connect(scene, &DepositAccount::goBack, this, &WindowManager::setUpMainMenu);
-    connect(scene, &DepositAccount::accountSelected, this, &WindowManager::handleDepositSelection);
-}
-
-void WindowManager::handleDepositSelection(const int accountId) {
-    // 유효하지 않은 accountId가 들어오면 예외 처리
-    qDebug() << accountId;
-
-    setUpDepositScene(accountId);
+    connect(scene, &DepositAccount::accountSelected, this, &WindowManager::setUpDepositScene);
 }
 
 void WindowManager::setUpWithdrawAccountScene() {
@@ -134,16 +127,8 @@ void WindowManager::setUpWithdrawAccountScene() {
     setCentralWidget(scene);
 
     connect(scene, &WithdrawAccount::goBack, this, &WindowManager::setUpMainMenu);
-    connect(scene, &WithdrawAccount::accountSelected, this, &WindowManager::handleWithdrawSelection);
+    connect(scene, &WithdrawAccount::accountSelected, this, &WindowManager::setUpWithdrawScene);
 }
-
-void WindowManager::handleWithdrawSelection(const int accountId) {
-    // 유효하지 않은 accountId가 들어오면 예외 처리
-    qDebug() << accountId;
-
-    setUpWithdrawScene(accountId);
-}
-
 
 void WindowManager::setUpDepositScene(const int accountId) {
     Account* selectedAccount = memberManager->getCurrentMember()->getAccount(accountId);

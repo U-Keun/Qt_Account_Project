@@ -33,8 +33,6 @@ private slots:
     // business logic
     void handleSignUpAttempt(const QString&, const QString&, const QString&);
     void handleRegisterAttempt(const QString&, const long long, const Date);
-    void handleDepositSelection(const int);
-    void handleWithdrawSelection(const int);
 
 public:
     WindowManager(std::shared_ptr<MemberManager>);
