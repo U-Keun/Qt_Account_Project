@@ -5,6 +5,7 @@
 #include <QStringList>
 #include <QVector>
 #include <ctime>
+#include <stdexcept>
 
 #if defined(_WIN32) || defined(_WIN64)
 #include <time.h>

@@ -4,6 +4,9 @@
 
 #include <QMessageBox>
 #include <QDate>
+#include <stdexcept>
+
+using namespace std;
 
 RegisterScene::RegisterScene(std::shared_ptr<MemberManager> memberManager, QWidget *parent)
     : QWidget(parent)
