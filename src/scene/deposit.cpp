@@ -2,6 +2,7 @@
 #include "account.h"
 #include "ui_deposit.h"
 
+#include <QString>
 #include <QMessageBox>
 
 Deposit::Deposit(Account* account, QWidget *parent)
@@ -11,6 +12,7 @@ Deposit::Deposit(Account* account, QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->accountName->setText("accountName : " + account->getAccountName() + "\n" + "balance: " + QString::number(account->getBalance()));
     connect(ui->checkButton, &QPushButton::clicked, this, &Deposit::depositRequested);
     connect(ui->goBackButton, &QPushButton::clicked, this, &Deposit::goBack);
 }

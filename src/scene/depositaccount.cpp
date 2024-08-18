@@ -29,6 +29,7 @@ void DepositAccount::showAccountList() {
     for (Account account : accountList) {
         QListWidgetItem* item = new QListWidgetItem(account.getAccountName());
         item->setData(Qt::UserRole, account.getAccountId());
+        // item->setData(Qt::UserRole, account.getAccountName());
         ui->accountList->addItem(item);
     }
 

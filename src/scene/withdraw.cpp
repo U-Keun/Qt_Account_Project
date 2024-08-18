@@ -3,6 +3,7 @@
 #include "ui_withdraw.h"
 
 #include <QmessageBox>
+#include <QString>
 
 Withdraw::Withdraw(Account* account, QWidget *parent)
     : QWidget(parent)
@@ -11,6 +12,7 @@ Withdraw::Withdraw(Account* account, QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->accountName->setText("accountName : " + account->getAccountName() + "\n" + "balance: " + QString::number(account->getBalance()));
     connect(ui->checkButton, &QPushButton::clicked, this, &Withdraw::withdrawRequested);
     connect(ui->goBackButton, &QPushButton::clicked, this, &Withdraw::goBack);
 }
